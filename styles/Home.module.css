@@ -1,121 +1,95 @@
+.outer {
+  background-color: white;
+  height: calc(100vh - 70px);
+  padding: 40px 0 80px 0;
+}
+.outer > h1 {
+  font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 55px;
+margin-left: 30px;
+/* or 114% */
+
+letter-spacing: 0.05cm;
+}
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  background-color: black;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-evenly;
+ height: 100%;
+  
+}
+
+.container > main {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-content: center;
+  justify-items: center;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.container > main > ul {
+  height: 18px;
+  width: 174px;
   text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  display: flex;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+.container > main > ul > li {
+  list-style: none;
+  display: inline-block;
+  background-color: #f1f1f1;
+  height: 11px;
+  width: 11px;
+  margin: 0 5px;
+  border-radius: 8px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.container > main > ul > li:first-child {
+  background: #14E4E4;
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.container > main > div {
+  
+  height: 290px;
+  width: 640px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.container > main > div > section {
+  height: 260px;
+  background-color: gainsboro;
+  width:260px;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.container > main > div > section:last-of-type {
+  width: 378px;
+  background-color: white;
+  padding: 20px;
+  border-bottom: skyblue solid 15px;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.container > main > div > section > h1 {
+font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 26px;
+/* or 110% */
+margin-bottom: 25px;
+letter-spacing: 0.05cm;
+
 }

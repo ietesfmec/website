@@ -1,0 +1,56 @@
+.outer {
+    background-color: transparent;
+    height: 70px;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.inner {
+    background-color: black;
+    height: 70px;   
+    
+}
+.inner ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.inner > ul > li {
+    list-style: none;
+    color: white;
+    display: inline;
+    margin: 0 10px;
+    cursor: pointer;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    color: #F1F1F1;
+}
+
+.inner > ul >li:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+.image {
+    height: 56px;
+    position: absolute;
+    right: 60px;
+}
+.image > img {
+    width: 56px;
+    border-radius: 28px;
+    margin-top: -40px;
+    right: 30px;
+
+}
