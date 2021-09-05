@@ -51,6 +51,7 @@ export default function Activity() {
         makeInterval()
     },[])
 
+    
     return (
         <div className={styles.outer}>
             <h1>Activities</h1>
