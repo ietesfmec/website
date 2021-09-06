@@ -2,7 +2,7 @@
     display: block;
     height: 373px;
     background-color:#191826;
-    padding: 50px 20px 50px 80px;
+    padding: 50px 60px 50px 60px;
 }
 
 .encloser > main {
@@ -76,7 +76,17 @@
     border-radius: 21px;
 }
 
+.social > div > svg {
+    cursor: pointer;
+}
+.social > div > svg:hover {
+    opacity: 0.7;
+}
 .social > div:first-of-type > h4 {
     margin-left: 10px;
     margin-top: 15px;
+    color: #f1f1f1;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
 }

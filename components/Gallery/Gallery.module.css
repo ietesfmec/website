@@ -1,0 +1,82 @@
+.encloser {
+    width: 100vw;
+    padding: 20px 80px;
+}
+.main {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.main > section > h3 {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 55px;
+}
+.main > section > p {
+    width: 350px;
+    border-left: 10px solid var(--base-color);
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.encloser > h1 {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 59px;
+    margin-bottom: -20px;
+}
+.photos > div {
+    background-color: #C4C4C4;
+    
+}
+.photos > div:nth-of-type(1) {
+    grid-area: pic1;
+    margin: 0px 5px 5px 0px;
+}
+.photos > div:nth-of-type(2) {
+    grid-area: pic2;
+    margin: 0px 5px 0px 5px;
+}
+.photos > div:nth-of-type(3) {
+    grid-area: pic3;
+    margin: 0px 5px 5px 5px;
+}
+.photos > div:nth-of-type(4) {
+    grid-area: pic4;
+    margin: 0px 0px 5px 5px;
+}
+.photos > div:nth-of-type(5) {
+    grid-area: pic5;
+    margin: 5px 5px 0px 0px;
+}
+.photos > div:nth-of-type(6) {
+    grid-area: pic6;
+    margin: 5px 5px 0px 5px;
+}
+.photos > div:nth-of-type(7) {
+    grid-area: pic7;
+    margin: 5px 0px 0px 5px;
+}
+
+.photos {
+    margin-top: 20px;
+    width: 100%;
+    height: 450px;
+    display: grid;
+    grid-template-areas: 
+    'pic1 pic2 pic3 pic4 pic4'
+    'pic5 pic2 pic6 pic6 pic7';
+    
+}
+.encloser > div {
+    width: 470px;
+    height: 3px;
+    background-color: #191826;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './Navbar.module.css';
 import sampleImage from '../../public/sample.jpg';
 
@@ -10,10 +11,10 @@ export default function Navbar() {
             </section>
             <main className={styles.inner}>
                 <ul>
-                    <li>HOME</li>
-                    <li>EVENTS</li>
-                    <li>GALLERY</li>
-                    <li>ARTICLES</li>
+                    <li><Link href="/home">HOME</Link></li>
+                    <li><Link href="/events">EVENTS</Link></li>
+                    <li><Link href="/articles">ARTICLES</Link></li>
+                    <li><Link href="/gallery">GALLERY</Link></li>
                 </ul>
             </main>
         </div>

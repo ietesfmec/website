@@ -9,6 +9,9 @@ body {
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;  
 }
 
 ::-webkit-scrollbar {

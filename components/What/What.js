@@ -7,10 +7,10 @@ export default function What() {
     return (
         <div>
             <main className = {styles.container}>
-                <section className = {`half ${styles.half}`}>
+                <section className = {'half' + ' ' + styles.half}>
                     <img src={sampleImage.src}></img>
                 </section>
-                <section className = {`half ${styles.half}`}>
+                <section className = {'half' + ' ' + styles.half}>
                     <Topbar/>
                     <div className = {styles.sectionWhat}>
                         <h1>What <br/> is <br/> IETE SF MEC?</h1>
