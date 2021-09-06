@@ -54,7 +54,9 @@ export default function Footer() {
                             <h4>email@gmail.com</h4>
                         </div>
                     </div>
+                    <span></span>
                 </section>
+                
             </main>
         </div>
     )

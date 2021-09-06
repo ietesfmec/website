@@ -6,14 +6,14 @@
   }
   .outer > h1 {
     font-family: Mulish;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 55px;
-  margin-left: 30px;
-  /* or 114% */
-  
-  letter-spacing: 0.05cm;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 55px;
+    margin-left: 30px;
+    /* or 114% */
+    
+    letter-spacing: 0.05cm;
   }
   .container {
     background-color: black;
@@ -112,4 +112,57 @@
   .container > div[disabled]  {
     pointer-events: none;
     opacity: 0.6;
+  }
+
+  
+
+  @media screen and (max-width:760px) {
+    .outer {
+      width: 100vw;
+      margin-bottom: 26px;
+      margin-top: 50px;
+      height: fit-content;
+    }
+    .container {
+      padding: 30px;
+    }
+    .container > div {
+      width: 200px;
+    } 
+    .container > main {
+      height: 100%;
+      justify-content: initial;
+      display: block;
+      margin:  70px;
+    }
+    .container > main > div {
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: fit-content;
+    }
+    .container > main > div > section {
+      width: 100% !important;
+      padding-bottom: 0 !important;
+    }
+    .container > main > div > section:nth-of-type(2) {
+      height: fit-content;
+      padding-bottom: 30px !important;
+    }
+    .container > main > ul {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .container {
+      display: block;
+    }
+    .container > main {
+      margin: 0;
+    }
+    .container > div {
+      display: none;
+    } 
   }

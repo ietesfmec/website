@@ -86,3 +86,11 @@
     justify-content: center;
     background-color: var(--base-color);
 }
+
+@media screen and (max-width : 760px) {
+    .topbar {
+        position: absolute;
+        top: 0;
+    }
+}
+    

@@ -12,9 +12,9 @@
 
 .encloser > main > div {
     padding: 0px 10px;
-    background-color: white;
+    background-color: #f1f1f1;
     width: calc(100% - 20px);
-    height: 5px;
+    height: 2px;
     border-radius: 3px;
     margin-left: 3px;
 }
@@ -89,4 +89,55 @@
     font-family: Mulish;
     font-style: normal;
     font-weight: bold;
+}
+
+@media screen and (max-width: 675px) {
+    .encloser {
+        height: fit-content;
+        font-size: smaller !important;
+    }
+    .encloser > main {
+        position: relative;
+    }
+    .encloser > main > section {
+        display: block;
+    }   
+    .social > div:last-of-type {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .social > div > svg {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .details {
+        height: fit-content !important;
+        
+    }
+    .details > div {
+        height: fit-content;
+        margin-bottom: 26px;
+        /* margin-left: auto;
+        margin-right: auto;
+        text-align: center; */
+        
+    }
+    .details > div > div {
+        margin-top: 0;
+    }
+    .details > div > div:nth-of-type(2) {
+        margin-top: 10px;
+    }
+    .details > span {
+        width: 90px;
+        height: 2px;
+        background-color: white;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
 }

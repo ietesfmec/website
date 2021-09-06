@@ -39,8 +39,15 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  
 }
 
 :root {
   --base-color:#14E4E4
+}
+
+@media screen and (max-width:800px) {
+  p {
+    font-size: medium !important;
+  };
 }
