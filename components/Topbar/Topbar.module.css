@@ -68,7 +68,7 @@
 .sidebar > ul > li:hover {
     opacity: 0.7;
 }
-.sidebar > ul > li > large {
+.sidebar > ul > li > h5 {
     font-family: Mulish;
     font-style: normal;
     font-weight: 600;

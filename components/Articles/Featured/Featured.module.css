@@ -2,7 +2,7 @@
     /* background-color: #191826; */
     background-color: #191826;
     height: calc(100vh - 145px);
-    padding: 30px 120px;
+    padding: 30px clamp(20px, 7vw, 120px);
 }
 .main {
     width: 100%;
@@ -77,7 +77,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    width: 80%;
+    
     color: #F1F1F1;
     /* color: black; */
 }
@@ -94,7 +94,7 @@
 }
 .share {
     background-color: var(--base-color);
-    width: 250px;
+    width: 230px;
     height: 54px !important;
     border-radius: 27px 30px 0px 27px;
     cursor: pointer;
@@ -122,4 +122,70 @@
 
 .share:hover {
     opacity: 0.7;
+}
+@media screen and (max-width:880px) {
+    .encloser {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .encloser {
+        padding: 0;
+    }
+    .main > section > h1 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 50px;
+    }
+    .main > section > div > p {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .encloser {
+        height: fit-content !important;
+        padding: 30px 5px;
+        
+    }
+    .main {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+    }
+    .main > section {
+        width: 100% !important;
+    }
+    .main > section > h1 {
+        font-size: 48px;
+        line-height: 57px;
+    }
+    .main > section:nth-of-type(1) {
+        padding: 0 30px;
+    }
+    .main > section:nth-of-type(3) {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .share {
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        
+    }
+}
+
+@media screen and (max-width:526px) {
+    .share {
+        border-radius: 27px;
+        width: min-content;
+        right: 35px;
+    }
+    .share > span {
+        margin: 0 !important;
+        width: 50px !important;
+    }
+    .share > h3 {
+        display: none;
+    }
 }

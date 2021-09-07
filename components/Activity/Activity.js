@@ -27,36 +27,44 @@ export default function Activity() {
     ];
     
     const [featured, setFeatured] = useState(init[0])
+    
+    var interval;
 
     const forwards = () => {
-        if(featured.index >=  init.length - 1)   return;
-        setFeatured(init[featured.index + 1])
+        let t = featured.index;
+        if(t >=  init.length - 1)   t = -1
+        setFeatured(init[t+1])
     }
     const backwards = () => {
-        if(featured.index === 0)   return;
-        setFeatured(init[featured.index-1])
+        let t = featured.index;
+        if(featured.index === 0)   t = init.length;
+        setFeatured(init[t-1])
     }
     const handleChange = (i) => e => {
         setFeatured(init[i])
     }
 
     function makeInterval() {
+        clearInterval(interval)
         if(init.length === 0)   return;
-        setInterval(()=>{
+        interval = setInterval(()=>{
             setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
         },5000)
     }
 
     useEffect(() => {
         makeInterval()
-    },[])
+        return () => { 
+            clearInterval(interval)
+        }
+    },[featured])
 
     
     return (
         <div className={styles.outer}>
             <h1>Activities</h1>
             <main className={styles.container}>
-                <div onClick={backwards} disabled={featured.index === 0}>
+                <div onClick={backwards} disabled={init.length === 0}>
                     <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 26.4L1.19995 13.6L14 0.800003" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -77,7 +85,7 @@ export default function Activity() {
                         })}
                     </ul>
                 </main>
-                <div onClick={forwards} disabled={featured.index >= init.length-1}>
+                <div onClick={forwards} disabled={init.length === 0}>
                     <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.19995 26.4L14 13.6L1.19995 0.800003" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
