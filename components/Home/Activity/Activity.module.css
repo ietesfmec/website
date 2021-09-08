@@ -22,6 +22,7 @@
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
+
   }
   
   .container > main {
@@ -159,10 +160,22 @@
     .container {
       display: block;
     }
-    .container > main {
-      margin: 0;
-    }
+
     .container > div {
       display: none;
     } 
+  }
+
+  @media screen and (max-width:560px) {
+    .container > main {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  @media screen and (max-width:424px) {
+    .container > main {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
   }
