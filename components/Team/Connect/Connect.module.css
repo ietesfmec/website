@@ -21,11 +21,11 @@
 .main {
     max-width: 972px;
     max-height: 472px;
-    padding: 50px 138px 0 138px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 90px;
     z-index: 2;
 }
 .main > section {
@@ -156,7 +156,7 @@
         height: 380px;
     }
     .main > div {
-        bottom: 110px;
+        bottom: 70px;
     }
 }
 
@@ -167,6 +167,6 @@
         height: 500px;
     }
     .main > div {
-        bottom: 80px;
+        bottom: 50px;
     }
 }

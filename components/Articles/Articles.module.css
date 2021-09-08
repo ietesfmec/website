@@ -166,3 +166,16 @@
     }
     
 }
+
+@media screen and (max-width:500px) {
+
+    .encloser {
+        padding: 30px 0;
+    }
+ 
+    .main > div {
+        width: 100%;
+        height: auto;
+    }
+    
+}

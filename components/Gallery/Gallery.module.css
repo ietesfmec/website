@@ -1,5 +1,5 @@
 .encloser {
-    width: 100vw;
+    width: 100%;
     padding: 20px 80px;
 }
 .main {
@@ -83,16 +83,19 @@
 
 @media screen and (max-width: 1100px) {
     .encloser {
-        width: 100vw;
         padding: 20px 40px;
     }   
 }
 
 @media screen and (max-width: 760px) {
     .encloser {
+        width: 100%;
        margin-top: 90px;
-       padding: 20px 20px;
+      
     }   
+    .encloser > div {
+       width: 100%;
+    }
     .photos > div:nth-of-type(1) {
         margin: 0px 5px 5px 0px;
     }
@@ -126,5 +129,8 @@
         'pic4 pic4 pic5 pic5' 
         'pic4 pic4 pic6 pic6'
         'pic7 pic7 pic6 pic6';
+    }
+    .main > section > p {
+        width: fit-content;
     }
 }
