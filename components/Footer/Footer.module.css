@@ -1,7 +1,6 @@
 .encloser {
     display: block;
     height: 373px;
-    background-color:#191826;
     padding: 50px 60px 50px 60px;
 }
 
@@ -12,7 +11,6 @@
 
 .encloser > main > div {
     padding: 0px 10px;
-    background-color: #f1f1f1;
     width: calc(100% - 20px);
     height: 2px;
     border-radius: 3px;
@@ -39,7 +37,6 @@
     width: 160px;
     height: 160px;   
     margin-right: 30px;
-    color: #f1f1f1;
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
@@ -60,7 +57,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
 }
 .social > div:last-of-type {
     height: 15px;
@@ -85,7 +81,6 @@
 .social > div:first-of-type > h4 {
     margin-left: 10px;
     margin-top: 15px;
-    color: #f1f1f1;
     font-family: Mulish;
     font-style: normal;
     font-weight: bold;
@@ -134,7 +129,6 @@
     .details > span {
         width: 90px;
         height: 2px;
-        background-color: white;
         display: block;
         margin-left: auto;
         margin-right: auto;

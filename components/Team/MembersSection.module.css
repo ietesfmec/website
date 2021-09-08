@@ -1,0 +1,26 @@
+.encloser {
+    width: 100vw;
+    height: fit-content;
+    padding: 100px 0;
+    background-color: black;
+}
+.encloser > h2 {
+    margin-left: 60px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #14E4E4;
+}
+
+.main {
+    width: 100%;
+}
+
+@media screen and (max-width: 490px) {
+    .encloser > h2 {
+        margin-left: 20px;
+    }
+}

@@ -13,7 +13,10 @@ export default function Topbar() {
             close.current.style.display = 'none';
             hamburger.current.style.display = 'block';
         } else {
-            sidebar.current.style.width = '346px';
+            if(window.matchMedia('(max-width: 600px)').matches)
+                sidebar.current.style.width = '300px';
+            else
+                sidebar.current.style.width = '346px';
             close.current.style.display = 'block';
             hamburger.current.style.display = 'none';
             

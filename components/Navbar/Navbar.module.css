@@ -52,5 +52,11 @@
     border-radius: 28px;
     margin-top: -40px;
     right: 30px;
+}
 
+.active {
+    border-bottom: 3px solid var(--base-color);
+}
+.inactive {
+    border-bottom: 3px solid black;
 }

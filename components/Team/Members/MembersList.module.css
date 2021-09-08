@@ -1,0 +1,143 @@
+.main {
+    width: 100%;
+    height: 245px;
+    margin-top: 150px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.main > div {
+    min-width: 120px;
+    height: 100%;
+    background-color: #33314D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main > div:hover {
+    opacity: 0.7;
+}
+
+.main:first-of-type > div > svg {
+    display: none;
+}
+.main:first-of-type > div {
+    background-color: black;
+}
+.cards {
+    width: 100%;
+    height: 100%;
+    background-color: #33314D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards {
+    width: 100%;
+}
+.cards > main {
+    max-width: calc((100% / 2) - 20px);
+    height: 245px;
+    background-color: white;
+    border-bottom: 15px solid var(--base-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.cards > main > div {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    margin-top: -80px;
+    background-color: #C4C4C4;
+}
+.cards > main > p {
+    text-align: center;
+    max-width: 420px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .main {
+        margin-top: 200px;
+        height: 280px;
+    }
+    .main > div {
+        min-width: 80px;
+    }
+    .cards > main {
+        height: 280px;
+    }
+    .cards > main > p {
+        margin-top: 10px;
+        text-align: center;
+        max-width: 420px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:816px) {
+    .main {
+        margin-top: 240px;
+        height: 300px;
+    }
+    .cards > main {
+        height: 300px;
+    }
+   
+}
+
+@media screen and (max-width:750px) {
+    .main {
+        height: 320px;
+    }
+    .cards > main {
+        height: 320px;
+    }   
+}
+
+@media screen and (max-width:720px) {
+    .main {
+        padding: 0 15px;
+        height: fit-content;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .main > div {
+        display: none;
+    }
+    .cards {
+        flex-direction: column;
+        height: fit-content;
+        background-color: black;
+    }
+    .cards > main {
+        max-width: 600px;
+        height: 250px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cards > main:first-of-type {
+        margin-top: 120px;
+        margin-bottom: 150px;
+    }
+    /* .cards > main > p {
+        margin-top: 0;
+    } */
+}
+
+@media screen and (max-width:440px) {
+    .cards > main {
+        height: 280px;
+    }
+}

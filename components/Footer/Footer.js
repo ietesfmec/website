@@ -2,9 +2,11 @@ import React from 'react';
 import styles from './Footer.module.css';
 import sampleImage from '../../public/sample.jpg';
 
-export default function Footer() {
+export default function Footer({secondary}) {
+    const c1 = "#191826"
+    const c2 = "#f1f1f1";
     return(
-        <div className={styles.encloser}>
+        <div className={styles.encloser} style={secondary ? { backgroundColor: c2, color: c1 } : { backgroundColor: c1, color: c2 }}>
             <main>
                 <section className={styles.social}>
                     <div>
@@ -28,7 +30,7 @@ export default function Footer() {
 
                     </div>
                 </section>
-                <div></div>
+                <div style={secondary ? { backgroundColor: c1 } : { backgroundColor: c2 }}></div>
                 <section className={styles.details}>
                     <div>
                         <h4>Contact:</h4>
