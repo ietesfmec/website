@@ -67,6 +67,17 @@
     margin-bottom: 20px;
 }
 
+.cards > main > ul {
+    display: none;
+}
+
+.active {
+    background: var(--base-color) !important;
+    height: 14px !important;
+    width: 14px !important;
+    border-radius: 14px !important;
+  }
+
 @media screen and (max-width:1000px) {
     .main {
         margin-top: 200px;
@@ -131,6 +142,26 @@
         margin-top: 120px;
         margin-bottom: 150px;
     }
+
+    .cards > main > ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        margin-bottom: -42px;
+    }
+
+    .cards > main > ul > li {
+    list-style: none;
+    display: inline-block;
+    background-color: #f1f1f1;
+    height: 11px;
+    width: 11px;
+    margin: 0 5px;
+    border-radius: 8px;
+    }
+
     /* .cards > main > p {
         margin-top: 0;
     } */

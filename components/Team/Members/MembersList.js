@@ -68,6 +68,11 @@ export default function MembersList() {
                                 </div>
                                 <p>Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur. Sint duis  deserunt elit irure.</p>
                                 <h4>{member[1].toUpperCase()}, POSITION</h4>
+                                <ul>
+                                {init && init.map((_, i) => {
+                                    return <li onClick={handleChange(i)} className={ featured.index === i ? styles.active:''} key={i}></li>
+                                })}
+                                </ul>
                             </main>
                         )
                     })
