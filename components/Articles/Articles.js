@@ -62,7 +62,7 @@ export default function Article({showFooter}) {
                         </div>
                     )
                 })}
-                <HashLoader color={color} loading={true}/>
+                <HashLoader color={color} loading={loading}/>
             </main>
         </div>
     )
