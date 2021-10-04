@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    overflow: hidden;
 }
 .main > div {
     min-width: 120px;
@@ -16,7 +15,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    overflow: hidden;
 }
 
 .main > div:hover {
@@ -38,6 +36,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .cards {
@@ -126,6 +125,7 @@
         height: fit-content;
         margin-top: 30px;
         margin-bottom: 0;
+        overflow: hidden;
     }
     .main > div {
         display: none;

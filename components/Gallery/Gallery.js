@@ -2,19 +2,23 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './Gallery.module.css';
 import sampleImage from '../../public/sample.jpg';
 import useScroll from '../../hooks/scroll';
+import { HashLoader } from 'react-spinners';
 
 export default function Gallery({showFooter}) {
 
     const allSections = ['Section_A', 'Section_B', 'Section_C', 'Section_D']
 
     const [sections, setSections] = useState([allSections[0]])
+    const [loading, setLoading] = useState(false);
     var timeout;
+    const color = '#14E4E4';
     
     const el = useRef()
     
     const listener = () => {
         if(timeout) clearTimeout(timeout)
         if(el.current?.getBoundingClientRect().bottom <= window.innerHeight) { 
+            setLoading(true)
             timeout = setTimeout(() => {
                 setSections(prev => {
                     if(prev.length >= allSections.length) {
@@ -23,6 +27,7 @@ export default function Gallery({showFooter}) {
                     }
                     return [...prev, ...allSections.slice(prev.length, prev.length+1)]
                 });
+                setLoading(false);
                 clearTimeout(timeout)
             }, 1000);
         }
@@ -81,7 +86,9 @@ export default function Gallery({showFooter}) {
         </main>
             )
         })}
-        <div></div>
+
+        <div hidden={loading}></div>
+        <HashLoader color={color} loading={loading}/>
     </div>
     )
 }

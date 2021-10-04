@@ -2,6 +2,15 @@
     width: 100%;
     padding: 20px 80px;
     overflow: hidden;
+    position: relative;
+}
+.encloser > span {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-top: -20px;
 }
 .main {
     margin-top: 30px;

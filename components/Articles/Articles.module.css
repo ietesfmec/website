@@ -15,7 +15,18 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 30px 60px;
     place-items: center;
+    position: relative;
 }
+
+.main > span {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    margin-bottom: -15px;
+}
+
 .main > div {
     height: 361px;
     background-color: #191826;

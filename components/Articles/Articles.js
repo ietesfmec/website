@@ -2,17 +2,21 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './Articles.module.css';
 import sampleImage from '../../public/sample.jpg';
 import useScroll from '../../hooks/scroll';
+import { HashLoader } from 'react-spinners';
 
 export default function Article({showFooter}) {
     const [articles, setArticles] = useState([1, 2]);
+    const [loading, setLoading] = useState(false);
     const allArticles = [1,2,3,4,5,6,7,8,9]
     var timeout;
+    const color = '#14E4E4';
     
     const el = useRef()
     
     const listener = () => {
         if(timeout) clearTimeout(timeout)
         if(el.current?.getBoundingClientRect().bottom <= window.innerHeight) { 
+            setLoading(true)
             timeout = setTimeout(() => {
                 setArticles(prev => {
                     if(prev.length >= allArticles.length) {
@@ -21,6 +25,7 @@ export default function Article({showFooter}) {
                     }
                     return [...prev, ...allArticles.slice(prev.length, prev.length+2)]
                 });
+                setLoading(false)
                 clearTimeout(timeout)
             }, 1000);
         }
@@ -30,7 +35,6 @@ export default function Article({showFooter}) {
     useEffect(()=>{
         if(articles.length >= allArticles.length)
             showFooter()
-
         return (()=>{
             clearTimeout(timeout)
         })
@@ -58,7 +62,7 @@ export default function Article({showFooter}) {
                         </div>
                     )
                 })}
-                
+                <HashLoader color={color} loading={true}/>
             </main>
         </div>
     )
