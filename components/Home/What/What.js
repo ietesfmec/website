@@ -14,7 +14,7 @@ export default function What() {
                     <Topbar/>
                     <div className = {styles.sectionWhat}>
                         <h1>What <br/> is <br/> IETE SF MEC?</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                        <p className = { `animate__animated animate__fadeInRight` }>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
                     </div>
                 </section>
             </main>

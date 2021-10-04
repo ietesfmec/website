@@ -40,6 +40,10 @@
     top: 0;
     background-color: #1A1A1ACC;
     z-index: 101;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 .sidebar > span {
     display: none;
@@ -52,7 +56,8 @@
     opacity: 0.8;
 }
 .sidebar > ul {
-    margin-top: 90px;
+    position: absolute;
+    top: 90px;
 }
 .sidebar > ul > li {
     list-style: none;
@@ -65,6 +70,7 @@
     justify-content: space-between;
     border: 2px solid var(--base-color);
     cursor: pointer;
+    overflow: hidden;
 }
 .sidebar > ul > li:hover {
     opacity: 0.7;
@@ -86,6 +92,35 @@
     align-items: center;
     justify-content: center;
     background-color: var(--base-color);
+}
+
+.sidebar > button {
+    width: 135px;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 0.2cm;
+    background-color: var(--base-color);
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 1px -2px 37px 16px rgba(255,215,0,0.69);
+    -webkit-box-shadow: 1px -2px 37px 16px rgba(255,215,0,0.69);
+    -moz-box-shadow: 1px -2px 37px 16px rgba(255,215,0,0.69);
+    cursor: pointer;
+}
+
+.sidebar > button:hover {
+    opacity: 0.7 !important;
+}
+
+@media screen and (max-height: 700px) {
+    .sidebar {
+        justify-content: flex-end;
+    }
+    .sidebar > button {
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (max-width : 760px) {

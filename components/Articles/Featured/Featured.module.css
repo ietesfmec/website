@@ -2,6 +2,8 @@
     /* background-color: #191826; */
     background-color: #191826;
     height: calc(100vh - 145px);
+    min-height: 460px;
+    max-height: 60vw;
     padding: 30px clamp(20px, 7vw, 120px);
 }
 .main {
@@ -10,6 +12,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 .main > section {
     height: 100%;
@@ -25,6 +29,11 @@
 .main > section:nth-of-type(3) {
     width: 35%;
     padding: 0 30px;
+    margin-top: -30px;
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
 }
 .main > section:nth-of-type(1) > span {
     position: absolute;
@@ -50,6 +59,7 @@
     font-size: 48px;
     line-height: 57px;
     color: #f1f1f1;
+    margin-top: 5px;
     /* color: black; */
 }
 
@@ -147,7 +157,8 @@
     .encloser {
         height: fit-content !important;
         padding: 30px 5px;
-        
+        max-height: none;
+        margin-top: 30px;
     }
     .main {
         flex-direction: column-reverse;

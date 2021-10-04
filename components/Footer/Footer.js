@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Footer.module.css';
 import sampleImage from '../../public/sample.jpg';
+import useScroll from '../../hooks/scroll';
+import animate from '../../hooks/animate';
 
 export default function Footer({secondary}) {
     const c1 = "#191826"
     const c2 = "#f1f1f1";
+
+    const el = useRef()
+
+    const listener = () => {
+        if(el.current?.getBoundingClientRect().bottom - 360 <= window.innerHeight) { 
+            //animate(el.current, 'slideInLeft', '0.1s')
+            window.removeEventListener('scroll', listener)
+        }
+    }
+
+    useScroll(el.current, listener)
+    
     return(
-        <div className={styles.encloser} style={secondary ? { backgroundColor: c2, color: c1 } : { backgroundColor: c1, color: c2 }}>
+        <div ref={el} className={styles.encloser} style={secondary ? { backgroundColor: c2, color: c1 } : { backgroundColor: c1, color: c2 }}>
             <main>
                 <section className={styles.social}>
                     <div>

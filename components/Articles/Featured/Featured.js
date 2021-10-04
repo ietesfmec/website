@@ -6,12 +6,12 @@ export default function Featured() {
     return(
         <div className = {styles.encloser}>
             <main className={styles.main}>
-                <section>
+                <section className={`animate__animated animate__fadeInLeft animate__fast`}>
                     <img src={sampleImage.src}></img>
                     <span>01 January 2021</span>
                 </section>
                 <section></section>
-                <section>
+                <section className={`animate__animated animate__fadeInRight animate__fast`}>
                     <h1>Article of <br/> the <br/> WEEK!</h1>
                     <div>
                         <span></span>

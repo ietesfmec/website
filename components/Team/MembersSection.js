@@ -12,7 +12,7 @@ export default function MembersSection() {
                     {
                         [1,2,3,4].map((_,i)=> {
                             return (
-                                <MembersList key={i}/>
+                                <MembersList key={i} id={i}/>
                             )
                         })
                     }

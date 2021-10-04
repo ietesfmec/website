@@ -3,6 +3,7 @@
     height: calc(100vh - 70px);
     padding: 40px 0 80px 0;
     margin-bottom: 40px;
+    overflow: hidden;
   }
   .outer > h1 {
     font-family: Mulish;
@@ -104,6 +105,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      
   }
 
   .container > div:hover {

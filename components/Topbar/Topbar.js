@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
+import Link from 'next/link';
 import styles from './Topbar.module.css';
 import sampleImage from '../../public/sample.jpg';
+import animate from '../../hooks/animate';
 
 export default function Topbar() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -9,16 +11,24 @@ export default function Topbar() {
     const close = useRef()
     const handleSidebar = () => {
         if(sidebarOpen) {
-            sidebar.current.style.width = '0px';
-            close.current.style.display = 'none';
-            hamburger.current.style.display = 'block';
+            animate(sidebar.current, 'fadeOutRight').then(()=>{
+                sidebar.current.style.width = '0px';
+                sidebar.current.style.display = 'none';
+                close.current.style.display = 'none';
+                hamburger.current.style.display = 'block';
+            })
         } else {
-            if(window.matchMedia('(max-width: 600px)').matches)
-                sidebar.current.style.width = '300px';
-            else
-                sidebar.current.style.width = '346px';
-            close.current.style.display = 'block';
-            hamburger.current.style.display = 'none';
+                if(window.matchMedia('(max-width: 600px)').matches)
+                    sidebar.current.style.width = '300px';
+                else
+                    sidebar.current.style.width = '346px';
+                
+                sidebar.current.style.display = 'flex';
+                animate(sidebar.current, 'fadeInRight', 'faster').then(()=>{
+                    close.current.style.display = 'block';
+                })
+                
+                hamburger.current.style.display = 'none';
             
         }
         setSidebarOpen(!sidebarOpen)
@@ -41,13 +51,13 @@ export default function Topbar() {
                     </svg>
                 </span>
                 <ul>
-                    <li>
+                    <li className={`animate__animated animate__fadeInRight animate__faster`}>
                         <h5>MEDIUM</h5>
                         <span>
 
                         </span>
                     </li>
-                    <li>
+                    <li className={`animate__animated animate__fadeInRight animate__fast`}>
                         <h5>INSTAGRAM</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +65,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li>
+                    <li className={`animate__animated animate__fadeInRight animate__slow`}>
                         <h5>FACEBOOK</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +73,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li>
+                    <li className={`animate__animated animate__fadeInRight animate__slower`}>
                         <h5>LINKEDIN</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,6 +82,7 @@ export default function Topbar() {
                         </span>
                     </li>
                 </ul>
+                <button className={`animate__animated animate__fadeIn animate__fast`}><Link href="/gallery">GALLERY</Link></button>
             </div>
         </div>
     )

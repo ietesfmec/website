@@ -1,6 +1,7 @@
 import styles from './Activity.module.css';
 import sampleImage from '../../../public/sample.jpg';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import animate from '../../../hooks/animate';
 
 export default function Activity() {
     const init = [
@@ -27,28 +28,74 @@ export default function Activity() {
     ];
     
     const [featured, setFeatured] = useState(init[0])
+    const el = useRef()
     
-    var interval;
+    var interval, timeout;
 
     const forwards = () => {
+        clearTimeout(timeout)
         let t = featured.index;
-        if(t >=  init.length - 1)   t = -1
-        setFeatured(init[t+1])
+        if(t >=  init.length - 1)   t = -1;
+        
+        animate(el.current, 'fadeOutLeft', 'faster').then(()=>{
+            animate(el.current, 'fadeInRight', 'faster')
+        })
+
+        timeout = setTimeout(()=>{
+            setFeatured(init[t+1])
+            clearTimeout(timeout)
+        }, 500)
+        
     }
     const backwards = () => {
+        clearTimeout(timeout)
+
         let t = featured.index;
         if(featured.index === 0)   t = init.length;
-        setFeatured(init[t-1])
+        
+        
+        animate(el.current, 'fadeOutRight', 'faster').then(()=>{
+            animate(el.current, 'fadeInLeft', 'faster')
+        })
+        
+        timeout = setTimeout(()=>{
+            setFeatured(init[t-1])
+            clearTimeout(timeout)
+        }, 500)
     }
     const handleChange = (i) => e => {
-        setFeatured(init[i])
+        clearTimeout(timeout)
+        if(featured.index === i)    return;
+        if(featured.index < i) {
+            animate(el.current, 'fadeOutLeft', 'faster').then(()=>{
+                animate(el.current, 'fadeInRight', 'faster')
+            })
+        } else {
+            animate(el.current, 'fadeOutRight', 'faster').then(()=>{
+                animate(el.current, 'fadeInLeft', 'faster')
+            })
+        }
+        timeout = setTimeout(()=>{
+            setFeatured(init[i])
+            clearTimeout(timeout)
+        }, 500)
     }
 
     function makeInterval() {
         clearInterval(interval)
+        
         if(init.length === 0)   return;
         interval = setInterval(()=>{
-            setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
+            clearTimeout(timeout)
+            
+            animate(el.current, 'fadeOutLeft', '0.1s').then(()=>{
+                animate(el.current, 'fadeInRight', '0.5s')
+            })
+
+            timeout = setTimeout(()=>{
+                setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
+                clearTimeout(timeout)
+            }, 500)
         },5000)
     }
 
@@ -56,21 +103,23 @@ export default function Activity() {
         makeInterval()
         return () => { 
             clearInterval(interval)
+            clearTimeout(timeout)
         }
     },[featured])
 
+    
     
     return (
         <div className={styles.outer}>
             <h1>Activities</h1>
             <main className={styles.container}>
                 <div onClick={backwards} disabled={init.length === 0}>
-                    <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/5000/svg">
                         <path d="M14 26.4L1.19995 13.6L14 0.800003" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </div>
                 <main>
-                    <div>
+                    <div ref={el}>
                         <section>
                             <img src={featured.data[0]}></img>
                         </section>
@@ -86,7 +135,7 @@ export default function Activity() {
                     </ul>
                 </main>
                 <div onClick={forwards} disabled={init.length === 0}>
-                    <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/5000/svg">
                         <path d="M1.19995 26.4L14 13.6L1.19995 0.800003" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
 

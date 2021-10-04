@@ -10,9 +10,10 @@ export default function Upcoming() {
                     <h1>Upcoming Events</h1>
                     {upcoming && upcoming.map((_, i) => {
                         return (
-                            <div className={styles.upcoming} key={i}>
+                            <div className={styles.upcoming + ` animate__animated animate__slow animate__fadeIn` + (i%2==0 ? 'Left' : 'Right')} key={i}>
                         <section className={styles.cover}>
                             <img src={sampleImage.src}></img>
+                            <span>01 JAN '21</span>
                         </section>
                         <section className={styles.details}>
                             <span>
