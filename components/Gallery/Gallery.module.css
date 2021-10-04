@@ -1,10 +1,12 @@
 .encloser {
     width: 100%;
     padding: 20px 80px;
+    overflow: hidden;
 }
 .main {
     margin-top: 30px;
     margin-bottom: 60px;
+    overflow: hidden;
 }
 .main > section > h3 {
     font-family: Mulish;

@@ -29,10 +29,6 @@ a {
   margin: 0;
 }
 
-.half {  
-  height: calc(100vh - 70px);
-}
-
 img {
   height: 100%;
   width: 100%;
@@ -44,6 +40,10 @@ img {
 
 :root {
   --base-color:#14E4E4
+}
+
+.animate__medium {
+  --animate-duration: 1.3s;
 }
 
 

@@ -1,9 +1,11 @@
 .encloser {
     padding: 0 150px;
+    overflow: hidden;
 }
 
 .main {
     margin-bottom: 60px;
+    overflow: hidden;
 }
 
 .main > h1 {

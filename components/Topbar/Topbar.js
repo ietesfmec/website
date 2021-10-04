@@ -65,7 +65,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li className={`animate__animated animate__fadeInRight animate__slow`}>
+                    <li className={`animate__animated animate__fadeInRight`}>
                         <h5>FACEBOOK</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li className={`animate__animated animate__fadeInRight animate__slower`}>
+                    <li className={`animate__animated animate__fadeInRight animate__slow`}>
                         <h5>LINKEDIN</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@ export default function Topbar() {
                         </span>
                     </li>
                 </ul>
-                <button className={`animate__animated animate__fadeIn animate__fast`}><Link href="/gallery">GALLERY</Link></button>
+                <button className={`animate__animated animate__fadeIn animate__slower`}><Link href="/gallery">GALLERY</Link></button>
             </div>
         </div>
     )

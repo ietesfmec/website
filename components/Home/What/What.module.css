@@ -5,6 +5,8 @@
   .half {
     background-color: white;
     width: 50%;
+    height: calc(100vh - 70px);
+    max-height: 50vw;
   }
   
   .sectionWhat {
@@ -34,9 +36,6 @@
     /* height: fit-content; */
   }
 
-  @media screen and (max-width: 760px) {
-   
-  }
 
   @media screen and (max-width: 760px) {
     .container {
@@ -48,6 +47,7 @@
     .half {
       width: 100%;
       height: 264px;
+      max-height: fit-content;
     }
     .half > img {
       object-fit: cover;
