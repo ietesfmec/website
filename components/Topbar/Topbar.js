@@ -73,7 +73,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li className={`animate__animated animate__fadeInRight animate__slow`}>
+                    <li className={`animate__animated animate__fadeInRight animate__medium`}>
                         <h5>LINKEDIN</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
