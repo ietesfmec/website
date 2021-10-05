@@ -3,6 +3,7 @@
     height: fit-content;
     padding: 100px 0;
     background-color: black;
+    overflow: hidden;
 }
 .encloser > h2 {
     margin-left: 60px;

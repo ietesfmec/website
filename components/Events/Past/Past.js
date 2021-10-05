@@ -18,10 +18,10 @@ export default function Past({showFooter}) {
     
     const listener = () => {
         
-        if(el.current?.getBoundingClientRect().top <= window.innerHeight) { 
+        if(e2.current?.getBoundingClientRect().top <= window.innerHeight) { 
             window.removeEventListener('scroll', listener);
-            animate(el.current, 'fadeIn').then(() => {
-                el.current.style.opacity = 1
+            animate(el.current, 'fadeInTopLeft', 'animate__medium').then(() => {
+                el.current.style.opacity=1;
                 showFooter()
             })
         }
@@ -81,8 +81,8 @@ export default function Past({showFooter}) {
 
     return (
         <div className={styles.encloser}>
-            <main className={styles.main} ref={el}>
                     <h1>Past Events</h1>
+                    <main ref={el} className={styles.main}>
                     <span onClick={backwards} disabled={index < 3}>
                         <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.59995 14L14.4 1.19995L27.2 14" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -124,7 +124,8 @@ export default function Past({showFooter}) {
                             <path d="M1.59995 1.19995L14.3999 14L27.2 1.19995" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </span>
-            </main>
+                    </main>
+        
         </div>
     )
 }

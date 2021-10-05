@@ -37,7 +37,7 @@
     opacity: 0.7;
 }
 
-.main > h1 {
+.encloser > h1 {
     font-family: Mulish;
     font-style: normal;
     font-weight: bold;
@@ -149,6 +149,7 @@
 }
 .active > .cover > img {
     height: 100%;
+    min-height: 100%;
 }
 .active > .cover > span {
     margin-bottom: -30px !important;
@@ -211,6 +212,9 @@
     .active {
         height: 265px !important;
         transform: scaleX(1.15) scaleY(1.15) !important;
+    }
+    .active > .cover > img {
+        min-height: auto;
     }
     .details > span {
         display: none;
