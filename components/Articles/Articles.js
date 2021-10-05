@@ -3,11 +3,11 @@ import styles from './Articles.module.css';
 import sampleImage from '../../public/sample.jpg';
 import useScroll from '../../hooks/scroll';
 import { HashLoader } from 'react-spinners';
+import Image from 'next/image';
 
-export default function Article({showFooter}) {
-    const [articles, setArticles] = useState([1, 2]);
+export default function Article({showFooter, allArticles}) {
+    const [articles, setArticles] = useState(allArticles.slice(0, 2));
     const [loading, setLoading] = useState(false);
-    const allArticles = [1,2,3,4,5,6,7,8,9]
     var timeout;
     const color = '#14E4E4';
     
@@ -39,24 +39,28 @@ export default function Article({showFooter}) {
             clearTimeout(timeout)
         })
     },[articles])
+
+    const imageLoader=({src})=>{
+        return src;
+      }
     
     return(
         <div className={styles.encloser} ref={el}>
                 <h1>Other Articles</h1>
             <main className = {styles.main}>
             
-                {articles && articles.map((_, i) => {
+                {articles && articles.map((article, i) => {
                     return (
                         <div key={i} className={`animate__animated animate__fadeInUp animate__faster`}>
-                            <h3>"Title of article"</h3>
+                            <h3>"{article[1]}"</h3>
                             <section className={styles.row}>
                                 <div>
-                                    <img src={sampleImage.src}></img>
-                                    <span>01 January 2021</span>
+                                    <Image loader={imageLoader} src={article[3]} layout="fill"></Image>
+                                    <span>by {article[2]}</span>
                                 </div>
                                 <div>
                                     
-                                    <p><span></span>Mollit labore adipisicing cillum exercitation. Qui Lorem veniam elit velit voluptate do consequat proident enim minim officia quis qui.</p>
+                                    <p><span></span>{article[4]}</p>
                                 </div>
                             </section>
                         </div>

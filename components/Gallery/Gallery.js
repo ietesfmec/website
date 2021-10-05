@@ -87,7 +87,7 @@ export default function Gallery({showFooter}) {
             )
         })}
 
-        <div hidden={loading}></div>
+        <div hidden={sections.length != allSections.length || loading}></div>
         <HashLoader color={color} loading={loading}/>
     </div>
     )

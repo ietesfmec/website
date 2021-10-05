@@ -1,14 +1,45 @@
 import React, { useState } from 'react';
-import { FeaturedArticle, Footer, OtherArticles, Topbar } from '../components'
+import { FeaturedArticle, Footer, OtherArticles, Topbar } from '../components';
+import Papa from 'papaparse';
 
-export default function Article() {
+export async function getStaticProps() {
+    const result = await fetch('https://docs.google.com/spreadsheets/d/1SBuaX-j9bzruHjl2_JlUpl5pa0KqmBT4TuRXQtSnL-0/gviz/tq?tqx=out:csv', {
+        method: 'GET',
+    });
+    const text = await result.text();
+    let data = Papa.parse(text).data.slice(1);
+    data.forEach((_,i)=>{
+        data[i] = data[i].filter(el=>{
+            return el!='';
+        });
+        if(data[i].length<5) {
+            while(data[i].length!=5) {
+                data[i].push('<none>');
+            }
+        }
+    });
+
+    data = data.reverse();
+    
+    const featured = data.splice(0, 1)[0];
+    const articles = data;
+
+    return {
+        props: {
+            featured, articles
+        },
+        revalidate:5
+    }
+}
+
+export default function Article({featured, articles}) {
     const [footer, setFooter] = useState(false)
     const showFooter = () => setFooter(true)
     return(
         <div>
             <Topbar/>
-            <FeaturedArticle/>
-            <OtherArticles showFooter={showFooter}/>
+            <FeaturedArticle featured={featured}/>
+            <OtherArticles showFooter={showFooter} allArticles={articles}/>
             { footer ? <Footer/> : <></>}
         </div>
     )
