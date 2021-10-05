@@ -5,7 +5,7 @@ import animate from '../../../hooks/animate';
 import useScroll from '../../../hooks/scroll';
 
 export default function Past({showFooter}) {
-    const all = [1,2,3,4,5,6,7,8,9,10]
+    const all = [1,2,3,4,5,6,7,8,9]
     const [past, setPast] = useState([...all.slice(0,3)])
     const [index, setIndex] = useState(0)
     var timeout;
@@ -20,7 +20,7 @@ export default function Past({showFooter}) {
         
         if(e2.current?.getBoundingClientRect().top <= window.innerHeight) { 
             window.removeEventListener('scroll', listener);
-            animate(el.current, 'fadeInTopLeft', 'animate__medium').then(() => {
+            animate(el.current, 'fadeIn', 'animate__medium').then(() => {
                 el.current.style.opacity=1;
                 showFooter()
             })
