@@ -11,9 +11,9 @@ export default function Connect() {
                     <section className={`animate__animated animate__fadeIn`}>
                         <h1>IETE SF MEC</h1>
                         <span></span>
-                        <p>Id enim ut ad eu ullamco. Veniam  minim  consectetur velit laborum mollit laborum. Nisi deserunt minim exercitation tempor laborum amet velit eu. Tempor ex duis aliquip nostrud magna ea id amet ex dolore. Mollit in eu cupidatat id ullamco et proident. Proident minim do do elit do enim labore voluptate nisi mollit elit ad consequat tempor.</p>
+                        <p>Meet our team, the minds behind the curation of the exciting events, webinars, workshops and articles of IETE SF MEC!</p>
+                        <div role="button"><h2>LETS CONNECT!</h2></div>
                     </section>
-                    <div role="button"><h2>LETS CONNECT!</h2></div>
                 </main>
             </div>
         </div>

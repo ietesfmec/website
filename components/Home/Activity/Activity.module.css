@@ -93,7 +93,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 26px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     letter-spacing: 0.05cm;
   }
 
@@ -151,8 +151,10 @@
     }
     .container > main > div > section:nth-of-type(2) {
       height: fit-content;
-      padding-bottom: 30px !important;
+      min-height: 376px;
+      padding-bottom: 10px !important;
     }
+    
     .container > main > ul {
       width: 100%;
       margin-top: 20px;

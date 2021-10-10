@@ -37,7 +37,11 @@
     box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     width: 403px;
-    min-width: 353px
+    min-width: 353px;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main >div:nth-of-type(2n-1) {
@@ -53,14 +57,16 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 59px;
-    margin-left: 20px;   
+    line-height: 34px;
+    margin-left: 10px;   
     margin-top: 17px;
+    margin-bottom: 15px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: calc(100% - 75.6px);
 }
 .row > div:nth-of-type(1) {
@@ -83,8 +89,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 59px;
     color: white;
+    text-align: center;
 }
 .row > div:nth-of-type(2) {
     width: 40%;
@@ -92,6 +98,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: -30px;
 }
 
 .row > div:nth-of-type(2) > p {
@@ -103,6 +110,7 @@
     font-size: 14px;
     line-height: 20px;
     color: #F1F1F1;
+    padding-right: 3px;
 }
 
 .row > div:nth-of-type(2) > p > span {
@@ -160,6 +168,7 @@
     .main > div {
         width: 326px;
         height: 260px;
+        min-width: none;
     }
     .main > div > h3 {
         vertical-align: middle;

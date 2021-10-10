@@ -101,12 +101,13 @@
     margin-left: auto;
     letter-spacing: 0.2cm;
     background-color: var(--base-color);
-    color: white;
+    color: #535353;
+    font-weight: bold;
     border: none;
     outline: none;
-    box-shadow: 1px -2px 37px 16px rgba(255,215,0,0.69);
-    -webkit-box-shadow: 1px -2px 37px 16px rgba(255,215,0,0.69);
-    -moz-box-shadow: 1px -2px 37px 16px rgba(255,215,0,0.69);
+    /* box-shadow: 1px -2px 37px 16px rgb(71, 194, 224);
+    -webkit-box-shadow: 1px -2px 37px 16px rgb(71, 194, 224);
+    -moz-box-shadow: 1px -2px 37px 16px rgb(71, 194, 224); */
     cursor: pointer;
 }
 

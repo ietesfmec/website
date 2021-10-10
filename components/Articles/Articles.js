@@ -50,6 +50,20 @@ export default function Article({showFooter, allArticles}) {
             <main className = {styles.main}>
             
                 {articles && articles.map((article, i) => {
+                    // article[4] = article[4].slice(0,100)
+                    // let index = article[4].lastIndexOf('.')
+                    // if(index >= 0) article[4] = article[4].slice(0, index + 1)
+                    // else {
+                    //     index = article[4].lastIndexOf('?')
+                    //     if(index >= 0) article[4] = article[4].slice(0, index + 1)
+                    //     else {
+                    //         index = article[4].lastIndexOf('!')
+                    //         if(index >= 0) article[4] = article[4].slice(0, index + 1)
+                    //     }
+                    // }
+                    article[4] = article[4].slice(0,110)
+                    let index = article[4].lastIndexOf(' ')
+                    article[4] = article[4].slice(0, index + 1)
                     return (
                         <div key={i} className={`animate__animated animate__fadeInUp animate__faster`}>
                             <h3>"{article[1]}"</h3>
@@ -60,13 +74,13 @@ export default function Article({showFooter, allArticles}) {
                                 </div>
                                 <div>
                                     
-                                    <p><span></span>{article[4]}</p>
+                                    <p><span></span>{article[4]} ...</p>
                                 </div>
                             </section>
                         </div>
                     )
                 })}
-                <HashLoader color={color} loading={loading}/>
+                <HashLoader color={color} loading={articles.length < allArticles.length && loading}/>
             </main>
         </div>
     )

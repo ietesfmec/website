@@ -7,23 +7,51 @@ export default function Activity() {
     const init = [
         {
             index:0,
-            data:[sampleImage.src, 'Activity_A']
-        },
-        {
+            data: {
+                image: sampleImage.src,
+                title: 'Let’s Talk Etiquette!',
+                content:`Let's Talk Etiquette was a Pre-Event of Influx 2.0, conducted by IETE SF MEC in collaboration with IEEE MEC SB.
+                With personal anecdotes, tips and tricks, speaker Aravind R Menon, a Senior Marketing Specialist specialized in Tech Marketing, Content and Branding, joined us to explore the essentials of job interview etiquette like never before.
+                `
+            }
+        },{
             index:1,
-            data:[sampleImage.src, 'Activity_B']
+            data: {
+                image: sampleImage.src,
+                title: 'TechCon',
+                content:`With over 150+ first-year participants in an event that promoted community, fun, and learning, IETE SF MEC conducted TechCon, an event jam-packed with fun ice-breakers, mind-boggling quizzes, and thought-provoking discussions on the latest advancements in the engineering world.
+                `
+            }
         },{
             index:2,
-            data:[sampleImage.src, 'Activity_C']
+            data: {
+                image: sampleImage.src,
+                title: 'GigaHertz',
+                content:`A technical competition conducted by IETE SF MEC in collaboration with Excel MEC, GigaHertz was an exploration of problem-solving and designing solutions through quizzes, live circuit design, mentorship, and more! Participants explored domains ranging from Computer Science to basic Electrical and Electronics, and had an interactive, fun and exciting event.`
+            }
         },{
             index:3,
-            data:[sampleImage.src, 'Activity_D']
+            data: {
+                image: sampleImage.src,
+                title: 'Reverso',
+                content:`Delving into the world of debugging, coding and hardware assembly, Reverso is a Reverse Engineering based technical competition conducted by IETE SF MEC in collaboration with Excel MEC. In this exciting team event, participants are implored to dismantle everyday appliances to model, design and implement a new product from its components.`
+            }
         },{
             index:4,
-            data:[sampleImage.src, 'Activity_E']
+            data: {
+                image: sampleImage.src,
+                title: 'Re-Engineer Series',
+                content:`A webinar series with some of the industry’s best and brightest, the Re-Engineer Talk Series introduced students and technology enthusiasts to the booming opportunities of today's dynamic industry.
+                `
+            }
         },{
             index:5,
-            data:[sampleImage.src, 'Activity_F']
+            data: {
+                image: sampleImage.src,
+                title: 'Technical Writing Competitons!',
+                content:`With a chance to win exciting prizes and to be featured on the IETE SF MEC Medium Publication, the Technical Writing Competition provided an excellent opportunity for students to showcase writing skills and gain new knowledge on the most talked-about fields of Technology.
+                `
+            }
         }
     ];
     
@@ -100,7 +128,7 @@ export default function Activity() {
     }
 
     useEffect(() => {
-        makeInterval()
+        //makeInterval()
         return () => { 
             clearInterval(interval)
             clearTimeout(timeout)
@@ -121,11 +149,11 @@ export default function Activity() {
                 <main>
                     <div ref={el}>
                         <section>
-                            <img src={featured.data[0]}></img>
+                            <img src={featured.data.image}></img>
                         </section>
                         <section>
-                            <h1>{featured.data[1]}</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h1>{featured.data.title}</h1>
+                            <p>{featured.data.content}</p>
                         </section>
                     </div>
                     <ul>

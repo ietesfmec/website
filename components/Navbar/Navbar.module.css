@@ -59,6 +59,8 @@
 
 .active {
     background-color: var(--base-color);
+    color: #535353 !important;
+    font-weight: bold !important;
 }
 .active:hover {
     opacity: 1 !important;
