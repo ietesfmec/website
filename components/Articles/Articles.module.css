@@ -20,9 +20,7 @@
 }
 
 .main > span {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    
     position: absolute;
     bottom: 24px;
     margin-bottom: -15px;

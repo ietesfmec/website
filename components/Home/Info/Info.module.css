@@ -39,7 +39,7 @@
 }
 .main > div > p {
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 15px;
 }
 .main > div > span {
     position: absolute;
@@ -73,6 +73,10 @@
         'card1'
         'card2'
         'card3';  
+    }
+    .main > div > p {
+        margin-top: 10px;
+        font-size: 13px;
     }
     .main > div {
         padding-bottom: 45px;
