@@ -14,10 +14,10 @@ export default function Featured({featured}) {
         <div className = {styles.encloser}>
             <main className={styles.main}>
                 <section className={`animate__animated animate__fadeInLeft animate__fast`}>
-                <div>
-                    <Image loader={imageLoader} src={featured[3]} layout="fill"></Image>
-                </div>
-                    {/* <img src={featured[3]}></img> */}
+                    {/* <section>
+                        <Image loader={imageLoader} src={featured[3]} layout="fill"></Image>
+                    </section> */}
+                    <img src={featured[3]}></img> 
                     <span>{featured[1]}</span>
                 </section>
                 <section></section>
