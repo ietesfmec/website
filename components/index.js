@@ -10,3 +10,4 @@ export { default as OtherArticles } from './Articles/Articles';
 export { default as Galleria } from './Gallery/Gallery';
 export { default as Connect } from './Team/Connect/Connect';
 export { default as Members } from './Team/MembersSection';
+export { default as Info } from './Home/Info/Info';

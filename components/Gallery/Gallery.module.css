@@ -78,8 +78,7 @@
     display: grid;
     grid-template-areas: 
     'pic1 pic2 pic3 pic4 pic4'
-    'pic5 pic2 pic6 pic6 pic7';
-    
+    'pic5 pic2 pic6 pic6 pic7';  
 }
 .encloser > div {
     width: 470px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Activity, Footer, What } from '../components'
+import { Activity, Footer, What, Info } from '../components'
 
 //{`${styles.}`}
 
@@ -9,6 +9,7 @@ export default function Home() {
         <div>
             <Head></Head>
             <What/>
+            <Info/>
             <Activity/>
             <Footer/>
         </div>

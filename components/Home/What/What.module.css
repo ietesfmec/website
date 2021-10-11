@@ -36,6 +36,11 @@
     /* height: fit-content; */
   }
 
+  @media screen and (max-height: 1200px) and (max-width: 1000px) {
+    .half {
+      max-height: 60vw;
+    }
+  }
 
   @media screen and (max-width: 760px) {
     .container {
