@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './Topbar.module.css';
 import sampleImage from '../../public/sample.jpg';
 import animate from '../../hooks/animate';
+import logo from '../../public/logo.png';
 
 export default function Topbar() {
     const [sidebarOpen, setSidebarOpen] = useState(false)

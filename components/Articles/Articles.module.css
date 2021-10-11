@@ -121,6 +121,13 @@
     border-radius: 5px;
 }
 
+.cover {
+    background-image: url('../../public/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 @media screen and (max-width:986px) {
     .main {
         padding: 30px 10px;

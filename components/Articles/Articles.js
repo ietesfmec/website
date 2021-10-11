@@ -68,12 +68,11 @@ export default function Article({showFooter, allArticles}) {
                         <div key={i} className={`animate__animated animate__fadeInUp animate__faster`}>
                             <h3>"{article[1]}"</h3>
                             <section className={styles.row}>
-                                <div>
+                                <div className={styles.cover}>
                                     <Image loader={imageLoader} src={article[3]} layout="fill"></Image>
                                     <span>by {article[2]}</span>
                                 </div>
-                                <div>
-                                    
+                                <div>                   
                                     <p><span></span>{article[4]} ...</p>
                                 </div>
                             </section>
