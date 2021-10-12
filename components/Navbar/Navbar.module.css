@@ -65,6 +65,7 @@
 }
 .active:hover {
     opacity: 1 !important;
+    text-decoration: none;
 }
 
 @media screen and (max-width:500px) {
