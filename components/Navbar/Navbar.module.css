@@ -62,10 +62,11 @@
     background-color: var(--base-color);
     color: #535353 !important;
     font-weight: bold !important;
+    text-decoration: none !important;
 }
 .active:hover {
     opacity: 1 !important;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 @media screen and (max-width:500px) {
