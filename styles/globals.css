@@ -49,6 +49,6 @@ img {
 
 @media screen and (max-width:800px) {
   p {
-    font-size: medium !important;
+    font-size: 18px !important;
   };
 }

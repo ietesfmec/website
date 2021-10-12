@@ -16,8 +16,10 @@ export default function Navbar() {
 
     return (
         <div className={styles.outer + ` animate__animated animate__fadeInUp`}>
-            <section className={styles.image}>
-                <img src={sampleImage.src}></img>
+            <section>
+                <div className={styles.image}>
+                    <img src={logo.src}></img>
+                </div>
             </section>
             <main className={styles.inner}>
                 <ul>

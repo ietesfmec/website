@@ -1,10 +1,20 @@
 .encloser {
     padding: 30px;
-    background-color:aliceblue;
+}
+.encloser > h1 {
+    margin-bottom: 40px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: 0.05cm;
 }
 .main > div:nth-of-type(1) {
     grid-area: card1;
     margin: 0px 10px 0px 0px;
+    overflow-y: scroll;
+    max-height: 684px;
 }
 .main > div:nth-of-type(2) {
     grid-area: card2;
@@ -15,7 +25,7 @@
     margin: 10px 0px 0px 10px;
 }
 .main {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     min-height: 450px;
     display: grid;
@@ -34,8 +44,9 @@
     flex-direction: column; */
 }
 .main > div > h1 {
-    font-family: Calibri;
+    font-family: Mulish;
     font-size: 29px;
+    margin-bottom: 20px;
 }
 .main > div > p {
     margin-top: 10px;
@@ -67,7 +78,14 @@
 .main > div > span:hover {
     opacity: 0.7;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
+    .encloser {
+        padding-bottom: 0;
+    }
+    .encloser > h1 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
     .main {
         grid-template-areas: 
         'card1'
@@ -79,7 +97,7 @@
         font-size: 13px;
     }
     .main > div {
-        padding-bottom: 45px;
+        padding-bottom: 55px;
         border: none;
         margin: 0 !important;
         margin-top: 25px !important;
@@ -103,7 +121,7 @@
     .main > div > p {
         display: none;
     }
-    .main > div > p:first-of-type {
+    .main > div > p:nth-of-type(n+1) {
         display: block;
     }
     .main > div:nth-of-type(1) {

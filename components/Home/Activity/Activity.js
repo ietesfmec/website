@@ -9,49 +9,54 @@ export default function Activity() {
             index:0,
             data: {
                 image: sampleImage.src,
-                title: 'Let’s Talk Etiquette!',
-                content:`Let's Talk Etiquette was a Pre-Event of Influx 2.0, conducted by IETE SF MEC in collaboration with IEEE MEC SB.
-                With personal anecdotes, tips and tricks, speaker Aravind R Menon, a Senior Marketing Specialist specialized in Tech Marketing, Content and Branding, joined us to explore the essentials of job interview etiquette like never before.
+                title: 'Competitions',
+                content:`
+                All about fun and learning, competitions by IETE SF MEC include face-paced quizzes, live circuit design, virtual simulation, coding, hardware assembly and more!
                 `
             }
         },{
             index:1,
             data: {
                 image: sampleImage.src,
-                title: 'TechCon',
-                content:`With over 150+ first-year participants in an event that promoted community, fun, and learning, IETE SF MEC conducted TechCon, an event jam-packed with fun ice-breakers, mind-boggling quizzes, and thought-provoking discussions on the latest advancements in the engineering world.
+                title: 'Webinars and Talks',
+                content:`
+                Meet some of the industry’s best and brightest, and learn all about the booming opportunities of today's dynamic world of technology through our Webinars and Talks.
                 `
             }
         },{
             index:2,
             data: {
                 image: sampleImage.src,
-                title: 'GigaHertz',
-                content:`A technical competition conducted by IETE SF MEC in collaboration with Excel MEC, GigaHertz was an exploration of problem-solving and designing solutions through quizzes, live circuit design, mentorship, and more! Participants explored domains ranging from Computer Science to basic Electrical and Electronics, and had an interactive, fun and exciting event.`
+                title: 'Workshops',
+                content:`
+                With regular workshops conducted by IETE SF MEC, work with experts and gain hands-on experience with the most relevant and essential skills in your domain.
+                `
             }
         },{
             index:3,
             data: {
                 image: sampleImage.src,
-                title: 'Reverso',
-                content:`Delving into the world of debugging, coding and hardware assembly, Reverso is a Reverse Engineering based technical competition conducted by IETE SF MEC in collaboration with Excel MEC. In this exciting team event, participants are implored to dismantle everyday appliances to model, design and implement a new product from its components.`
-            }
-        },{
-            index:4,
-            data: {
-                image: sampleImage.src,
-                title: 'Re-Engineer Series',
-                content:`A webinar series with some of the industry’s best and brightest, the Re-Engineer Talk Series introduced students and technology enthusiasts to the booming opportunities of today's dynamic industry.
+                title: 'Articles',
+                content:`
+                We also have our very own IETE SF MEC Medium Publication, where we invite technology enthusiasts of all ages to write about the newest and most exciting innovations in the world today!
                 `
             }
-        },{
-            index:5,
-            data: {
-                image: sampleImage.src,
-                title: 'Technical Writing Competitons!',
-                content:`With a chance to win exciting prizes and to be featured on the IETE SF MEC Medium Publication, the Technical Writing Competition provided an excellent opportunity for students to showcase writing skills and gain new knowledge on the most talked-about fields of Technology.
-                `
-            }
+        // },{
+        //     index:4,
+        //     data: {
+        //         image: sampleImage.src,
+        //         title: 'Re-Engineer Series',
+        //         content:`A webinar series with some of the industry’s best and brightest, the Re-Engineer Talk Series introduced students and technology enthusiasts to the booming opportunities of today's dynamic industry.
+        //         `
+        //     }
+        // },{
+        //     index:5,
+        //     data: {
+        //         image: sampleImage.src,
+        //         title: 'Technical Writing Competitons!',
+        //         content:`With a chance to win exciting prizes and to be featured on the IETE SF MEC Medium Publication, the Technical Writing Competition provided an excellent opportunity for students to showcase writing skills and gain new knowledge on the most talked-about fields of Technology.
+        //         `
+        //     }
         }
     ];
     

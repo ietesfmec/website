@@ -23,26 +23,33 @@ export default function MembersList({id}) {
     
     var interval;
 
-    const el = useRef()
+    const e1 = useRef();
+    const e2 = useRef();
+
+    const findRef = (r1, r2) => {
+        if(window.matchMedia('(max-width: 720px)').matches) return r2;
+        return r1;
+    }
 
     const forwards = () => {
-        let t = featured.index;
-        if(t >=  init.length - 1)   t = -1
+        const el = findRef(e1, e2);
         animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
             animate(el.current, 'fadeInRight', 'fast')
         })
-        setFeatured(init[t+1])
+        setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
     }
     const backwards = () => {
-        let t = featured.index;
-        if(featured.index === 0)   t = init.length;
+        const el = findRef(e1, e2);
         animate(el.current, 'fadeOutRight', 'fast').then(()=>{
             animate(el.current, 'fadeInLeft', 'fast')
         })
-        setFeatured(init[t-1])
+        setFeatured(f => f.index === 0 ? init[init.length - 1] : init[f.index - 1])
     }
     const handleChange = (i) => e => {
         if(featured.index === i)    return;
+
+        const el = findRef(e1, e2);
+
         if(featured.index < i) {
             animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
                 animate(el.current, 'fadeInRight', 'fast')
@@ -59,11 +66,7 @@ export default function MembersList({id}) {
         clearInterval(interval)
         if(init.length === 0)   return;
         interval = setInterval(()=>{
-            animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
-                animate(el.current, 'fadeInRight', 'fast')
-            })
-            
-            setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
+            forwards();
         },3700 + (id*500))
     }
 
@@ -82,11 +85,11 @@ export default function MembersList({id}) {
                     <path d="M14 26.4L1.19995 13.6L14 0.800003" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             </div>      
-            <section className={styles.cards} ref={el}>
+            <section className={styles.cards} ref={e1}>
                 {
                     featured.data.map((member , i)=>{
                         return (
-                            <main key={i}>
+                            <main key={i} ref={e2}>
                                 <div>
                                     <img src={member[0]}></img>
                                 </div>

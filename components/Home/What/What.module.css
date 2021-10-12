@@ -7,6 +7,8 @@
     width: 50%;
     height: calc(100vh - 70px);
     max-height: 50vw;
+    min-height: 500px;
+    margin-bottom: 30px;
   }
   
   .sectionWhat {

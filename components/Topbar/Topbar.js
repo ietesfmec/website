@@ -37,7 +37,7 @@ export default function Topbar() {
     return (
         <div>
             <main className={styles.topbar}>
-                <img src={sampleImage.src}/>
+                <img src={logo.src}/>
                 <h3>IETE SF MEC</h3>
                 <span ref={hamburger} onClick={handleSidebar}>
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -51,10 +51,11 @@
     right: 60px;
 }
 .image > img {
-    width: 56px;
-    border-radius: 28px;
-    margin-top: -60px;
+    
+    border-radius: 33px;
+    margin-top: -30px;
     right: 30px;
+    transform: scale(1.5);
 }
 
 .active {

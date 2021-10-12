@@ -5,6 +5,7 @@
     margin-bottom: 40px;
     overflow: hidden;
     max-height: 50vw;
+    min-height: 500px;
   }
   .outer > h1 {
     font-family: Mulish;
@@ -93,7 +94,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 26px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     letter-spacing: 0.05cm;
   }
 
@@ -151,7 +152,7 @@
     }
     .container > main > div > section:nth-of-type(2) {
       height: fit-content;
-      min-height: 376px;
+      min-height: 230px;
       padding-bottom: 10px !important;
     }
     
