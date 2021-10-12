@@ -1,5 +1,6 @@
 .encloser {
     padding: 30px;
+    background-color:aliceblue;
 }
 .encloser > h1 {
     margin-bottom: 40px;
@@ -80,7 +81,7 @@
 }
 @media screen and (max-width: 800px) {
     .encloser {
-        padding-bottom: 0;
+        padding-bottom: 20px;
     }
     .encloser > h1 {
         margin-bottom: 0;
