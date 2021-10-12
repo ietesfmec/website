@@ -37,9 +37,13 @@
     width: 403px;
     min-width: 353px;
     display: flex;
-    
+    cursor: pointer;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.main > div:hover {
+    opacity: 0.8;
 }
 
 .main >div:nth-of-type(2n-1) {
@@ -89,6 +93,7 @@
     font-size: 24px;
     color: white;
     text-align: center;
+    padding: 0px 4px;
 }
 .row > div:nth-of-type(2) {
     width: 40%;
@@ -119,13 +124,6 @@
     height: 100%;
     background-color: var(--base-color);
     border-radius: 5px;
-}
-
-.cover {
-    background-image: url('../../public/logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 @media screen and (max-width:986px) {
@@ -177,7 +175,7 @@
     }
     .main > div > h3 {
         vertical-align: middle;
-        margin-top: 3px;
+        margin-top: 20px;
     }
     .row {
         align-items: center !important;

@@ -13,7 +13,7 @@ export default function What() {
                 <section className = {styles.half}>
                     <Topbar/>
                     <div className = {styles.sectionWhat}>
-                        <h1>What <br/> is <br/> IETE SF MEC?</h1>
+                        <h1>What is <br/> IETE SF MEC?</h1>
                         <p className = { `animate__animated animate__fadeInRight` }>
                             {/* The Institution of Electronics and Telecommunication Engineers (IETE) is a leading recognized professional society focused on the growth, development and empowerment of youth through technical education and skill development in all disciplines of engineering. */}
                             

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Articles.module.css';
-import sampleImage from '../../public/sample.jpg';
+import logo from '../../public/logo.png';
 import useScroll from '../../hooks/scroll';
 import { HashLoader } from 'react-spinners';
 import Image from 'next/image';
 
 export default function Article({showFooter, allArticles}) {
-    const [articles, setArticles] = useState(allArticles.slice(0, 2));
+    const [articles, setArticles] = useState(allArticles.slice(0, 6));
     const [loading, setLoading] = useState(false);
     var timeout;
     const color = '#14E4E4';
@@ -23,7 +23,7 @@ export default function Article({showFooter, allArticles}) {
                         window.removeEventListener('scroll', listener);
                         return prev;
                     }
-                    return [...prev, ...allArticles.slice(prev.length, prev.length+2)]
+                    return [...prev, ...allArticles.slice(prev.length, prev.length+4)]
                 });
                 setLoading(false)
                 clearTimeout(timeout)
@@ -40,8 +40,8 @@ export default function Article({showFooter, allArticles}) {
         })
     },[articles])
 
-    const imageLoader=({src})=>{
-        return src;
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
       }
     
     return(
@@ -50,30 +50,16 @@ export default function Article({showFooter, allArticles}) {
             <main className = {styles.main}>
             
                 {articles && articles.map((article, i) => {
-                    // article[4] = article[4].slice(0,100)
-                    // let index = article[4].lastIndexOf('.')
-                    // if(index >= 0) article[4] = article[4].slice(0, index + 1)
-                    // else {
-                    //     index = article[4].lastIndexOf('?')
-                    //     if(index >= 0) article[4] = article[4].slice(0, index + 1)
-                    //     else {
-                    //         index = article[4].lastIndexOf('!')
-                    //         if(index >= 0) article[4] = article[4].slice(0, index + 1)
-                    //     }
-                    // }
-                    article[4] = article[4].slice(0,110)
-                    let index = article[4].lastIndexOf(' ')
-                    article[4] = article[4].slice(0, index + 1)
                     return (
                         <div key={i} className={`animate__animated animate__fadeInUp animate__faster`}>
                             <h3>"{article[1]}"</h3>
                             <section className={styles.row}>
                                 <div className={styles.cover}>
-                                    <Image loader={imageLoader} src={article[3]} layout="fill"></Image>
+                                    <Image loader={imageLoader} src={article[3]} layout="fill" placeholder="blur" blurDataURL={logo.src}></Image>
                                     <span>by {article[2]}</span>
                                 </div>
                                 <div>                   
-                                    <p><span></span>{article[4]} ...</p>
+                                    <p><span></span>{article[4]}<br/>Read on!</p>
                                 </div>
                             </section>
                         </div>

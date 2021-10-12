@@ -1,23 +1,20 @@
 import React from 'react';
 import styles from './Featured.module.css';
 import Image from 'next/image';
-import sampleImage from '../../../public/sample.jpg';
+import logo from '../../../public/logo.png';
 import clapImage from '../../../public/clap.png';
 
 export default function Featured({featured}) {
 
-    const imageLoader=({src})=>{
-        return src;
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
       }
 
     return(
         <div className = {styles.encloser}>
             <main className={styles.main}>
-                <section className={`animate__animated animate__fadeInLeft animate__fast`}>
-                    {/* <section>
-                        <Image loader={imageLoader} src={featured[3]} layout="fill"></Image>
-                    </section> */}
-                    <img src={featured[3]}></img> 
+                <section className={styles.image + ` animate__animated animate__fadeInLeft animate__fast`}>
+                    <Image loader={imageLoader} src={featured[3]} layout="fill" placeholder="blur" blurDataURL={logo.src}></Image>
                     <span>{featured[1]}</span>
                 </section>
                 <section></section>

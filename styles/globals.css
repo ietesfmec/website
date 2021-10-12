@@ -47,7 +47,7 @@ img {
 }
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:760px) {
   p {
     font-size: 18px !important;
   };

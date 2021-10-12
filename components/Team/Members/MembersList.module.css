@@ -165,9 +165,9 @@
     border-radius: 8px;
     }
 
-    /* .cards > main > p {
-        margin-top: 0;
-    } */
+    .cards > main > p {
+        margin-bottom: 10px;
+    } 
 }
 
 @media screen and (max-width:440px) {

@@ -67,6 +67,13 @@
     opacity: 1 !important;
 }
 
+@media screen and (max-width:500px) {
+    .image > img {
+        margin-top: -36px;
+        transform: scale(1.45);
+    }   
+}
+
 @media screen and (max-width:370px) {
     .inner > ul > li {
         width: auto;

@@ -120,11 +120,6 @@
 @media screen and (max-width:800px) {
     .encloser {
         padding: 0 10px !important;
-    }
-}
-
-@media screen and (max-width:610px) {
-    .encloser {
         margin-top: 90px;
     }
 }

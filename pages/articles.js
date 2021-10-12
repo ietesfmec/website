@@ -17,6 +17,12 @@ export async function getStaticProps() {
                 data[i].push('<none>');
             }
         }
+        data[i][4] = data[i][4].slice(0, 110).trim()
+        let l = data[i][4].length;
+        let lastLetter = data[i][4][l-1];
+        if(lastLetter.toLowerCase() != lastLetter.toUpperCase()) {
+            data[i][4] += ' - '
+        }
     });
 
     data = data.reverse();

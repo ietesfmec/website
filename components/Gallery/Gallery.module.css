@@ -97,7 +97,7 @@
     }   
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
     .encloser {
         width: 100%;
        margin-top: 90px;
