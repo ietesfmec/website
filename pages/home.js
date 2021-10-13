@@ -11,7 +11,7 @@ export default function Home() {
             <What/>
             <Info/>
             <Activity/>
-            <Footer/>
+            <Footer secondary="true"/>
         </div>
     )
 }

@@ -151,7 +151,6 @@
         height: fit-content !important;
         padding: 30px 5px;
         max-height: none;
-        margin-top: 30px;
     }
     .main {
         flex-direction: column-reverse;

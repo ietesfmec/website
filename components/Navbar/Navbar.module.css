@@ -69,7 +69,7 @@
     text-decoration: none !important;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:800px) {
     .image > img {
         margin-top: -36px;
         transform: scale(1.45);
