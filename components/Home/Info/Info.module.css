@@ -53,7 +53,7 @@
 }
 .main > div > p {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 17px;
 }
 .main > div > span {
     position: absolute;
@@ -97,7 +97,8 @@
     }
     .main > div > p {
         margin-top: 10px;
-        font-size: 13px;
+        font-size: 14px;
+        display: none;
     }
     .main > div {
         padding-bottom: 55px;
@@ -123,9 +124,6 @@
     .main > div:nth-of-type(2n) > span {
         left: 0;
     } */
-    .main > div > p {
-        display: none;
-    }
     .main > div > p:nth-of-type(n+1) {
         display: block;
     }
