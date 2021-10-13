@@ -1,7 +1,6 @@
 .encloser {
     padding: 30px;
     padding-top: 60px;
-    background-color:#f1f1f1;
 }
 
 .encloser > h1 {
@@ -36,7 +35,7 @@
 }
 
 .main > div {
-    background-color: white;
+    background-color:rgb(241, 241, 241);
     border-left: 13px var(--base-color) solid;
     padding: 13px 15px;
     position: relative;

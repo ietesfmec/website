@@ -101,6 +101,7 @@
 @media screen and (max-width:950px) {
     .encloser {
         max-height: 60vw;
+        height: 100vw;
     }
     .main {
         padding-top: 0;
@@ -117,9 +118,9 @@
 }
 
 @media screen and (max-width:760px) {
-    .outer {
+    /* .outer {
         margin-top: 70px;
-    }
+    } */
     .encloser {
         max-height: 85vw;
     }
