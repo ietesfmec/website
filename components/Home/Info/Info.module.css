@@ -53,6 +53,7 @@
 }
 .main > div > p {
     margin-top: 10px;
+    font-size: 14px;
 }
 .main > div > span {
     position: absolute;
