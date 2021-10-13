@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Connect.module.css'
-import mecImage from '../../../public/mec.png';
 
 export default function Connect() {
     return (

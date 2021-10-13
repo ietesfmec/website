@@ -1,14 +1,21 @@
-import React from 'react'
-import styles from './What.module.css'
-import sampleImage from "../../../public/sample.jpg"
-import Topbar from '../../Topbar/Topbar'
+import React from 'react';
+import Image from 'next/image';
+import styles from './What.module.css';
+import filledLogo from '../../../public/logo_filled.png'
+import mecImage from '../../../public/mec.png';
+import Topbar from '../../Topbar/Topbar';
 
 export default function What() {
+    
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
+    }
+
     return (
         <div>
             <main className = {styles.container}>
-                <section className = {styles.half}>
-                    <img src={sampleImage.src}></img>
+                <section className = {styles.half + ' ' + styles.cover}>
+                
                 </section>
                 <section className = {styles.half}>
                     <Topbar/>

@@ -3,7 +3,7 @@
     width: 100vw;
     height: calc(100vh - 145px);
     max-height: 50vw;
-    background: url('../../../public/mec.png') center center;
+    background: url('../../../public/mec_aerial.jpg') center center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -111,16 +111,14 @@
         padding: 40px 150px;
     }
     .main > section > h1 {
-        margin-top: 0;
+        margin-top: 35px;
         margin-bottom: 0;
         line-height: 80px;
     }
 }
 
-@media screen and (max-width:760px) {
-    /* .outer {
-        margin-top: 70px;
-    } */
+/* @media screen and (max-width:800px) {
+    
     .encloser {
         max-height: 85vw;
     }
@@ -134,18 +132,19 @@
     .main > section > p {
         min-height: 80px;
     }
-}
+} */
 
-@media screen and (max-width:535px) {
+@media screen and (max-width:800px) {
     .encloser {
         min-height: 424px !important;
     }
     .main {
         height: 100%;
-        margin-top: 0;
+        margin-top: 35px;
         padding-bottom: 0;
     }
     .main > section {
+        background: rgba(26, 26, 26, 0.51);
         width: 100vw;
         padding: 0 15px;
         height: 100%;
@@ -155,7 +154,9 @@
         justify-content: center;
         
     }
-  
+    .main > section > span {
+        width: 300px;
+    }
     .main > section > div {
         max-width: 60%;
         margin-left: auto;

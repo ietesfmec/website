@@ -37,6 +37,15 @@
     line-height: 26px;
     /* height: fit-content; */
   }
+  .cover {
+    background: url('../../../public/mec.png') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .cover > div {
+    position: relative !important;
+    height: 100%;
+  }
 
   @media screen and (max-height: 1200px) and (max-width: 1000px) {
     .half {
