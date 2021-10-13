@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Footer.module.css';
-import sampleImage from '../../public/sample.jpg';
+import logo from '../../public/logo.png';
 import useScroll from '../../hooks/scroll';
 import animate from '../../hooks/animate';
 
@@ -24,7 +24,7 @@ export default function Footer({secondary}) {
             <main>
                 <section className={styles.social}>
                     <div>
-                        <img src={sampleImage.src}></img>
+                        <img src={logo.src}></img>
                         <h4>@2021 IETE-SF-MEC</h4>
                     </div>
                     <div>

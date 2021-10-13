@@ -70,6 +70,8 @@
     width: 42px;
     height: 42px;
     border-radius: 21px;
+    margin-bottom: -8px;
+    transform: scale(1.4);
 }
 
 .social > div > svg {
