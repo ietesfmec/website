@@ -12,6 +12,7 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;  
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -34,9 +35,15 @@ img {
   width: 100%;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
-  
+  user-select: none;  
 }
+
+@media screen and (max-width:1000px){
+  p {
+    font-size: smaller !important;
+  }  
+}
+
 
 :root {
   --base-color:#14E4E4
@@ -46,6 +53,3 @@ img {
   --animate-duration: 1.3s;
 }
 
-p {
-    font-size: 14px;
-};

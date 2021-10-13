@@ -98,6 +98,10 @@
     letter-spacing: 0.05cm;
   }
 
+  .container > main > div > section > p {
+    font-size: medium !important;
+  }
+
   .container > div {
       width: 51px;
       height: 83px;
