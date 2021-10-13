@@ -12,6 +12,7 @@
     justify-content: center;
     z-index: 0;
     position: relative;
+    overflow: auto;
 }
 .encloser > span {
     /* background-color: rgba(134, 247, 247, 0.5); */

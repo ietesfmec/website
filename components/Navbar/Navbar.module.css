@@ -55,7 +55,7 @@
     border-radius: 33px;
     margin-top: -30px;
     right: 30px;
-    transform: scale(1.5);
+    transform: scale(1.4);
     max-width: 60px;
 }
 
@@ -73,7 +73,7 @@
 @media screen and (max-width:800px) {
     .image > img {
         margin-top: -36px;
-        transform: scale(1.45);
+        transform: scale(1.3);
     }   
 }
 
