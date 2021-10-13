@@ -4,6 +4,7 @@
     padding: 100px 0;
     background-color: black;
     overflow: hidden;
+    z-index: -3;
 }
 .encloser > h2 {
     margin-left: 60px;
