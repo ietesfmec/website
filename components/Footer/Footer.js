@@ -49,25 +49,25 @@ export default function Footer({secondary}) {
                     <div>
                         <h4>Contact:</h4>
                         <div>
-                            <h4>John Doe, Position</h4>
-                            <h4>+91 1234567890</h4>
+                            <h4>Sangeeth S <br/> Chairman</h4>
+                            <h4>+91 9962983325</h4>
                         </div>
                         <div>
-                            <h4>John Doe, Position</h4>
-                            <h4>+91 1234567890</h4>
+                            <h4>Jerom Joseph Joy <br/> Vice Chairman</h4>
+                            <h4>+91 9846745061</h4>
                         </div>
                     </div>
                     <div>
                     <h4>Location:</h4>
                         <div>
-                            <h4>Addr.</h4>
-                            <h4>MEC</h4>
+                            <h4>Government Model Engineering College</h4>
+                            <h4>Thrikkakara <br/> Kochi</h4>
                         </div>
                     </div>
                     <div>
                     <h4>Email:</h4>
                         <div>
-                            <h4>email@gmail.com</h4>
+                            <h4>ietestudentsforum.mec2019@gmail.com</h4>
                         </div>
                     </div>
                     <span style={secondary ? { backgroundColor: c1 } : { backgroundColor: c2 }}></span>

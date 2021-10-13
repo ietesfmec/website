@@ -2,8 +2,7 @@ import React from 'react';
 import styles from './Upcoming.module.css';
 import sampleImage from '../../../public/sample.jpg';
 
-export default function Upcoming() {
-    const upcoming = [1,2]
+export default function Upcoming({upcoming}) {
     return (
         <div className={styles.encloser}>
             <main className={styles.main}>

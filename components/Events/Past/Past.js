@@ -4,9 +4,9 @@ import sampleImage from '../../../public/sample.jpg';
 import animate from '../../../hooks/animate';
 import useScroll from '../../../hooks/scroll';
 
-export default function Past({showFooter}) {
-    const all = [1,2,3,4,5,6,7,8,9]
-    const [past, setPast] = useState([...all.slice(0,3)])
+export default function Past({showFooter, events}) {
+    // const all = [1,2,3,4,5,6,7,8,9]
+    const [past, setPast] = useState([...events.slice(0,3)])
     const [index, setIndex] = useState(0)
     var timeout;
 
@@ -32,7 +32,7 @@ export default function Past({showFooter}) {
     const forwards = () => {
         if(timeout) return;
         
-        if(all.length - index < 3 || index+3 >= all.length)   return;
+        if(events.length - index < 3)   return;
         
         animate(e1.current, 'fadeOutBottomRight', 'slow').then(()=>{
             animate(e1.current, 'fadeInTopLeft', 'faster')
@@ -73,7 +73,7 @@ export default function Past({showFooter}) {
     },[])
 
     useEffect(()=>{
-        setPast([...all.slice(index, index+3)])
+        setPast([...events.slice(index, index+3)])
         return (()=>{
             clearTimeout(timeout)
         })
@@ -88,7 +88,7 @@ export default function Past({showFooter}) {
                             <path d="M1.59995 14L14.4 1.19995L27.2 14" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </span>
-                    {past && past.map((_, i) => {
+                    {past && past.map((event, i) => {
                         let r;
                         if(i===0)   r = e1;
                         if(i===1)   r = e2;
@@ -99,27 +99,27 @@ export default function Past({showFooter}) {
                             <img src={sampleImage.src}></img>
                             <span>
                                 <h3>Special Mentions:</h3>
-                                <h5>John Doe, AB{_}C</h5>
-                                <h5>Jane Doe, AB{_}C</h5>
-                                <h5>Jack Doe, AB{_}C</h5>
+                                <h5>{event[3]}</h5>
+                                <h5>{event[4]}</h5>
+                                <h5>{event[5]}</h5>
                             </span>
                         </section>
                         <section className={styles.details}>
                             <span>
                                 <h3>Special {i === 1 ? '' : <br/>} Mentions:</h3>
-                                <h5>John Doe, AB{_}C</h5>
-                                <h5>Jane Doe, AB{_}C</h5>
-                                <h5>Jack Doe, AB{_}C</h5>
+                                <h5>{event[3]}</h5>
+                                <h5>{event[4]}</h5>
+                                <h5>{event[5]}</h5>
                             </span>
                             <div>
-                                <h3>NAME</h3>
-                                <p>Labore mollit id non culpa magna aliquip nulla anim magna. Commodo exercitation sunt sint sit irure anim nostrud laborum.</p>
+                                <h3>{event[0]}</h3>
+                                <p>{event[1]}</p>
                             </div>
                         </section>
                     </div>
                         )
                     })}
-                    <span onClick={forwards} disabled={all.length - index < 3 || index+3 >= all.length}>
+                    <span onClick={forwards} disabled={events.length - index < 3 || index+3 >= events.length}>
                         <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.59995 1.19995L14.3999 14L27.2 1.19995" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
