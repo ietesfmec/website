@@ -32,9 +32,9 @@
   .sectionWhat > p {
     margin-top: 50px;
     border-left: 8px solid #14E4E4;
-    width: 80%;
+    width: 85%;
     padding-left: 20px;
-    /* font-size: 18px; */
+    font-size: 18px !important; 
     /* height: fit-content; */
   }
 
