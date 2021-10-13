@@ -44,7 +44,7 @@
     justify-content: center;
     flex-direction: column; */
     overflow-y: scroll;
-    max-height: 684px;
+    max-height: 584px;
 }
 .main > div > h1 {
     font-family: Mulish;
@@ -53,7 +53,6 @@
 }
 .main > div > p {
     margin-top: 10px;
-    font-size: 14px !important;
 }
 .main > div > span {
     position: absolute;

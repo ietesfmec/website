@@ -46,9 +46,6 @@ img {
   --animate-duration: 1.3s;
 }
 
-
-@media screen and (max-width:760px) {
-  p {
-    font-size: 14px !important;
-  };
-}
+p {
+    font-size: 14px;
+};

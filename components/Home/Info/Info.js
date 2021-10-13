@@ -22,7 +22,7 @@ export default function Info() {
                     <button onClick={()=>setText(prev =>
                     <>
                     {prev}
-                        <>
+                        
                         <p>The Institution provides leadership in Scientific and Technical areas of direct importance to the national development and economy. Government of India has recognised IETE as a Scientific and Industrial Research Organization (SIRO) and also notified as an educational Institution of national eminence. The objectives of IETE focus on advancing electro-technology. IETE conducts and sponsors technical meetings, conferences, symposia, and exhibitions all over India, publishes technical journals and provides continuing education as well as career advancement opportunities to its members.</p>
                         <br/>
                         <p>IETE also plays an important role in Skill India initiative of the Govt. IETE has
@@ -32,7 +32,7 @@ export default function Info() {
                         the field of Fibre Optics & Solar Panels, which are being diversified to many
                         more job roles.
                         </p>
-                        </>
+                        
                     </>
                     )}>READ MORE</button>
                 </div>
