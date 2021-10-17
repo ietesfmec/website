@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './Gallery.module.css';
 import sampleImage from '../../public/sample.jpg';
+import logo from '../../public/logo.png';
 import useScroll from '../../hooks/scroll';
 import { HashLoader } from 'react-spinners';
 
@@ -43,6 +45,10 @@ export default function Gallery({showFooter}) {
         })
     },[sections])
 
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
+    }
+
     return (
         <div className={styles.encloser} ref={el}>
         <h1>GALLERY</h1>
@@ -54,34 +60,13 @@ export default function Gallery({showFooter}) {
                 <p>Est amet et officia cupidatat magna mollit. Nisi anim mollit aliquip ex aute. Consip proquip non. In aliquip consectetur ea ad deserunt aliqua consequat.</p>
             </section>
             <section className={styles.photos}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                {/* <div>
-                    <img src={sampleImage.src}/>
-                </div>
-                <div>
-                    <img src={sampleImage.src}/>
-                </div>
-                <div>
-                    <img src={sampleImage.src}/>
-                </div>
-                <div>
-                    <img src={sampleImage.src}/>
-                </div>
-                <div>
-                    <img src={sampleImage.src}/>
-                </div>
-                <div>
-                    <img src={sampleImage.src}/>
-                </div>
-                <div>
-                    <img src={sampleImage.src}/>
-                </div> */}
+            { [1, 2, 3, 4, 5, 6, 7].map((_, i) => {
+                return (
+                    <div>
+                        <Image loader={imageLoader} layout="fill" src={sampleImage} placeholder="blur" blurDataURL={logo.src}></Image>
+                    </div>
+                )})
+            }
             </section>
         </main>
             )

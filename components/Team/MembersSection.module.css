@@ -5,7 +5,6 @@
     background-color: black;
     overflow: hidden;
     z-index: -3;
-    overflow: hidden;
 }
 .encloser > h2 {
     margin-left: 60px;

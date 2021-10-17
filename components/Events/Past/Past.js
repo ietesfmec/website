@@ -70,31 +70,42 @@ export default function Past({showFooter, events}) {
     }
     useEffect(()=>{
         listener()
+        e2.current.classList.add(styles.active)
     },[])
 
     useEffect(()=>{
-        setPast([...events.slice(index, index+3)])
+        if(events.length - index < 3)
+            setPast([...events.slice(events.length - 3, events.length)])
+        else setPast([...events.slice(index, index + 3)])
         return (()=>{
             clearTimeout(timeout)
         })
     }, [index])
 
+    const handleActive = (ref) => (e) => {
+        e1.current.classList.remove(styles.active);
+        e2.current.classList.remove(styles.active);
+        e3.current.classList.remove(styles.active);
+        ref.current.classList.add(styles.active);
+    }
+
     return (
         <div className={styles.encloser}>
                     <h1>Past Events</h1>
-                    <main ref={el} className={styles.main}>
+                    <div className={styles.container}>
                     <span onClick={backwards} disabled={index < 3}>
                         <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.59995 14L14.4 1.19995L27.2 14" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </span>
+                    <main ref={el} className={styles.main}>
                     {past && past.map((event, i) => {
                         let r;
                         if(i===0)   r = e1;
                         if(i===1)   r = e2;
                         if(i===2)   r = e3;
                         return (
-                            <div ref={r} className={styles.past + ' ' + (i === 1 ? styles.active : '')} key={i}>
+                            <div ref={r} onClick={handleActive(r)} className={styles.past} key={i}>
                         <section className={styles.cover}>
                             <img src={sampleImage.src}></img>
                             <span>
@@ -119,12 +130,13 @@ export default function Past({showFooter, events}) {
                     </div>
                         )
                     })}
+                    </main>
                     <span onClick={forwards} disabled={events.length - index < 3 || index+3 >= events.length}>
                         <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.59995 1.19995L14.3999 14L27.2 1.19995" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </span>
-                    </main>
+                    </div>
         
         </div>
     )

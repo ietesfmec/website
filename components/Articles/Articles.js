@@ -42,7 +42,7 @@ export default function Article({showFooter, allArticles}) {
 
     const imageLoader=({src, width})=>{
         return `${src}?w=${width}`;
-      }
+    }
     
     return(
         <div className={styles.encloser} ref={el}>

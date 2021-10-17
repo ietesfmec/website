@@ -3,31 +3,27 @@ import styles from './MembersList.module.css';
 import sampleImage from '../../../public/sample.jpg';
 import animate from '../../../hooks/animate';
 
-export default function MembersList({id}) {
+export default function MembersList({id, members}) {
     const init = [
         {
             index:0,
-            data:[
-                [sampleImage.src, 'John Doe'], [sampleImage.src, 'Jane Doe']
-            ]
+            data: [...members.slice(0, 2)]
         },
         {
             index:1,
-            data:[
-                [sampleImage.src, 'Jack Doe'], [sampleImage.src, 'Jill Doe']
-            ]
+            data:[...members.slice(2, 4)]
         }
     ];
     
     const [featured, setFeatured] = useState(init[0])
     
-    var interval;
+    var interval, timeout;
 
     const e1 = useRef();
     const e2 = useRef();
 
     const findRef = (r1, r2) => {
-        if(window.matchMedia('(max-width: 720px)').matches) return r2;
+        if(window.matchMedia('(max-width: 720px)').matches) return r1; //r2;
         return r1;
     }
 
@@ -36,21 +32,29 @@ export default function MembersList({id}) {
         animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
             animate(el.current, 'fadeInRight', 'fast')
         })
-        setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
+        timeout = setTimeout(()=>{
+            setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
+            clearTimeout(timeout)
+        }, 1000)
     }
     const backwards = () => {
         const el = findRef(e1, e2);
         animate(el.current, 'fadeOutRight', 'fast').then(()=>{
             animate(el.current, 'fadeInLeft', 'fast')
         })
-        setFeatured(f => f.index === 0 ? init[init.length - 1] : init[f.index - 1])
+        
+        timeout = setTimeout(()=>{
+            setFeatured(f => f.index === 0 ? init[init.length - 1] : init[f.index - 1])
+            clearTimeout(timeout)
+        }, 1000)
     }
-    const handleChange = (i) => e => {
-        if(featured.index === i)    return;
+    const handleChange = (i, j) => e => {
+        console.log(i+1, j+1)
+        if(featured.index === j)    return;
 
         const el = findRef(e1, e2);
 
-        if(featured.index < i) {
+        if(featured.index < j) {
             animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
                 animate(el.current, 'fadeInRight', 'fast')
             })
@@ -59,7 +63,10 @@ export default function MembersList({id}) {
                 animate(el.current, 'fadeInLeft', 'fast')
             })
         }
-        setFeatured(init[i])
+        timeout = setTimeout(()=>{
+            setFeatured(init[j])
+            clearTimeout(timeout)
+        }, 1000)
     }
 
     function makeInterval() {
@@ -67,14 +74,16 @@ export default function MembersList({id}) {
         if(init.length === 0)   return;
         interval = setInterval(()=>{
             forwards();
-        },3700 + (id*500))
+        },5700 //+ (id*500)
+        )
     }
 
     useEffect(() => {
         if(id > 0)
-            makeInterval()
+            //makeInterval()
         return () => { 
             clearInterval(interval)
+            clearTimeout(timeout)
         }
     },[featured])
 
@@ -87,17 +96,18 @@ export default function MembersList({id}) {
             </div>      
             <section className={styles.cards} ref={e1}>
                 {
-                    featured.data.map((member , i)=>{
+                    featured && featured.data && featured.data.map((member , i)=>{
+                    
                         return (
                             <main key={i} ref={e2}>
                                 <div>
-                                    <img src={member[0]}></img>
+                                    <img src={sampleImage.src}></img>
                                 </div>
-                                <p>Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur. Sint duis  deserunt elit irure.</p>
-                                <h4>{member[1].toUpperCase()}, POSITION</h4>
+                                <p>Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur - {member.position.toUpperCase()}</p>
+                                <h4>{member.name.toUpperCase()}</h4>
                                 <ul>
-                                {init && init.map((_, i) => {
-                                    return <li onClick={handleChange(i)} className={ featured.index === i ? styles.active:''} key={i}></li>
+                                {id && i && featured.data.map((_, j) => {
+                                    return <li onClick={handleChange(i, j)} className={ featured.index === j ? styles.active:''} key={j}></li>
                                 })}
                                 </ul>
                             </main>

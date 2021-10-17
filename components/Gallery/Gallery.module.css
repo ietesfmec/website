@@ -40,6 +40,7 @@
 }
 .photos > div {
     background-color: #C4C4C4;
+    position: relative;
     
 }
 .photos > div:nth-of-type(1) {
@@ -89,6 +90,9 @@
     border-radius: 3px;
     margin-bottom: 30px;
     margin-top: -20px;
+}
+.photos > div > div {
+    position: absolute;
 }
 
 @media screen and (max-width: 1100px) {

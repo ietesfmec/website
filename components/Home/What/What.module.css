@@ -37,14 +37,17 @@
     line-height: 26px;
     /* height: fit-content; */
   }
-  .cover {
+  /* .cover {
     background: url('../../../public/mec.png') center center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
   .cover > div {
     position: relative !important;
     height: 100%;
+  }
+  .cover > div > img {
+    object-fit: cover;
   }
 
   @media screen and (max-height: 1200px) and (max-width: 1000px) {

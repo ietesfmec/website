@@ -63,9 +63,13 @@
     margin-top: -80px;
     background-color: #C4C4C4;
 }
+.cards > main > h4 {
+    text-align: center;
+}
 .cards > main > p {
     text-align: center;
     max-width: 420px;
+    min-width: 260px;
     margin-bottom: 20px;
 }
 
