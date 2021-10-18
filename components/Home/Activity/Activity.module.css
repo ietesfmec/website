@@ -99,7 +99,7 @@
   }
 
   .container > main > div > section > p {
-    font-size: medium !important;
+    line-height: 24px;
   }
 
   .container > div {

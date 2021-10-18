@@ -13,15 +13,15 @@
     line-height: 55px;
     letter-spacing: 0.05cm;
 }
-.main > div:nth-of-type(1) {
+.main > section:nth-of-type(1) {
     grid-area: card1;
     margin: 0px 10px 0px 0px;
 }
-.main > div:nth-of-type(2) {
+.main > section:nth-of-type(2) {
     grid-area: card2;
     margin: 0px 0px 10px 10px;
 }
-.main > div:nth-of-type(3) {
+.main > section:nth-of-type(3) {
     grid-area: card3;
     margin: 10px 0px 0px 10px;
 }
@@ -35,27 +35,32 @@
     'card1 card3';  
 }
 
-.main > div {
+.main > section {
     background-color:white;
     border-left: 13px var(--base-color) solid;
     padding: 13px 15px;
     position: relative;
+    min-height: 248px;
+    width: 43vw;
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
-    overflow-y: scroll;
-    max-height: 584px;
+    
 }
-.main > div > h1 {
+.main > section > h1 {
     font-family: Mulish;
     font-size: 29px;
     margin-bottom: 20px;
 }
-.main > div > p {
+.main > section > div {
+    overflow-y: scroll;
+    max-height: 584px;
+}
+.main > section > div > p {
     margin-top: 10px;
     line-height: 24px;
 }
-.main > div > span {
+.main > section > span {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -64,7 +69,7 @@
     background-color: var(--base-color);
     cursor: pointer;
 }
-.main > div > button {
+.main > section > button {
     margin-top: 25px;
     width: 120px;
     height: 34px;
@@ -72,13 +77,13 @@
     border: none;
     color: #535353;
     font-weight: bold;
-    font-family: 'Mulish';
     cursor: pointer;
+    font-family: 'Mulish';
 }
-.main > div > button:hover {
+.main > section > button:hover {
     opacity: 0.7;
 }
-.main > div > span:hover {
+.main > section > span:hover {
     opacity: 0.7;
 }
 @media screen and (max-width: 1000px) {
@@ -92,38 +97,39 @@
         'card2'
         'card3';  
     }
-    .main > div > p {
+    .main > section > div > p {
         margin-top: 10px;
         display: none;
     }
-    .main > div {
+    .main > section {
         padding-bottom: 55px;
         border: none;
+        width: auto;
         margin: 0 !important;
         margin-top: 25px !important;
         max-height: fit-content;
         overflow-y: visible;
     }
-    /* .main > div:nth-of-type(2n+1) {
+    /* .main > section:nth-of-type(2n+1) {
         border-left: 13px var(--base-color) solid;
     }
-    .main > div:nth-of-type(2n) {
+    .main > section:nth-of-type(2n) {
         border-right: 13px var(--base-color) solid;
     }
-    .main > div > span {
+    .main > section > span {
         left: none;
         right: none;
     }
-    .main > div:nth-of-type(2n+1) > span {
+    .main > section:nth-of-type(2n+1) > span {
         right: 0;
     }
-    .main > div:nth-of-type(2n) > span {
+    .main > section:nth-of-type(2n) > span {
         left: 0;
     } */
-    .main > div > p:nth-of-type(n+1) {
+    .main > section > div > p:nth-of-type(n+1) {
         display: block;
     }
-    .main > div:nth-of-type(1) {
+    .main > section:nth-of-type(1) {
         padding-bottom: 20px;
     }
 }
