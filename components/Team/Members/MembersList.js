@@ -1,30 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './MembersList.module.css';
-import sampleImage from '../../../public/sample.jpg';
+import logo from '../../../public/logo.png';
 import animate from '../../../hooks/animate';
 
 export default function MembersList({id, members}) {
-    // const init = [
-    //     {
-    //         index:0,
-    //         data: [...members.slice(0, 2)]
-    //     },
-    //     {
-    //         index:1,
-    //         data: [...members.slice(2, 4)]
-    //     },
-    //     {
-    //         index:3,
-    //         data: [...members.slice(4, 6)]
-    //     },
-    //     {
-    //         index:4,
-    //         data: [...members.slice(6, 8)]
-    //     },
-    // ];
+    
     const init = members;
-    console.log(members)
     
     const [featured, setFeatured] = useState(init[0])
     
@@ -90,7 +72,6 @@ export default function MembersList({id, members}) {
     }
 
     useEffect(() => {
-        console.log(members)
         if(id > 0)
             //makeInterval()
         return () => { 
@@ -113,12 +94,12 @@ export default function MembersList({id, members}) {
                         return (
                             <main key={i} ref={e2}>
                                 <div className={styles.cover}>
-                                    <Image src={member.pic} loading="eager" blurDataURL={sampleImage.src} placeholder="blur" layout="fill"></Image>
+                                    <Image src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>
                                 <p>{member.content ? member.content : `${member.position.toUpperCase()}`}</p>
                                 <h4>{member.name.toUpperCase()}</h4>
                                 <ul>
-                                {id && i && members.map((_, j) => {
+                                {members.map((_, j) => {
                                     return <li onClick={handleChange(i, j)} className={ featured.index === j ? styles.active:''} key={j}></li>
                                 })}
                                 </ul>

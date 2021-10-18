@@ -139,8 +139,8 @@ export default function MembersSection() {
             pic: Ananya
         }
     ]
-    const [members, setMembers] = useState([])
-    const [type, setType] = useState(1)
+    const [allMembers, setAllMembers] = useState([])
+    const [type, setType] = useState(2)
     const format = (type) => {
         const x = [];
         let k = 0;
@@ -157,26 +157,20 @@ export default function MembersSection() {
                 x.push(y);
             }
         } else {
-            for(let i = 0; i < 2; i++) {
+            for(let i = 0; i < 5; i++) {
                 const y = [];
-                for(let j = 0; j < 2; j++) {
-                    if(i === 0) {
-                        y.push({
-                            index: j,
-                            data: [team[k++], team[k++] ]
-                        });
-                        break;
-                    }
+                for(let j = 0; j < 4; j++) {
                     y.push({
                         index: j,
-                        data: [team[k++], team[k++], team[k++], team[k++], team[k++], team[k++]]
+                        data: [team[k++]]
                     });
+
+                    if(i === 0 && j === 1) break;
                 }
                 x.push(y);
             }
         }
-        console.log(x)
-        setMembers(x)
+        setAllMembers(x)
     }
 
     const listener = () => {
@@ -185,16 +179,17 @@ export default function MembersSection() {
     }
     
     useEffect(()=>{
+        console.log("hey")
         format(type)
     },[type])
 
-    // useEffect(()=>{
-    //     listener();
-    //     window.addEventListener('resize', listener)
-    //     return (()=>{
-    //         window.removeEventListener('resize', listener)
-    //     })
-    // }, [])
+    useEffect(()=>{
+        listener();
+        window.addEventListener('resize', listener)
+        return (()=>{
+            window.removeEventListener('resize', listener)
+        })
+    }, [])
 
     return (
         <div>
@@ -202,9 +197,9 @@ export default function MembersSection() {
                 <h2>MEET THE TEAM</h2>
                 <main className={styles.main}>
                     {
-                        members.map((members,i)=> {
+                        allMembers.map((members,i)=> {
                             return (
-                                <MembersList key={i} id={i} members={members}/>
+                                <MembersList key={Math.E*Math.random()*9876 + ''} id={i} members={members}/>
                             )
                         })
                     }

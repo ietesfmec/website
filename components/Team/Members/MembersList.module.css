@@ -108,8 +108,9 @@
 @media screen and (max-width:720px) {
     .main {
         padding: 0 15px;
-        height: fit-content;
-        margin-top: 30px;
+        /* height: fit-content;
+        margin-top: 30px; */
+        margin-top: 150px;
         margin-bottom: 0;
     
     }
@@ -144,13 +145,13 @@
     }
 
     .cards > main > ul > li {
-    list-style: none;
-    display: inline-block;
-    background-color: #f1f1f1;
-    height: 11px;
-    width: 11px;
-    margin: 0 5px;
-    border-radius: 8px;
+        list-style: none;
+        display: inline-block;
+        background-color: #f1f1f1;
+        height: 11px;
+        width: 11px;
+        margin: 0 5px;
+        border-radius: 8px;
     }
 
     .cards > main > p {
