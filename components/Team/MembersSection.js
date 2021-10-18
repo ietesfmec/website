@@ -179,7 +179,6 @@ export default function MembersSection() {
     }
     
     useEffect(()=>{
-        console.log("hey")
         format(type)
     },[type])
 
