@@ -5,16 +5,26 @@ import sampleImage from '../../../public/sample.jpg';
 import animate from '../../../hooks/animate';
 
 export default function MembersList({id, members}) {
-    const init = [
-        {
-            index:0,
-            data: [...members.slice(0, 2)]
-        },
-        {
-            index:1,
-            data:[...members.slice(2, 4)]
-        }
-    ];
+    // const init = [
+    //     {
+    //         index:0,
+    //         data: [...members.slice(0, 2)]
+    //     },
+    //     {
+    //         index:1,
+    //         data: [...members.slice(2, 4)]
+    //     },
+    //     {
+    //         index:3,
+    //         data: [...members.slice(4, 6)]
+    //     },
+    //     {
+    //         index:4,
+    //         data: [...members.slice(6, 8)]
+    //     },
+    // ];
+    const init = members;
+    console.log(members)
     
     const [featured, setFeatured] = useState(init[0])
     
@@ -50,7 +60,7 @@ export default function MembersList({id, members}) {
         }, 1000)
     }
     const handleChange = (i, j) => e => {
-        console.log(i+1, j+1)
+
         if(featured.index === j)    return;
 
         const el = findRef(e1, e2);
@@ -105,10 +115,10 @@ export default function MembersList({id, members}) {
                                 <div className={styles.cover}>
                                     <Image src={member.pic} loading="eager" blurDataURL={sampleImage.src} placeholder="blur" layout="fill"></Image>
                                 </div>
-                                <p>Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur - {member.position.toUpperCase()}</p>
+                                <p>{member.content ? member.content : `${member.position.toUpperCase()}`}</p>
                                 <h4>{member.name.toUpperCase()}</h4>
                                 <ul>
-                                {id && i && featured.data.map((_, j) => {
+                                {id && i && members.map((_, j) => {
                                     return <li onClick={handleChange(i, j)} className={ featured.index === j ? styles.active:''} key={j}></li>
                                 })}
                                 </ul>

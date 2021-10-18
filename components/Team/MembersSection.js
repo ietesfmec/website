@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './MembersSection.module.css';
 import MembersList from './Members/MembersList';
 
-import sampleImg from '../../public/sample.jpg';
 import Navnit from '../../public/team/navnit.jpg';
 import Nikhil from '../../public/team/nikhil.jpg';
 import Joann from '../../public/team/joann.jpg';
@@ -112,7 +111,7 @@ export default function MembersSection() {
         {
             name: 'Nikhil George Mathew',
             position: 'Web Head',
-            content: '',
+            content: 'Rome was not built in a day. Neither was this website :)',
             pic: Nikhil
         },
         {
@@ -140,19 +139,63 @@ export default function MembersSection() {
             pic: Ananya
         }
     ]
-    const members = [
-        [
-            team[0], team[1]
-    ], [
-        team[2], team[3], team[4], team[5]
-    ], [
-        team[6], team[7], team[8], team[9]
-    ], [
-        team[10], team[11], team[12], team[13]
-    ], [
-        team[14], team[15], team[16], team[17]
-    ] 
-]
+    const [members, setMembers] = useState([])
+    const [type, setType] = useState(1)
+    const format = (type) => {
+        const x = [];
+        let k = 0;
+        if(type === 1) {
+            for(let i = 0; i < 5; i++) {
+                const y = [];
+                for(let j = 0; j < 2; j++) {
+                    y.push({
+                        index: j,
+                        data: [team[k++], team[k++]]
+                    });
+                if(j === 0 && i === 0) break;
+                }
+                x.push(y);
+            }
+        } else {
+            for(let i = 0; i < 2; i++) {
+                const y = [];
+                for(let j = 0; j < 2; j++) {
+                    if(i === 0) {
+                        y.push({
+                            index: j,
+                            data: [team[k++], team[k++] ]
+                        });
+                        break;
+                    }
+                    y.push({
+                        index: j,
+                        data: [team[k++], team[k++], team[k++], team[k++], team[k++], team[k++]]
+                    });
+                }
+                x.push(y);
+            }
+        }
+        console.log(x)
+        setMembers(x)
+    }
+
+    const listener = () => {
+        if(window.matchMedia('(max-width: 720px)').matches) setType(2)
+        else setType(1)
+    }
+    
+    useEffect(()=>{
+        format(type)
+    },[type])
+
+    // useEffect(()=>{
+    //     listener();
+    //     window.addEventListener('resize', listener)
+    //     return (()=>{
+    //         window.removeEventListener('resize', listener)
+    //     })
+    // }, [])
+
     return (
         <div>
             <div id="team" className={styles.encloser}>

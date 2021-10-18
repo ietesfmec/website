@@ -38,12 +38,12 @@
     align-items: center;
     
 }
-
 .cards {
     width: 100%;
 }
 .cards > main {
     max-width: calc((100% / 2) - 20px);
+    width: 40vw;
     height: 245px;
     background-color: white;
     border-bottom: 15px solid var(--base-color);
@@ -82,24 +82,22 @@
 .cover > div > img {
     object-fit: cover;
 }
-
 .active {
     background: var(--base-color) !important;
     height: 14px !important;
     width: 14px !important;
     border-radius: 14px !important;
-  }
+}
 
 @media screen and (max-width:1000px) {
     .main {
-        margin-top: 200px;
         height: 280px;
     }
     .main > div {
         min-width: 80px;
     }
     .cards > main {
-        height: 280px;
+        height: 210px;
     }
     .cards > main > p {
         margin-top: 10px;
@@ -115,7 +113,7 @@
         height: 300px;
     }
     .cards > main {
-        height: 300px;
+        height: 280px;
     }
    
 }
@@ -125,7 +123,7 @@
         height: 320px;
     }
     .cards > main {
-        height: 320px;
+        height: 200px;
     }   
 }
 
@@ -147,9 +145,10 @@
     }
     .cards > main {
         max-width: 600px;
-        height: 250px;
+        height: 200px;
         margin-left: 10px;
         margin-right: 10px;
+        width: 80vw;
     }
     .cards > main:first-of-type {
         margin-top: 120px;
@@ -182,6 +181,6 @@
 
 @media screen and (max-width:440px) {
     .cards > main {
-        height: 280px;
+        height: 200px;
     }
 }
