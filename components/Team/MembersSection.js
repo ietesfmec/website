@@ -17,7 +17,7 @@ import Nayantara from '../../public/sample.jpg';
 import Riya from '../../public/team/riya.JPG';
 import Abhirami from '../../public/team/abhirami.jpg';
 import Unnikrishnan from '../../public/team/unni.png';
-import Namitha from '../../public/team/namitha.jpg';
+import Namitha from '../../public/team/namitha.jpeg';
 import Ananya from '../../public/team/ananya.jpg';
 import Fac_1 from '../../public/team/fac1.jpg';
 import Fac_2 from '../../public/team/fac2.jpg';
@@ -111,7 +111,7 @@ export default function MembersSection() {
         {
             name: 'Nikhil George Mathew',
             position: 'Web Head',
-            content: 'Rome was not built in a day. Neither was this website :)',
+            content: '',
             pic: Nikhil
         },
         {
