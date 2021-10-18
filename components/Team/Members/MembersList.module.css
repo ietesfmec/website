@@ -54,15 +54,6 @@
     justify-content: flex-end;
     position: relative;
 }
-.cards > main > div {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    margin-top: -80px;
-    background-color: #C4C4C4;
-}
 .cards > main > h4 {
     text-align: center;
 }
@@ -75,6 +66,15 @@
 
 .cards > main > ul {
     display: none;
+}
+.cover {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    margin-top: -80px;
+    background-color: #C4C4C4;
 }
 .cover > div {
     position: initial !important;
@@ -90,15 +90,11 @@
 }
 
 @media screen and (max-width:1000px) {
-    .main {
-        height: 280px;
-    }
+    
     .main > div {
         min-width: 80px;
     }
-    .cards > main {
-        height: 210px;
-    }
+    
     .cards > main > p {
         margin-top: 10px;
         text-align: center;
@@ -107,25 +103,7 @@
     }
 }
 
-@media screen and (max-width:816px) {
-    .main {
-        margin-top: 240px;
-        height: 300px;
-    }
-    .cards > main {
-        height: 280px;
-    }
-   
-}
 
-@media screen and (max-width:750px) {
-    .main {
-        height: 320px;
-    }
-    .cards > main {
-        height: 200px;
-    }   
-}
 
 @media screen and (max-width:720px) {
     .main {
@@ -142,6 +120,7 @@
         flex-direction: column;
         height: fit-content;
         background-color: black;
+        margin-top: 70px;
     }
     .cards > main {
         max-width: 600px;
