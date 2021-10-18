@@ -20,10 +20,8 @@ export default function Featured({featured}) {
                 <section></section>
                 <section className={`animate__animated animate__fadeInRight animate__fast`}>
                     <h1>Article of <br/> the <br/> WEEK!</h1>
-                    <div>
+                    <div className={styles.details}>
                         <span></span>
-                        {/* <p>Lorem cillum nua quis ut. Voluptate incididunt ipsum ipsum adipisicing Lorem occaecat fugiat nulla ut magna tempor eu consectetur nulla. Occaecat pariatur enim amet deserunt occaecat.</p>
-                         */}
                          <p>{featured[4]}</p>
                     </div>
                     <h2>by {featured[2]}</h2>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './MembersList.module.css';
 import sampleImage from '../../../public/sample.jpg';
 import animate from '../../../hooks/animate';
@@ -79,13 +80,14 @@ export default function MembersList({id, members}) {
     }
 
     useEffect(() => {
+        console.log(members)
         if(id > 0)
             //makeInterval()
         return () => { 
             clearInterval(interval)
             clearTimeout(timeout)
         }
-    },[featured])
+    },[])
 
     return (
         <main className={styles.main} >
@@ -100,8 +102,8 @@ export default function MembersList({id, members}) {
                     
                         return (
                             <main key={i} ref={e2}>
-                                <div>
-                                    <img src={sampleImage.src}></img>
+                                <div className={styles.cover}>
+                                    <Image src={member.pic} loading="eager" blurDataURL={sampleImage.src} placeholder="blur" layout="fill"></Image>
                                 </div>
                                 <p>Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur - {member.position.toUpperCase()}</p>
                                 <h4>{member.name.toUpperCase()}</h4>

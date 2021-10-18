@@ -1,10 +1,11 @@
 .encloser {
     /* background-color: #191826; */
     background-color: #191826;
-    height: calc(100vh - 145px);
+    height: calc(100vh - 144px);
     min-height: 460px;
     max-height: 60vw;
     padding: 30px clamp(20px, 7vw, 120px);
+    overflow: hidden;
 }
 .main {
     width: 100%;
@@ -13,7 +14,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 .main > section {
     height: 100%;
@@ -83,7 +83,7 @@
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 20px;
     
     color: #F1F1F1;
@@ -172,14 +172,19 @@
         position: relative;
         margin-bottom: 10px;
     }
-    .main > section > div > p {
+    /* .main > section > div > p {
+        margin-bottom: 20px;
+    } */
+    .details {
         margin-bottom: 20px;
     }
     .share {
         position: absolute;
         bottom: 0;
         right: 30px;
-        
+    }
+    .image {
+        height: 270px !important;
     }
 }
 

@@ -8,24 +8,27 @@ export async function getStaticProps() {
     });
     const text = await result.text();
     let data = Papa.parse(text).data.slice(1);
+    
+    data = data.reverse();
+
     data.forEach((_,i)=>{
         data[i] = data[i].filter(el=>{
             return el!='';
         });
         if(data[i].length<5) {
             while(data[i].length!=5) {
-                data[i].push('<none>');
+                data[i].push('');
             }
         }
-        data[i][4] = data[i][4].slice(0, 110).trim()
+        if(i > 0)  
+            data[i][4] = data[i][4].slice(0, 110).trim()
+
         let l = data[i][4].length;
         let lastLetter = data[i][4][l-1];
         if(lastLetter.toLowerCase() != lastLetter.toUpperCase()) {
             data[i][4] += ' - '
         }
     });
-
-    data = data.reverse();
     
     const featured = data.splice(0, 1)[0];
     const articles = data;

@@ -1,21 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './What.module.css';
-import logo from '../../../public/logo.png';
+import logo from '../../../public/new_logo_filled.png';
 import mecImg from '../../../public/mec.png';
 import Topbar from '../../Topbar/Topbar';
 
 export default function What() {
-    
-    const imageLoader=({src, width})=>{
-        return `${src}?w=${width}`;
-    }
 
     return (
         <div>
             <main className = {styles.container}>
                 <section className = {styles.half + ' ' + styles.cover}>
-                <Image loader={imageLoader} layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
+                <Image layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
                 </section>
                 <section className = {styles.half}>
                     <Topbar/>

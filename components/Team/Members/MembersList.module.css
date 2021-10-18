@@ -76,6 +76,12 @@
 .cards > main > ul {
     display: none;
 }
+.cover > div {
+    position: initial !important;
+}
+.cover > div > img {
+    object-fit: cover;
+}
 
 .active {
     background: var(--base-color) !important;
