@@ -16,7 +16,7 @@ export default function MembersList({id, members}) {
     const e2 = useRef();
 
     const findRef = (r1, r2) => {
-        if(window.matchMedia('(max-width: 720px)').matches) return r1; //r2;
+        if(window.matchMedia('(max-width: 720px)').matches) return r2;
         return r1;
     }
 
