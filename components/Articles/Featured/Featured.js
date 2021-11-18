@@ -3,12 +3,19 @@ import styles from './Featured.module.css';
 import Image from 'next/image';
 import logo from '../../../public/logo.png';
 import clapImage from '../../../public/clap.png';
+import { useRouter } from 'next/dist/client/router';
 
 export default function Featured({featured}) {
+
+    const router = useRouter();
 
     const imageLoader=({src, width})=>{
         return `${src}?w=${width}`;
       }
+
+    const handleLink = (link) => () => {
+        router.push(link);
+    }
 
     return(
         <div className = {styles.encloser}>
@@ -25,7 +32,7 @@ export default function Featured({featured}) {
                          <p>{featured[4]}</p>
                     </div>
                     <h2>by {featured[2]}</h2>
-                    <div className={styles.share}>
+                    <div className={styles.share} onClick={handleLink(featured[5])}>
                         <span>
                             <img src={clapImage.src}></img>                           
                         </span>

@@ -13,7 +13,7 @@ import Fudhail from '../../public/team/fudhail.jpg';
 import Jaseem from '../../public/team/jaseem.jpg';
 import Anitha from '../../public/team/anitha.jpeg';
 import Haripriya from '../../public/team/haripriya.jpg';
-import Nayantara from '../../public/sample.jpg';
+import Nayantara from '../../public/team/nayantara.jpg';
 import Riya from '../../public/team/riya.JPG';
 import Abhirami from '../../public/team/abhirami.jpg';
 import Unnikrishnan from '../../public/team/unni.png';
@@ -27,13 +27,13 @@ export default function MembersSection() {
         {
             name: 'Dr M V Rajesh',
             position: 'IETE Kochi Vice Chairman',
-            content: 'Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur. Sint duis  deserunt elit irure.',
+            content: '',
             pic: Fac_1
         },
         {
             name: 'Sajeesh M',
             position: 'Staff in Charge',
-            content: 'Veniam aute  voluptate aute cupidatat. Sint eiusmod ullamco sunt ex. Anim  pariatur aliquip magna duis sunt excepteur. Sint duis  deserunt elit irure.',
+            content: '',
             pic: Fac_2
         },
         {
@@ -198,7 +198,7 @@ export default function MembersSection() {
                     {
                         allMembers.map((members,i)=> {
                             return (
-                                <MembersList key={Math.E*Math.random()*9876 + ''} id={i} members={members}/>
+                                <MembersList key={Math.E*Math.random()*9876 + 98765 + ''} id={i} members={members}/>
                             )
                         })
                     }

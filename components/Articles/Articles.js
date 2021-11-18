@@ -4,6 +4,7 @@ import logo from '../../public/logo.png';
 import useScroll from '../../hooks/scroll';
 import { HashLoader } from 'react-spinners';
 import Image from 'next/image';
+import { useRouter } from 'next/dist/client/router';
 
 export default function Article({showFooter, allArticles}) {
     const [articles, setArticles] = useState(allArticles.slice(0, 6));
@@ -12,6 +13,7 @@ export default function Article({showFooter, allArticles}) {
     const color = '#14E4E4';
     
     const el = useRef()
+    const router = useRouter();
     
     const listener = () => {
         if(timeout) clearTimeout(timeout)
@@ -43,6 +45,10 @@ export default function Article({showFooter, allArticles}) {
     const imageLoader=({src, width})=>{
         return `${src}?w=${width}`;
     }
+
+    const handleLink = (link) => () => {
+        router.push(link);
+    }
     
     return(
         <div className={styles.encloser} ref={el}>
@@ -51,7 +57,7 @@ export default function Article({showFooter, allArticles}) {
             
                 {articles && articles.map((article, i) => {
                     return (
-                        <div key={i} className={`animate__animated animate__fadeInUp animate__faster`}>
+                        <div onClick={handleLink(article[5])} key={i} className={`animate__animated animate__fadeInUp animate__faster`}>
                             <h3>"{article[1]}"</h3>
                             <section className={styles.row}>
                                 <div className={styles.cover}>

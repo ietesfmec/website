@@ -9,7 +9,7 @@ export default function animate(element, animation, delay='') {
         // When the animation ends, we clean the classes and resolve the Promise
         function handleAnimationEnd(event) {
         event.stopPropagation();
-        node.classList.remove(`${prefix}animated`, animationName);
+        node.classList.remove(`${prefix}animated`, animationName, `${prefix}${delay}`);
         resolve('Animation ended');
         }
 

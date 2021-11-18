@@ -43,7 +43,7 @@
 }
 
 .main > div:hover {
-    opacity: 0.8;
+    opacity: 0.8 !important;
 }
 
 .main >div:nth-of-type(2n-1) {

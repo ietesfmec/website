@@ -34,43 +34,44 @@ export default function Past({showFooter, events}) {
         
         if(events.length - index < 3)   return;
         
-        animate(e1.current, 'fadeOutBottomRight', 'slow').then(()=>{
-            animate(e1.current, 'fadeInTopLeft', 'faster')
+        animate(e1.current, 'fadeOutBottomRight', 'medium').then(()=>{
+            animate(e1.current, 'fadeInTopLeft', 'slow')
         })
-        animate(e2.current, 'fadeOutBottomRight', 'slow').then(()=>{
+        animate(e2.current, 'fadeOutBottomRight', 'medium').then(()=>{
             animate(e2.current, 'fadeIn', 'slower')
         })
-        animate(e3.current, 'fadeOutBottomRight', 'slow').then(()=>{
+        animate(e3.current, 'fadeOutBottomRight', 'medium').then(()=>{
             animate(e3.current, 'fadeInTopLeft', 'slower')
         })
         
         timeout = setTimeout(()=>{
             setIndex(prev=>prev+3)
             clearTimeout(timeout)
-        }, 1000)
+        }, 1500)
         
     }
     const backwards = () => {
         if(timeout) return;
         if(index < 3)   return;
         
-        animate(e1.current, 'fadeOutTopLeft', 'slow').then(()=>{
-            animate(e1.current, 'fadeInBottomRight', 'faster')
+        animate(e1.current, 'fadeOutTopLeft', 'medium').then(()=>{
+            animate(e1.current, 'fadeInBottomRight', 'slower')
         })
-        animate(e2.current, 'fadeOutTopLeft', 'slow').then(()=>{
-            animate(e2.current, 'fadeIn', 'slower')
+        animate(e2.current, 'fadeOutTopLeft', 'medium').then(()=>{
+            animate(e2.current, 'fadeIn', 'slow')
         })
-        animate(e3.current, 'fadeOutTopLeft', 'slow').then(()=>{
+        animate(e3.current, 'fadeOutTopLeft', 'medium').then(()=>{
             animate(e3.current, 'fadeInBottomRight', 'slower')
         })
         timeout = setTimeout(()=>{
             setIndex(prev=>prev-3)
             clearTimeout(timeout)
-        }, 500)
+        }, 1500)
     }
     useEffect(()=>{
         listener()
-        e2.current.classList.add(styles.active)
+        if(!e1.current.classList.contains(styles.active) && !e2.current.classList.contains(styles.active) && !e3.current.classList.contains(styles.active))
+            e2.current.classList.add(styles.active)
     },[])
 
     useEffect(()=>{
@@ -107,7 +108,7 @@ export default function Past({showFooter, events}) {
                         return (
                             <div ref={r} onClick={handleActive(r)} className={styles.past} key={i}>
                         <section className={styles.cover}>
-                            <img src={sampleImage.src}></img>
+                            <img src={event[2]}></img>
                             <span>
                                 <h3>Special Mentions:</h3>
                                 <h5>{event[3]}</h5>

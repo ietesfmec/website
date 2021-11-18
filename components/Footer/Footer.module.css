@@ -92,6 +92,10 @@
 .details > div > div > h4 {
     font-weight: 500;
 }
+.underline:hover {
+    text-decoration: underline;
+    cursor: pointer !important;
+}
 
 @media screen and (max-width: 675px) {
     .encloser {

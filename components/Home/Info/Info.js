@@ -18,8 +18,6 @@ export default function Info() {
         <p>          
         IETE focuses on advancement of the Science and Technology of Electronics, Telecommunication, Computers, Information Technology and related areas. Towards this end the Institution promotes and conducts basic engineering and continuing technical education programmes for human resource development.
         </p>
-        `,
-        moreInfo:`
         <p>
         The Institution provides leadership in Scientific and Technical areas of direct importance to the national development and economy. Government of India has recognised IETE as a Scientific and Industrial Research Organization (SIRO) and also notified as an educational Institution of national eminence. The objectives of IETE focus on advancing electro-technology. IETE conducts and sponsors technical meetings, conferences, symposia, and exhibitions all over India, publishes technical journals and provides continuing education as well as career advancement opportunities to its members.
         </p>
@@ -46,7 +44,6 @@ export default function Info() {
         cannot afford engineering education at a regular engineering college.
         </p>
         `,
-        moreInfo:``,
         type:2
     }
     const working = {
@@ -59,7 +56,6 @@ export default function Info() {
         professional development of its members.
         </p>
         `,
-        moreInfo:``,
         type:2
     }
     const info = [ overview, aim, working ];

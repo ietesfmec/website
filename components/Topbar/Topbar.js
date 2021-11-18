@@ -4,12 +4,17 @@ import styles from './Topbar.module.css';
 import sampleImage from '../../public/sample.jpg';
 import animate from '../../hooks/animate';
 import logo from '../../public/logo.png';
+import { useRouter } from 'next/router';
 
 export default function Topbar() {
+
+    const router = useRouter()
+
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const sidebar = useRef()
     const hamburger = useRef()
     const close = useRef()
+
     const handleSidebar = () => {
         if(sidebarOpen) {
             animate(sidebar.current, 'fadeOutRight').then(()=>{
@@ -34,6 +39,11 @@ export default function Topbar() {
         }
         setSidebarOpen(!sidebarOpen)
     }
+
+    const handleLink = (page) => () => {
+        router.push(page);
+    }
+
     return (
         <div>
             <main className={styles.topbar}>
@@ -52,13 +62,13 @@ export default function Topbar() {
                     </svg>
                 </span>
                 <ul>
-                    <li className={`animate__animated animate__fadeInRight animate__faster`}>
+                    <li onClick={handleLink('https://medium.com/iete-sf-mec')} className={`animate__animated animate__fadeInRight animate__faster`}>
                         <h5>MEDIUM</h5>
                         <span>
 
                         </span>
                     </li>
-                    <li className={`animate__animated animate__fadeInRight animate__fast`}>
+                    <li onClick={handleLink('https://www.instagram.com/ietemec/?hl=en')} className={`animate__animated animate__fadeInRight animate__fast`}>
                         <h5>INSTAGRAM</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +84,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li className={`animate__animated animate__fadeInRight animate__medium`}>
+                    <li onClick={handleLink('https://www.linkedin.com/company/iete-sf-mec')} className={`animate__animated animate__fadeInRight animate__medium`}>
                         <h5>LINKEDIN</h5>
                         <span>
                             <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
