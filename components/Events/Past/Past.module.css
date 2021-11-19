@@ -53,17 +53,20 @@
 .cover {
     width: 100%;
     max-width: 260px;
-    
     background-color: black;
     position: relative;
     /* min-width: 220px; */
 }
 
+
 .cover > img {
     height: 100%;
-    max-height: 200px;
     max-width: 260px;
-}
+} 
+/* .cover > div {
+    position: relative !important;
+    min-height: 100%;
+} */
 
 .details {
     width: 100%;
@@ -81,7 +84,6 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 10px;
-    
 }
 .details > span > h3 {
     font-family: Mulish;
@@ -105,6 +107,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .details > div > h3 {
     font-family: Mulish;
@@ -113,8 +116,7 @@
     font-size: 24px;
     text-align: center;
     margin-bottom: 15px;
-    /* width: 214px; */
-    
+    /* width: 214px; */    
 }
 .details > div > p {
     font-family: Mulish;
@@ -131,7 +133,8 @@
     width: 80% !important;
     margin-left: auto;
     margin-right: auto;
-    height: 200px;
+    height: fit-content;
+    min-height: 240px;
     display: flex;
     flex-direction: row;
     background-color:black;
@@ -142,7 +145,7 @@
 }
 .active {
     transform: scaleX(1.25) scaleY(1.15) !important;
-    height: 240px !important;
+    /* height: 240px !important; */
     position: relative;
     z-index: 1;
     cursor: default !important;
@@ -206,7 +209,8 @@
 @media screen and (max-width:800px) {
    
     .past {
-        min-height: 290px;
+        min-height: 380px;
+        text-align: center;
         /* width: auto; */
     }
     .active {
@@ -220,14 +224,14 @@
         display: none;
     }
     .cover {
-        height: calc(100% - 30px) !important;
-        min-height: 150px;
+        height: calc(100% - 110px) !important;
+        
     }
     .cover > img {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        height: 84%;
-        min-height: 200px;
+        
+        
     }
     .cover > span {
         display: flex;

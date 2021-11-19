@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Past.module.css';
-import sampleImage from '../../../public/sample.jpg';
+import logo from '../../../public/logo.png';
 import animate from '../../../hooks/animate';
 import useScroll from '../../../hooks/scroll';
 
@@ -34,39 +34,39 @@ export default function Past({showFooter, events}) {
         
         if(events.length - index < 3)   return;
         
-        animate(e1.current, 'fadeOutBottomRight', 'medium').then(()=>{
+        animate(e1.current, 'fadeOutBottomRight', 'slow').then(()=>{
             animate(e1.current, 'fadeInTopLeft', 'slow')
         })
-        animate(e2.current, 'fadeOutBottomRight', 'medium').then(()=>{
+        animate(e2.current, 'fadeOutBottomRight', 'slow').then(()=>{
             animate(e2.current, 'fadeIn', 'slower')
         })
-        animate(e3.current, 'fadeOutBottomRight', 'medium').then(()=>{
+        animate(e3.current, 'fadeOutBottomRight', 'slow').then(()=>{
             animate(e3.current, 'fadeInTopLeft', 'slower')
         })
         
         timeout = setTimeout(()=>{
             setIndex(prev=>prev+3)
             clearTimeout(timeout)
-        }, 1500)
+        }, 1000)
         
     }
     const backwards = () => {
         if(timeout) return;
         if(index < 3)   return;
         
-        animate(e1.current, 'fadeOutTopLeft', 'medium').then(()=>{
+        animate(e1.current, 'fadeOutTopLeft', 'slow').then(()=>{
             animate(e1.current, 'fadeInBottomRight', 'slower')
         })
-        animate(e2.current, 'fadeOutTopLeft', 'medium').then(()=>{
+        animate(e2.current, 'fadeOutTopLeft', 'slow').then(()=>{
             animate(e2.current, 'fadeIn', 'slow')
         })
-        animate(e3.current, 'fadeOutTopLeft', 'medium').then(()=>{
+        animate(e3.current, 'fadeOutTopLeft', 'slow').then(()=>{
             animate(e3.current, 'fadeInBottomRight', 'slower')
         })
         timeout = setTimeout(()=>{
             setIndex(prev=>prev-3)
             clearTimeout(timeout)
-        }, 1500)
+        }, 1000)
     }
     useEffect(()=>{
         listener()
@@ -108,7 +108,7 @@ export default function Past({showFooter, events}) {
                         return (
                             <div ref={r} onClick={handleActive(r)} className={styles.past} key={i}>
                         <section className={styles.cover}>
-                            <img src={event[2]}></img>
+                            <img src={event[1]} placeholder={logo.src}></img>
                             <span>
                                 <h3>Special Mentions:</h3>
                                 <h5>{event[3]}</h5>
@@ -125,7 +125,7 @@ export default function Past({showFooter, events}) {
                             </span>
                             <div>
                                 <h3>{event[0]}</h3>
-                                <p>{event[1]}</p>
+                                <p>{event[2]}</p>
                             </div>
                         </section>
                     </div>
