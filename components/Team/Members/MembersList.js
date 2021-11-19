@@ -4,51 +4,51 @@ import styles from './MembersList.module.css';
 import logo from '../../../public/logo.png';
 import animate from '../../../hooks/animate';
 
-import Navnit from '../../../public/team/navnit.jpg';
-import Nikhil from '../../../public/team/nikhil.jpg';
-import Joann from '../../../public/team/joann.jpg';
-import Jerom from '../../../public/team/jerom.jpg';
-import Sangeeth from '../../../public/team/sangeeth.jpg';
-import Samyuktha from '../../../public/team/samyuktha.jpg';
-import Merin from '../../../public/team/merin.jpg';
-import Fudhail from '../../../public/team/fudhail.jpg';
-import Jaseem from '../../../public/team/jaseem.jpg';
-import Anitha from '../../../public/team/anitha.jpeg';
-import Haripriya from '../../../public/team/haripriya.jpg';
-import Nayantara from '../../../public/team/nayantara.jpg';
-import Riya from '../../../public/team/riya.JPG';
-import Abhirami from '../../../public/team/abhirami.jpg';
-import Unnikrishnan from '../../../public/team/unni.png';
-import Namitha from '../../../public/team/namitha.jpeg';
-import Ananya from '../../../public/team/ananya.jpg';
-import Fac_1 from '../../../public/team/fac1.jpg';
-import Fac_2 from '../../../public/team/fac2.jpg';
+// import Navnit from '../../../public/team/navnit.jpg';
+// import Nikhil from '../../../public/team/nikhil.jpg';
+// import Joann from '../../../public/team/joann.jpg';
+// import Jerom from '../../../public/team/jerom.jpg';
+// import Sangeeth from '../../../public/team/sangeeth.jpg';
+// import Samyuktha from '../../../public/team/samyuktha.jpg';
+// import Merin from '../../../public/team/merin.jpg';
+// import Fudhail from '../../../public/team/fudhail.jpg';
+// import Jaseem from '../../../public/team/jaseem.jpg';
+// import Anitha from '../../../public/team/anitha.jpeg';
+// import Haripriya from '../../../public/team/haripriya.jpg';
+// import Nayantara from '../../../public/team/nayantara.jpg';
+// import Riya from '../../../public/team/riya.JPG';
+// import Abhirami from '../../../public/team/abhirami.jpg';
+// import Unnikrishnan from '../../../public/team/unni.png';
+// import Namitha from '../../../public/team/namitha.jpeg';
+// import Ananya from '../../../public/team/ananya.jpg';
+// import Fac_1 from '../../../public/team/fac1.jpg';
+// import Fac_2 from '../../../public/team/fac2.jpg';
 
 export default function MembersList({id, members}) {
     
     const init = members;
 
-    const mapping = {
-        'Navnit':Navnit,
-        'Nikhil':Nikhil,
-        'Joann':Joann,
-        'Jerom':Jerom,
-        'Sangeeth':Sangeeth,
-        'Samyuktha':Samyuktha,
-        'Merin':Merin,
-        'Fudhail':Fudhail,
-        'Jaseem':Jaseem,
-        'Anitha':Anitha,
-        'Haripriya':Haripriya,
-        'Nayantara':Nayantara,
-        'Riya':Riya,
-        'Abhirami':Abhirami,
-        'Unnikrishnan':Unnikrishnan,
-        'Namitha':Namitha,
-        'Ananya':Ananya,
-        'Fac_1':Fac_1,
-        'Fac_2':Fac_2
-    }
+    // const mapping = {
+    //     'Navnit':Navnit,
+    //     'Nikhil':Nikhil,
+    //     'Joann':Joann,
+    //     'Jerom':Jerom,
+    //     'Sangeeth':Sangeeth,
+    //     'Samyuktha':Samyuktha,
+    //     'Merin':Merin,
+    //     'Fudhail':Fudhail,
+    //     'Jaseem':Jaseem,
+    //     'Anitha':Anitha,
+    //     'Haripriya':Haripriya,
+    //     'Nayantara':Nayantara,
+    //     'Riya':Riya,
+    //     'Abhirami':Abhirami,
+    //     'Unnikrishnan':Unnikrishnan,
+    //     'Namitha':Namitha,
+    //     'Ananya':Ananya,
+    //     'Fac_1':Fac_1,
+    //     'Fac_2':Fac_2
+    // }
     
     const [featured, setFeatured] = useState(init[0])
     
@@ -65,7 +65,7 @@ export default function MembersList({id, members}) {
     const forwards = () => {
         const el = findRef(e1, e2);
         animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
-            animate(el.current, 'fadeInRight', 'fast')
+            animate(el.current, 'fadeInRight', 'slow')
         })
         timeout = setTimeout(()=>{
             setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
@@ -75,7 +75,7 @@ export default function MembersList({id, members}) {
     const backwards = () => {
         const el = findRef(e1, e2);
         animate(el.current, 'fadeOutRight', 'fast').then(()=>{
-            animate(el.current, 'fadeInLeft', 'fast')
+            animate(el.current, 'fadeInLeft', 'slow')
         })
         
         timeout = setTimeout(()=>{
@@ -91,11 +91,11 @@ export default function MembersList({id, members}) {
 
         if(featured.index < j) {
             animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
-                animate(el.current, 'fadeInRight', 'fast')
+                animate(el.current, 'fadeInRight', 'slow')
             })
         } else {
             animate(el.current, 'fadeOutRight', 'fast').then(()=>{
-                animate(el.current, 'fadeInLeft', 'fast')
+                animate(el.current, 'fadeInLeft', 'slow')
             })
         }
         timeout = setTimeout(()=>{
@@ -139,8 +139,8 @@ export default function MembersList({id, members}) {
                     
                         return (
                             <main key={i} ref={e2}>
-                                <div className={styles.cover} key={mapping[member.pic].src}>
-                                    <Image src={mapping[member.pic]} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
+                                <div className={styles.cover} key={member.pic.src}>
+                                    <Image src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>
                                 <p>{member.content ? member.content : `${member.position.toUpperCase()}`}</p>
                                 <h4>{member.name.toUpperCase()}</h4>
