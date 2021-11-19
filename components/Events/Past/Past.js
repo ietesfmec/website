@@ -103,7 +103,7 @@ export default function Past({showFooter, events}) {
 
     return (
         <div className={styles.encloser}>
-                    <h1>Past Events</h1>
+                    <h1>Our Events</h1>
                     <div className={styles.container}>
                     <span onClick={backwards} disabled={index < 3}>
                         <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">

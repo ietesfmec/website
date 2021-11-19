@@ -66,13 +66,17 @@ export default function MembersList({id, members}) {
         clearInterval(interval)
         if(init.length === 0)   return;
         interval = setInterval(()=>{
-            forwards();
+            if(init.length === 1) return;
+            if(id%2 === 0)
+                forwards();
+            else 
+                backwards();
         },8700 //+ (id*500)
         )
     }
 
     useEffect(() => {
-        if(id > 0)
+    
             makeInterval()
         return () => { 
             clearInterval(interval)

@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
     data = data.reverse();
     
-    const upcoming = data.splice(0, 2);
+    const upcoming = data.slice(0, 2);
     const events = data;
 
     return {
@@ -38,7 +38,7 @@ export default function Events({upcoming, events}) {
     return(
         <div>
             <Topbar/>
-            <UpcomingEvents upcoming={upcoming}/>
+            {/* <UpcomingEvents upcoming={upcoming}/> */}
             <PastEvents events={events} showFooter={showFooter}/>
             <Footer/> 
         </div>
