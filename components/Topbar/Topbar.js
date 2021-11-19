@@ -65,6 +65,9 @@ export default function Topbar() {
                     <li onClick={handleLink('https://medium.com/iete-sf-mec')} className={`animate__animated animate__fadeInRight animate__faster`}>
                         <h5>MEDIUM</h5>
                         <span>
+                        <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.23052 0C6.56698 0 8.4609 4.01284 8.4609 8.96257C8.4609 13.9123 6.56684 17.9248 4.23052 17.9248C1.89421 17.9248 0 13.9123 0 8.96257C0 4.01284 1.89406 0 4.23052 0ZM10.9864 0.525004C12.1546 0.525004 13.1016 4.30225 13.1016 8.96257H13.1018C13.1018 13.6217 12.1547 17.4001 10.9865 17.4001C9.81828 17.4001 8.87125 13.6217 8.87125 8.96257C8.87125 4.30346 9.81813 0.525004 10.9864 0.525004ZM14.2561 1.40384C14.6668 1.40384 15 4.78794 15 8.96257C15 13.136 14.667 16.5213 14.2561 16.5213C13.8451 16.5213 13.5123 13.1369 13.5123 8.96257C13.5123 4.78824 13.8453 1.40384 14.2561 1.40384Z" fill="#535353"/>
+                        </svg>
 
                         </span>
                     </li>
@@ -76,14 +79,7 @@ export default function Topbar() {
                             </svg>
                         </span>
                     </li>
-                    <li className={`animate__animated animate__fadeInRight`}>
-                        <h5>FACEBOOK</h5>
-                        <span>
-                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.125 5.73363V3.64865C10.125 3.0732 10.629 2.60616 11.25 2.60616H12.375V-6.10352e-05H10.125C8.26087 -6.10352e-05 6.75 1.4 6.75 3.12741V5.73363H4.5V8.33986H6.75V16.6798H10.125V8.33986H12.375L13.5 5.73363H10.125Z" fill="#535353"/>
-                            </svg>
-                        </span>
-                    </li>
+                   
                     <li onClick={handleLink('https://www.linkedin.com/company/iete-sf-mec')} className={`animate__animated animate__fadeInRight animate__medium`}>
                         <h5>LINKEDIN</h5>
                         <span>

@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
     <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
     <title>IETE SF MEC</title>
     {/* <meta name="description" content="Official website of IETE-SF-MEC" /> */}
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.png" />
   </Head>
   <Component {...pageProps} />
     <Navbar/>

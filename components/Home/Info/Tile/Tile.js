@@ -7,7 +7,7 @@ export default function Tile({info}) {
 
     const handleScroll = () => {
         el.current.scrollBy({
-            top: 80,
+            top: 234,
             left: 0,
             behavior: 'smooth'
           })
@@ -20,7 +20,9 @@ export default function Tile({info}) {
             info.type === 1 ? 
                 (<button onClick={handleScroll}>Read More!</button>)
             :
-            (<span onClick={handleScroll}></span>)}
+            (<span onClick={handleScroll}>
+                
+            </span>)}
         </section>
     )
 }

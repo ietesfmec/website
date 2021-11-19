@@ -11,7 +11,7 @@ export default function Activity() {
                 image: sampleImage.src,
                 title: 'Competitions',
                 content:`
-                All about fun and learning, competitions by IETE SF MEC include face-paced quizzes, live circuit design, virtual simulation, coding, hardware assembly and more!
+                All about fun and learning, competitions by IETE SF MEC include fast-paced quizzes, live circuit design, virtual simulation, coding, hardware assembly and more!
                 `
             }
         },{
@@ -41,6 +41,16 @@ export default function Activity() {
                 We also have our very own IETE SF MEC Medium Publication, where we invite technology enthusiasts of all ages to write about the newest and most exciting innovations in the world today!
                 `
             }
+        }
+            ,{
+                index:3,
+                data: {
+                    image: sampleImage.src,
+                    title: 'Collaborations!',
+                    content:`
+                    IETE SF MEC joins forces with other organizations to bring you quality content, enthralling events to help you conquer higher altitudes!
+                    `
+                }
         // },{
         //     index:4,
         //     data: {

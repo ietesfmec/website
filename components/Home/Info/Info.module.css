@@ -1,12 +1,13 @@
 .encloser {
     padding: 60px;
-    padding-top: 60px;
+    padding-top: 20px;
+    margin-top: 60px;
     background-color: #f1f1f1;
 }
 
 .encloser > h1 {
     margin-bottom: 40px;
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -48,7 +49,7 @@
     
 }
 .main > section > h1 {
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-size: 29px;
     margin-bottom: 20px;
 }
@@ -56,6 +57,7 @@
     overflow-y: scroll;
     max-height: 384px;
 }
+
 .main > section > div > p {
     margin-top: 10px;
     line-height: 24px;
@@ -86,7 +88,7 @@
 .main > section > span:hover {
     opacity: 0.7;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) { /*1000*/
     .encloser > h1 {
         margin-bottom: 0;
         padding-bottom: 0;

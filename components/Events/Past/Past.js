@@ -8,7 +8,7 @@ export default function Past({showFooter, events}) {
     // const all = [1,2,3,4,5,6,7,8,9]
     const [past, setPast] = useState([...events.slice(0,3)])
     const [index, setIndex] = useState(0)
-    const [hideImg, setHideImg] = useState(false)
+    // const [hideImg, setHideImg] = useState(false)
 
     var timeout;
 
@@ -86,9 +86,9 @@ export default function Past({showFooter, events}) {
         })
     }, [index])
 
-    useEffect(()=>{
-        setHideImg(true)
-    },[past])
+    // useEffect(()=>{
+    //     setHideImg(true)
+    // },[past])
 
     const handleActive = (ref) => (e) => {
         e1.current.classList.remove(styles.active);
@@ -97,9 +97,9 @@ export default function Past({showFooter, events}) {
         ref.current.classList.add(styles.active);
     }
 
-    const handleImg = (e) => {
-        setHideImg(false)
-    }
+    // const handleImg = (e) => {
+    //     setHideImg(false)
+    // }
 
     return (
         <div className={styles.encloser}>
@@ -119,20 +119,20 @@ export default function Past({showFooter, events}) {
                         return (
                             <div ref={r} onClick={handleActive(r)} className={styles.past} key={i}>
                         <section className={styles.cover}>
-                            <img onLoad={handleImg} hidden={hideImg} src={event[1]} placeholder={logo.src}></img>
+                            <img key={event[1]} src={event[1]} placeholder={logo.src}></img>
                             <span>
                                 <h3>Special Mentions:</h3>
-                                <h5>{event[3]}</h5>
-                                <h5>{event[4]}</h5>
-                                <h5>{event[5]}</h5>
+                                <h5 hidden={event[3] === '<none>'}>{event[3]}</h5>
+                                <h5 hidden={event[4] === '<none>'}>{event[4]}</h5>
+                                <h5 hidden={event[5] === '<none>'}>{event[5]}</h5>
                             </span>
                         </section>
                         <section className={styles.details}>
                             <span>
                                 <h3>Special {i === 1 ? '' : <br/>} Mentions:</h3>
-                                <h5>{event[3]}</h5>
-                                <h5>{event[4]}</h5>
-                                <h5>{event[5]}</h5>
+                                <h5 hidden={event[3] === '<none>'}>{event[3]}</h5>
+                                <h5 hidden={event[4] === '<none>'}>{event[4]}</h5>
+                                <h5 hidden={event[5] === '<none>'}>{event[5]}</h5>
                             </span>
                             <div>
                                 <h3>{event[0]}</h3>

@@ -20,7 +20,7 @@ export default function Featured({featured}) {
     return(
         <div className = {styles.encloser}>
             <main className={styles.main}>
-                <section className={styles.image + ` animate__animated animate__fadeInLeft animate__fast`}>
+                <section className={styles.image + ` animate__animated animate__fadeInLeft animate__fast`} onClick={handleLink(featured[5])}>
                     <Image loader={imageLoader} src={featured[3]} layout="fill" placeholder="blur" blurDataURL={logo.src}></Image>
                     <span>{featured[1]}</span>
                 </section>

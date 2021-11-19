@@ -67,13 +67,13 @@ export default function MembersList({id, members}) {
         if(init.length === 0)   return;
         interval = setInterval(()=>{
             forwards();
-        },5700 //+ (id*500)
+        },8700 //+ (id*500)
         )
     }
 
     useEffect(() => {
         if(id > 0)
-            //makeInterval()
+            makeInterval()
         return () => { 
             clearInterval(interval)
             clearTimeout(timeout)
@@ -93,7 +93,7 @@ export default function MembersList({id, members}) {
                     
                         return (
                             <main key={i} ref={e2}>
-                                <div className={styles.cover}>
+                                <div className={styles.cover} key={member.pic.src}>
                                     <Image src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>
                                 <p>{member.content ? member.content : `${member.position.toUpperCase()}`}</p>

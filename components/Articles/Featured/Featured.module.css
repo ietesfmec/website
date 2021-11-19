@@ -104,6 +104,10 @@
     position: relative;
     height: 350px !important;
 }
+.image:hover {
+    opacity: 0.8 !important;
+    cursor: pointer !important;
+}
 .image > div {
     height: 100% !important;
     margin: 0 30px;

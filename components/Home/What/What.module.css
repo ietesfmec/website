@@ -19,14 +19,14 @@
   }
   
   .sectionWhat > h1 {
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
     line-height: 79px;
     /* or 124% */
     letter-spacing: 0.05cm;
-    color: #1A1A1A;font-family: Mulish;
+    color: #1A1A1A;
   }
   
   .sectionWhat > p {
