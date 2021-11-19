@@ -92,7 +92,7 @@ export default function MembersList({id, members}) {
                     featured && featured.data && featured.data.map((member , i)=>{
                     
                         return (
-                            <main key={member.pic.src} ref={e2}>
+                            <main key={i} ref={e2}>
                                 <div className={styles.cover}>
                                     <Image src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>

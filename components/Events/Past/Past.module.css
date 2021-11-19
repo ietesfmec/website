@@ -128,12 +128,13 @@
     /* width: 210px; */
     position: relative;
     overflow: hidden;
+    overflow-y: scroll;
 }
 .past {
     width: 80% !important;
     margin-left: auto;
     margin-right: auto;
-    height: fit-content;
+    height: 240px;
     min-height: 240px;
     display: flex;
     flex-direction: row;

@@ -8,6 +8,8 @@ export default function Past({showFooter, events}) {
     // const all = [1,2,3,4,5,6,7,8,9]
     const [past, setPast] = useState([...events.slice(0,3)])
     const [index, setIndex] = useState(0)
+    const [hideImg, setHideImg] = useState(false)
+
     var timeout;
 
     const e1 = useRef()
@@ -33,6 +35,7 @@ export default function Past({showFooter, events}) {
         if(timeout) return;
         
         if(events.length - index < 3)   return;
+
         
         animate(e1.current, 'fadeOutBottomRight', 'slow').then(()=>{
             animate(e1.current, 'fadeInTopLeft', 'slow')
@@ -47,7 +50,7 @@ export default function Past({showFooter, events}) {
         timeout = setTimeout(()=>{
             setIndex(prev=>prev+3)
             clearTimeout(timeout)
-        }, 1000)
+        }, 1500)
         
     }
     const backwards = () => {
@@ -66,7 +69,7 @@ export default function Past({showFooter, events}) {
         timeout = setTimeout(()=>{
             setIndex(prev=>prev-3)
             clearTimeout(timeout)
-        }, 1000)
+        }, 1500)
     }
     useEffect(()=>{
         listener()
@@ -83,11 +86,19 @@ export default function Past({showFooter, events}) {
         })
     }, [index])
 
+    useEffect(()=>{
+        setHideImg(true)
+    },[past])
+
     const handleActive = (ref) => (e) => {
         e1.current.classList.remove(styles.active);
         e2.current.classList.remove(styles.active);
         e3.current.classList.remove(styles.active);
         ref.current.classList.add(styles.active);
+    }
+
+    const handleImg = (e) => {
+        setHideImg(false)
     }
 
     return (
@@ -108,7 +119,7 @@ export default function Past({showFooter, events}) {
                         return (
                             <div ref={r} onClick={handleActive(r)} className={styles.past} key={i}>
                         <section className={styles.cover}>
-                            <img src={event[1]} placeholder={logo.src}></img>
+                            <img onLoad={handleImg} hidden={hideImg} src={event[1]} placeholder={logo.src}></img>
                             <span>
                                 <h3>Special Mentions:</h3>
                                 <h5>{event[3]}</h5>
