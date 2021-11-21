@@ -52,7 +52,7 @@ export default function Activity() {
                 index:4,
                 data: {
                     image: collaboration.src,
-                    title: 'Collaborations!',
+                    title: 'Collaborations',
                     content:`
                     IETE SF MEC joins forces with other organizations to bring you quality content, enthralling events to help you conquer higher altitudes!
                     `
