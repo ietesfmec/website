@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Footer.module.css';
-import filledLogo from '../../public/new_logo_filled.png';
+import filledLogo from '../../public/new_logo.png';
 import logo from '../../public/logo.png';
 import useScroll from '../../hooks/scroll';
 import { useRouter } from 'next/dist/client/router';

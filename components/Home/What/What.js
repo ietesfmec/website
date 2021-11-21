@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './What.module.css';
-import logo from '../../../public/new_logo_filled.png';
+import logo from '../../../public/new_logo.png';
 import mecImg from '../../../public/mec.png';
 import Topbar from '../../Topbar/Topbar';
 

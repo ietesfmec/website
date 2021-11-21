@@ -65,7 +65,7 @@ export default function MembersList({id, members}) {
     const forwards = () => {
         const el = findRef(e1, e2);
         animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
-            animate(el.current, 'fadeInRight', 'slow')
+            animate(el.current, 'fadeInRight', 'medium')
         })
         timeout = setTimeout(()=>{
             setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
@@ -75,7 +75,7 @@ export default function MembersList({id, members}) {
     const backwards = () => {
         const el = findRef(e1, e2);
         animate(el.current, 'fadeOutRight', 'fast').then(()=>{
-            animate(el.current, 'fadeInLeft', 'slow')
+            animate(el.current, 'fadeInLeft', 'medium')
         })
         
         timeout = setTimeout(()=>{
@@ -91,11 +91,11 @@ export default function MembersList({id, members}) {
 
         if(featured.index < j) {
             animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
-                animate(el.current, 'fadeInRight', 'slow')
+                animate(el.current, 'fadeInRight', 'medium')
             })
         } else {
             animate(el.current, 'fadeOutRight', 'fast').then(()=>{
-                animate(el.current, 'fadeInLeft', 'slow')
+                animate(el.current, 'fadeInLeft', 'medium')
             })
         }
         timeout = setTimeout(()=>{

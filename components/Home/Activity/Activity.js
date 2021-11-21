@@ -1,12 +1,13 @@
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import styles from './Activity.module.css';
-import sampleImage from '../../../public/sample.jpg';
+import animate from '../../../hooks/animate';
+import logo from '../../../public/new_logo.png';
 import collaboration from '../../../public/activities/collaboration.jpg';
 import articles from '../../../public/activities/articles.jpg';
 import webinar from '../../../public/activities/webinar.jpg';
 import competition from '../../../public/activities/competition.jpg';
 import workshop from '../../../public/activities/workshop.jpg';
-import { useState, useEffect, useRef } from 'react';
-import animate from '../../../hooks/animate';
 
 export default function Activity() {
     const init = [
@@ -168,8 +169,8 @@ export default function Activity() {
                 </div>
                 <main>
                     <div ref={el}>
-                        <section key={featured.index}>
-                            <img src={featured.data.image}></img>
+                        <section key={featured.index} className={styles.cover}>
+                            <Image layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
                         </section>
                         <section>
                             <h1>{featured.data.title}</h1>

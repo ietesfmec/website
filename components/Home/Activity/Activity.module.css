@@ -54,6 +54,11 @@
     margin: 0 5px;
     border-radius: 8px;
   }
+
+  .cover > div {
+    position: relative !important;
+    height: 100%;
+  }
   
   .active {
     background: var(--base-color) !important;
