@@ -144,11 +144,11 @@ export default function Activity() {
                 setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
                 clearTimeout(timeout)
             }, 500)
-        },5000)
+        },7500)
     }
 
     useEffect(() => {
-        //makeInterval()
+        makeInterval()
         return () => { 
             clearInterval(interval)
             clearTimeout(timeout)
@@ -167,8 +167,8 @@ export default function Activity() {
                     </svg>
                 </div>
                 <main>
-                    <div onDragEnd={forwards} ref={el}>
-                        <section>
+                    <div ref={el}>
+                        <section key={featured.index}>
                             <img src={featured.data.image}></img>
                         </section>
                         <section>
