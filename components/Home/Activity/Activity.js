@@ -86,14 +86,14 @@ export default function Activity() {
         let t = featured.index;
         if(t >=  init.length - 1)   t = -1;
         
-        animate(el.current, 'fadeOutLeft', 'faster').then(()=>{
-            animate(el.current, 'fadeInRight', 'faster')
+        animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
+            animate(el.current, 'fadeInRight', 'fast')
         })
 
         timeout = setTimeout(()=>{
             setFeatured(init[t+1])
             clearTimeout(timeout)
-        }, 500)
+        }, 700)
         
     }
     const backwards = () => {
@@ -103,8 +103,8 @@ export default function Activity() {
         if(featured.index === 0)   t = init.length;
         
         
-        animate(el.current, 'fadeOutRight', 'faster').then(()=>{
-            animate(el.current, 'fadeInLeft', 'faster')
+        animate(el.current, 'fadeOutRight', 'fast').then(()=>{
+            animate(el.current, 'fadeInLeft', 'fast')
         })
         
         timeout = setTimeout(()=>{
@@ -116,12 +116,12 @@ export default function Activity() {
         clearTimeout(timeout)
         if(featured.index === i)    return;
         if(featured.index < i) {
-            animate(el.current, 'fadeOutLeft', 'faster').then(()=>{
-                animate(el.current, 'fadeInRight', 'faster')
+            animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
+                animate(el.current, 'fadeInRight', 'fast')
             })
         } else {
-            animate(el.current, 'fadeOutRight', 'faster').then(()=>{
-                animate(el.current, 'fadeInLeft', 'faster')
+            animate(el.current, 'fadeOutRight', 'fast').then(()=>{
+                animate(el.current, 'fadeInLeft', 'fast')
             })
         }
         timeout = setTimeout(()=>{
@@ -135,17 +135,8 @@ export default function Activity() {
         
         if(init.length === 0)   return;
         interval = setInterval(()=>{
-            clearTimeout(timeout)
-            
-            animate(el.current, 'fadeOutLeft', '0.1s').then(()=>{
-                animate(el.current, 'fadeInRight', '0.5s')
-            })
-
-            timeout = setTimeout(()=>{
-                setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
-                clearTimeout(timeout)
-            }, 500)
-        },7500)
+            forwards()
+        },6500)
     }
 
     useEffect(() => {
