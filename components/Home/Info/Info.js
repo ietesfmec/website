@@ -25,9 +25,7 @@ export default function Info() {
         <p>
         IETE also plays an important role in Skill India initiative of the Govt. IETE has
         become training partner to number of Skill Sector Council like Telecom Sector
-        Skill Council (TSSC); Electronics Sector Skill Council of India (ESSCI), NIELIT,
-        etc. Skilling programmes have been conducted in the field of Fibre Optics & Solar Panels, 
-        which are being diversified to many more job roles.
+        Skill Council (TSSC).
         </p>
         <br/>
         <p></p>
