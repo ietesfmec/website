@@ -151,7 +151,7 @@ export default function Activity() {
     
     return (
         <div className={styles.outer}>
-            <h1>Activities</h1>
+            <h1>Our Activities</h1>
             <main className={styles.container}>
                 <div onClick={backwards} disabled={init.length === 0}>
                     <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/5000/svg">
