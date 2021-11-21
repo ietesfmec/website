@@ -37,11 +37,11 @@ img {
   user-select: none;  
 }
 
-@media screen and (max-width:1000px){
+/* @media screen and (max-width:1000px){
   p {
     font-size: smaller !important;
   }  
-}
+} */
 
 
 :root {
