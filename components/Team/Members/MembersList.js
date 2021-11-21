@@ -71,7 +71,7 @@ export default function MembersList({id, members}) {
                 forwards();
             else 
                 backwards();
-        },8700 //+ (id*500)
+        },8100 
         )
     }
 
