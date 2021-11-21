@@ -16,7 +16,7 @@ import Haripriya from '../../public/team/haripriya.jpg';
 import Nayantara from '../../public/team/nayantara.jpg';
 import Riya from '../../public/team/riya.JPG';
 import Abhirami from '../../public/team/abhirami.jpg';
-import Unnikrishnan from '../../public/team/unni.png';
+import Unnikrishnamenon from '../../public/team/unnikrishnamenon.png';
 import Namitha from '../../public/team/namitha.jpeg';
 import Ananya from '../../public/team/ananya.jpg';
 import Fac_1 from '../../public/team/fac1.jpg';
@@ -52,7 +52,7 @@ export default function MembersSection() {
             name: 'Unnikrishnamenon M',
             position: 'Secretary',
             content: '',
-            pic: Unnikrishnan
+            pic: Unnikrishnamenon
         },
         {
             name: 'Haripriya H Nair',

@@ -65,7 +65,7 @@ export default function Info() {
             <main className={styles.main}>
                 { info && info.map((inf, i)=>{
                     return (
-                        <Tile info={inf} key={i}/>
+                        <Tile info={inf} id={i} key={i}/>
                     )
                 })}
             </main>
