@@ -54,7 +54,7 @@ export default function Activity() {
                     image: collaboration.src,
                     title: 'Collaborations',
                     content:`
-                    IETE SF MEC joins forces with other organizations to bring you quality content, enthralling events to help you conquer higher altitudes!
+                    We join forces with other organizations to bring you quality content, enthralling events to help you conquer higher altitudes!
                     `
                 }
         // },{
