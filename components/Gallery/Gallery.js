@@ -18,7 +18,7 @@ export default function Gallery({showFooter}) {
     const allSections = [
         {
         title:'Webinars and Conferences',
-        content: 'We conduct unique activities and events which invloves interaction and engagement among participants thereby instilling and motivating them to pool ideas and bring out the best innovations possible.',
+        content: 'Our events involve interaction and engagement among participants and thereby provide a platform for all to pool ideas and bring out the best innovations possible.',
         images: [
             img_1,
             img_2,
