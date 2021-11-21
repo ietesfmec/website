@@ -57,7 +57,7 @@
 
   .cover > div {
     position: relative !important;
-    height: 101%;
+    height: 100%;
   }
   
   .active {
@@ -185,7 +185,12 @@
 
     .container > div {
       display: none;
-    } 
+    }
+    
+    .cover > div {
+      height: calc(100% + 1px);
+    }
+
   }
 
   @media screen and (max-width:560px) {
