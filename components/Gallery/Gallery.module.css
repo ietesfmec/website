@@ -78,8 +78,8 @@
     height: 450px;
     display: grid;
     grid-template-areas: 
-    'pic1 pic2 pic3 pic4 pic4'
-    'pic5 pic2 pic6 pic6 pic7';  
+    'pic1 pic2 pic2 pic4 pic4'
+    'pic5 pic5 pic3 pic3 pic6';  
 }
 .encloser > div {
     width: 470px;
@@ -142,8 +142,7 @@
         'pic1 pic1 pic2 pic2'
         'pic3 pic3 pic3 pic3'
         'pic4 pic4 pic5 pic5' 
-        'pic4 pic4 pic6 pic6'
-        'pic7 pic7 pic6 pic6';
+        'pic4 pic4 pic6 pic6';
     }
     .main > section > p {
         width: fit-content;

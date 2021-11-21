@@ -167,9 +167,15 @@
     }
   }
 
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:700px) {
     .container {
       display: block;
+    }
+
+    .container > main > div > section > p {
+      line-height: 24px;
+      margin-top: 0;
+      font-size: medium !important;
     }
 
     .container > div {

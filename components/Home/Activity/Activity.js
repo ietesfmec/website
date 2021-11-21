@@ -1,5 +1,10 @@
 import styles from './Activity.module.css';
 import sampleImage from '../../../public/sample.jpg';
+import collaboration from '../../../public/activities/collaboration.jpg';
+import articles from '../../../public/activities/articles.jpg';
+import webinar from '../../../public/activities/webinar.jpg';
+import competition from '../../../public/activities/competition.jpg';
+import workshop from '../../../public/activities/workshop.jpg';
 import { useState, useEffect, useRef } from 'react';
 import animate from '../../../hooks/animate';
 
@@ -8,7 +13,7 @@ export default function Activity() {
         {
             index:0,
             data: {
-                image: sampleImage.src,
+                image: competition.src,
                 title: 'Competitions',
                 content:`
                 All about fun and learning, competitions by IETE SF MEC include fast-paced quizzes, live circuit design, virtual simulation, coding, hardware assembly and more!
@@ -17,25 +22,25 @@ export default function Activity() {
         },{
             index:1,
             data: {
-                image: sampleImage.src,
-                title: 'Webinars and Talks',
-                content:`
-                Meet some of the industry’s best and brightest, and learn all about the booming opportunities of today's dynamic world of technology through our Webinars and Talks.
-                `
-            }
-        },{
-            index:2,
-            data: {
-                image: sampleImage.src,
+                image: workshop.src,
                 title: 'Workshops',
                 content:`
                 With regular workshops conducted by IETE SF MEC, work with experts and gain hands-on experience with the most relevant and essential skills in your domain.
                 `
             }
         },{
+            index:2,
+            data: {
+                image: webinar.src,
+                title: 'Webinars and Talks',
+                content:`
+                Meet some of the industry’s best and brightest, and learn all about the booming opportunities of today's dynamic world of technology through our Webinars and Talks.
+                `
+            }
+        },{
             index:3,
             data: {
-                image: sampleImage.src,
+                image: articles.src,
                 title: 'Articles',
                 content:`
                 We also have our very own IETE SF MEC Medium Publication, where we invite technology enthusiasts of all ages to write about the newest and most exciting innovations in the world today!
@@ -43,9 +48,9 @@ export default function Activity() {
             }
         }
             ,{
-                index:3,
+                index:4,
                 data: {
-                    image: sampleImage.src,
+                    image: collaboration.src,
                     title: 'Collaborations!',
                     content:`
                     IETE SF MEC joins forces with other organizations to bring you quality content, enthralling events to help you conquer higher altitudes!
@@ -162,7 +167,7 @@ export default function Activity() {
                     </svg>
                 </div>
                 <main>
-                    <div ref={el}>
+                    <div onDragEnd={forwards} ref={el}>
                         <section>
                             <img src={featured.data.image}></img>
                         </section>
