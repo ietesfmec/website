@@ -1,12 +1,15 @@
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
+import { Activity, Footer, What, Info } from '../components';
 
 export default function Home() {
-  const router = useRouter()
-  useEffect(() => {
-    router.replace('/home');
-  },[])
-  return (
-    <></>
-  )
+    return (
+        <div>
+            <Head></Head>
+            <What/>
+            <Info/>
+            <Activity/>
+            <Footer secondary="true"/>
+        </div>
+    )
 }

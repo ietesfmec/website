@@ -39,19 +39,28 @@ export default function Past({showFooter, events}) {
 
         
         animate(e1.current, 'fadeOutBottomRight', 'slow').then(()=>{
-            animate(e1.current, 'fadeInTopLeft', 'slow')
+            if(e1.current.classList.contains(styles.active))
+                animate(e1.current, 'fadeIn', 'slow')
+            else
+                animate(e1.current, 'fadeInTopLeft', 'slow')
         })
         animate(e2.current, 'fadeOutBottomRight', 'slow').then(()=>{
-            animate(e2.current, 'fadeIn', 'slower')
+            if(e2.current.classList.contains(styles.active))
+                animate(e2.current, 'fadeIn', 'slow')
+            else
+                animate(e2.current, 'fadeInTopLeft', 'slow')
         })
         animate(e3.current, 'fadeOutBottomRight', 'slow').then(()=>{
-            animate(e3.current, 'fadeInTopLeft', 'slower')
+            if(e3.current.classList.contains(styles.active))
+                animate(e3.current, 'fadeIn', 'slow')
+            else
+            animate(e3.current, 'fadeInTopLeft', 'slow')
         })
         
         timeout = setTimeout(()=>{
             setIndex(prev=>prev+3)
             clearTimeout(timeout)
-        }, 1500)
+        }, 1700)
         
     }
     const backwards = () => {
@@ -59,18 +68,27 @@ export default function Past({showFooter, events}) {
         if(index < 3)   return;
         
         animate(e1.current, 'fadeOutTopLeft', 'slow').then(()=>{
-            animate(e1.current, 'fadeInBottomRight', 'slower')
+            if(e1.current.classList.contains(styles.active))
+                animate(e1.current, 'fadeIn', 'slow')
+            else
+                animate(e1.current, 'fadeInBottomRight', 'slower')
         })
         animate(e2.current, 'fadeOutTopLeft', 'slow').then(()=>{
-            animate(e2.current, 'fadeIn', 'slow')
+            if(e2.current.classList.contains(styles.active))
+                animate(e2.current, 'fadeIn', 'slow')
+            else
+                animate(e2.current, 'fadeInBottomRight', 'slower')
         })
         animate(e3.current, 'fadeOutTopLeft', 'slow').then(()=>{
-            animate(e3.current, 'fadeInBottomRight', 'slower')
+            if(e3.current.classList.contains(styles.active))
+                animate(e3.current, 'fadeIn', 'slow')
+            else
+                animate(e3.current, 'fadeInBottomRight', 'slower')
         })
         timeout = setTimeout(()=>{
             setIndex(prev=>prev-3)
             clearTimeout(timeout)
-        }, 1500)
+        }, 1700)
     }
     useEffect(()=>{
         listener()

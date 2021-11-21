@@ -1,18 +1,12 @@
-import React from 'react'
-import Head from 'next/head'
-import { Activity, Footer, What, Info } from '../components'
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-//{`${styles.}`}
-
-export default function Home() {
-    return (
-        <div>
-            <Head></Head>
-            <What/>
-            <Info/>
-            <Activity/>
-            <Footer secondary="true"/>
-        </div>
-    )
+export default function Replace() {
+  const router = useRouter()
+  useEffect(() => {
+    router.replace('/');
+  },[])
+  return (
+    <></>
+  )
 }
-
