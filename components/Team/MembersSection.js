@@ -154,18 +154,26 @@ export default function MembersSection() {
                     });
                 if(j === 0 && i === 0) break;
                 }
+                if(i === 4)
+                    y.push({
+                        index: 2,
+                        data: [team[k++]]
+                    })
                 x.push(y);
             }
         } else {
             for(let i = 0; i < 5; i++) {
                 const y = [];
-                for(let j = 0; j < 4; j++) {
+                for(let j = 0; j < 5; j++) {
+                    if(!team[k])    break;
                     y.push({
                         index: j,
                         data: [team[k++]]
                     });
 
                     if(i === 0 && j === 1) break;
+                    if(i === 1 && j === 2) break;
+                    if(i === 2 && j === 3) break;
                 }
                 x.push(y);
             }

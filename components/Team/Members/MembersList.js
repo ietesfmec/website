@@ -28,7 +28,7 @@ export default function MembersList({id, members}) {
         timeout = setTimeout(()=>{
             setFeatured(f => f.index >= init.length-1 ? init[0] : init[f.index + 1])
             clearTimeout(timeout)
-        }, 1000)
+        }, 600)
     }
     const backwards = () => {
         const el = findRef(e1, e2);
@@ -39,7 +39,7 @@ export default function MembersList({id, members}) {
         timeout = setTimeout(()=>{
             setFeatured(f => f.index === 0 ? init[init.length - 1] : init[f.index - 1])
             clearTimeout(timeout)
-        }, 1000)
+        }, 600)
     }
     const handleChange = (i, j) => e => {
 
@@ -59,7 +59,7 @@ export default function MembersList({id, members}) {
         timeout = setTimeout(()=>{
             setFeatured(init[j])
             clearTimeout(timeout)
-        }, 1000)
+        }, 600)
     }
 
     function makeInterval() {
@@ -76,7 +76,6 @@ export default function MembersList({id, members}) {
     }
 
     useEffect(() => {
-    
             makeInterval()
         return () => { 
             clearInterval(interval)
@@ -91,7 +90,7 @@ export default function MembersList({id, members}) {
                     <path d="M14 26.4L1.19995 13.6L14 0.800003" stroke="#C3CBCD" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             </div>      
-            <section className={styles.cards} ref={e1}>
+            <section style={featured?.data.length > 1 ? {'justifyContent' : 'space-between'}:{'justifyContent':'center'}} className={styles.cards} ref={e1}>
                 {
                     featured && featured.data && featured.data.map((member , i)=>{
                     
