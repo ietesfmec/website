@@ -141,8 +141,16 @@ export default function Activity() {
     }
 
     const swipeHandlers = useSwipeable({
-        onSwipedLeft:()=> {forwards()},
-        onSwipedRight:()=>{backwards()},
+        onSwipedLeft:() => {
+            if(window.matchMedia('(max-width: 700px)').matches)
+                forwards()
+        },
+        onSwipedRight:() => {
+            if(window.matchMedia('(max-width: 700px)').matches)
+                backwards()
+        },
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
     })
 
     useEffect(() => {
@@ -153,14 +161,6 @@ export default function Activity() {
         }
     },[featured])
 
-    useEffect(()=>{
-        el.current.addEventListener('swiped-left', backwards);
-        el.current.addEventListener('swiped-right', forwards);
-        return(()=>{
-            el.current.removeEventListener('swiped-left', backwards);
-            el.current.removeEventListener('swiped-right', forwards);
-        })
-    },[])
     
     return (
         <div className={styles.outer}>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './MembersList.module.css';
 import logo from '../../../public/logo.png';
 import animate from '../../../hooks/animate';
+import { useSwipeable } from 'react-swipeable';
 
 export default function MembersList({id, members}) {
     
@@ -75,6 +76,19 @@ export default function MembersList({id, members}) {
         )
     }
 
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft:() => {
+            if(window.matchMedia('(max-width: 720px)').matches)
+                forwards()
+        },
+        onSwipedRight:() => {
+            if(window.matchMedia('(max-width: 720px)').matches)
+                backwards()
+        },
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    })
+
     useEffect(() => {
             makeInterval()
         return () => { 
@@ -95,7 +109,7 @@ export default function MembersList({id, members}) {
                     featured && featured.data && featured.data.map((member , i)=>{
                     
                         return (
-                            <main key={i} ref={e2}>
+                            <main {...swipeHandlers} key={i} ref={e2}>
                                 <div className={styles.cover} key={member.pic.src}>
                                     <Image src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>
