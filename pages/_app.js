@@ -1,7 +1,7 @@
-import '../styles/globals.css'
-import Head from 'next/head'
-import { Navbar } from '../components'
-import 'animate.css'
+import '../styles/globals.css';
+import Head from 'next/head';
+import { Navbar } from '../components';
+import 'animate.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
     <title>IETE SF MEC</title>
     {/* <meta name="description" content="Official website of IETE-SF-MEC" /> */}
     <link rel="icon" href="/favicon.png" />
+    <script src="../utils/swipe.js"></script>
   </Head>
   <Component {...pageProps} />
     <Navbar/>

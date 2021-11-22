@@ -147,7 +147,14 @@ export default function Activity() {
         }
     },[featured])
 
-    
+    useEffect(()=>{
+        el.current.addEventListener('swiped-left', backwards);
+        el.current.addEventListener('swiped-right', forwards);
+        return(()=>{
+            el.current.removeEventListener('swiped-left', backwards);
+            el.current.removeEventListener('swiped-right', forwards);
+        })
+    },[])
     
     return (
         <div className={styles.outer}>

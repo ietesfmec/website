@@ -139,10 +139,10 @@
     .photos {
         height: 1350px;
         grid-template-areas: 
-        'pic1 pic1 pic2 pic2'
+        'pic2 pic2 pic5 pic5'
         'pic3 pic3 pic3 pic3'
         'pic4 pic4 pic6 pic6' 
-        'pic5 pic5 pic5 pic5';
+        'pic1 pic1 pic1 pic1';
     }
     .main > section > p {
         width: fit-content;
