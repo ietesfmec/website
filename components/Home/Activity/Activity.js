@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Activity.module.css';
 import animate from '../../../hooks/animate';
+import { useSwipeable } from 'react-swipeable';
 import logo from '../../../public/new_logo.png';
 import collaboration from '../../../public/activities/collaboration.jpg';
 import articles from '../../../public/activities/articles.jpg';
@@ -139,6 +140,11 @@ export default function Activity() {
         },6500)
     }
 
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft:()=> {forwards()},
+        onSwipedRight:()=>{backwards()},
+    })
+
     useEffect(() => {
         makeInterval()
         return () => { 
@@ -166,7 +172,7 @@ export default function Activity() {
                     </svg>
                 </div>
                 <main>
-                    <div ref={el}>
+                    <div {...swipeHandlers} ref={el}>
                         <section key={featured.index} className={styles.cover}>
                             <Image layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
                         </section>

@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }) {
     <title>IETE SF MEC</title>
     {/* <meta name="description" content="Official website of IETE-SF-MEC" /> */}
     <link rel="icon" href="/favicon.png" />
-    <script src="../utils/swipe.js"></script>
   </Head>
   <Component {...pageProps} />
     <Navbar/>
