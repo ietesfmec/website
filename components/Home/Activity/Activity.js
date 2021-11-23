@@ -141,16 +141,15 @@ export default function Activity() {
     }
 
     const swipeHandlers = useSwipeable({
-        onSwipedLeft:() => {
-            if(window.matchMedia('(max-width: 700px)').matches)
-                forwards()
-        },
+        onSwipedLeft:() => forwards(),
         onSwipedRight:() => {
             if(window.matchMedia('(max-width: 700px)').matches)
                 backwards()
         },
-        preventDefaultTouchmoveEvent: true,
-        trackMouse: true
+        trackTouch:true,
+        trackMouse:true,
+        preventDefaultTouchmoveEvent:true
+        
     })
 
     useEffect(() => {
