@@ -180,7 +180,7 @@
     .container > main > div > section > p {
       line-height: 24px;
       margin-top: 0;
-      font-size: 18px;
+      font-size: 15px !important;
     }
 
     .container > div {
