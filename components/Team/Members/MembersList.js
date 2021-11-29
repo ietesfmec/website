@@ -79,8 +79,8 @@ export default function MembersList({id, members}) {
     let touchendX = 0;
 
     function handleGesture() {
-        if (touchendX < touchstartX) forwards()
-        if (touchendX > touchstartX) backwards()
+        if (touchendX < (touchstartX - 150)) forwards()
+        if (touchendX > (touchstartX + 150)) backwards()
     }
     
     const handleTouchStart = (e) => {
