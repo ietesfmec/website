@@ -7,11 +7,15 @@ import Topbar from '../../Topbar/Topbar';
 
 export default function What() {
 
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
+    }
+
     return (
         <div>
             <main className = {styles.container}>
                 <section className = {styles.half + ' ' + styles.cover}>
-                <Image layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
+                <Image loader={imageLoader} layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
                 </section>
                 <section className = {styles.half}>
                     <Topbar/>

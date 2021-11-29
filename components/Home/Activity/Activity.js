@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Activity.module.css';
 import animate from '../../../hooks/animate';
-import { useSwipeable } from 'react-swipeable';
 import logo from '../../../public/new_logo.png';
 import collaboration from '../../../public/activities/collaboration.jpg';
 import articles from '../../../public/activities/articles.jpg';
@@ -140,19 +139,6 @@ export default function Activity() {
         },6500)
     }
 
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft:() => {
-            if(window.matchMedia('(max-width: 700px)').matches)
-                forwards()
-        },
-        onSwipedRight:() => {
-            if(window.matchMedia('(max-width: 700px)').matches)
-                backwards()
-        },
-        preventDefaultTouchmoveEvent: true,
-        trackMouse: true
-    })
-
     useEffect(() => {
         makeInterval()
         return () => { 
@@ -161,6 +147,27 @@ export default function Activity() {
         }
     },[featured])
 
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+
+    function handleGesture() {
+    if (touchendX < touchstartX) forwards()
+    if (touchendX > touchstartX) backwards()
+    }
+
+    const handleTouchStart = (e) => {
+        touchstartX = e.changedTouches[0].screenX;
+    }
+    const handleTouchEnd = (e) => {
+        touchendX = e.changedTouches[0].screenX;
+        handleGesture()
+    }
+
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
+    }
     
     return (
         <div className={styles.outer}>
@@ -172,9 +179,9 @@ export default function Activity() {
                     </svg>
                 </div>
                 <main>
-                    <div {...swipeHandlers} ref={el}>
+                    <div ref={el} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                         <section key={featured.index} className={styles.cover}>
-                            <Image layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
+                            <Image loader={imageLoader} priority layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
                         </section>
                         <section>
                             <h1>{featured.data.title}</h1>

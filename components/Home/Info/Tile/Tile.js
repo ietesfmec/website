@@ -12,6 +12,7 @@ export default function Tile({info, id}) {
             behavior: 'smooth'
           })
     }
+
     return (
         <section>
             <h1>{info.title}</h1>

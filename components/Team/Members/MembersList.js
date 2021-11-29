@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from './MembersList.module.css';
 import logo from '../../../public/logo.png';
 import animate from '../../../hooks/animate';
-import { useSwipeable } from 'react-swipeable';
 
 export default function MembersList({id, members}) {
     
@@ -76,18 +75,21 @@ export default function MembersList({id, members}) {
         )
     }
 
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft:() => {
-            if(window.matchMedia('(max-width: 720px)').matches)
-                forwards()
-        },
-        onSwipedRight:() => {
-            if(window.matchMedia('(max-width: 720px)').matches)
-                backwards()
-        },
-        preventDefaultTouchmoveEvent: true,
-        trackMouse: true
-    })
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    function handleGesture() {
+        if (touchendX < touchstartX) forwards()
+        if (touchendX > touchstartX) backwards()
+    }
+    
+    const handleTouchStart = (e) => {
+        touchstartX = e.changedTouches[0].screenX;
+    }
+    const handleTouchEnd = (e) => {
+        touchendX = e.changedTouches[0].screenX;
+        handleGesture()
+    }
 
     useEffect(() => {
             makeInterval()
@@ -96,6 +98,10 @@ export default function MembersList({id, members}) {
             clearTimeout(timeout)
         }
     },[])
+
+    const imageLoader=({src, width})=>{
+        return `${src}?w=${width}`;
+    }
 
     return (
         <main className={styles.main} >
@@ -109,9 +115,9 @@ export default function MembersList({id, members}) {
                     featured && featured.data && featured.data.map((member , i)=>{
                     
                         return (
-                            <main {...swipeHandlers} key={i} ref={e2}>
+                            <main onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} key={i} ref={e2}>
                                 <div className={styles.cover} key={member.pic.src}>
-                                    <Image src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
+                                    <Image loader={imageLoader} priority src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>
                                 <p>{member.content ? member.content : `${member.position.toUpperCase()}`}</p>
                                 <h4>{member.name.toUpperCase()}</h4>
