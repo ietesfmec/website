@@ -5,9 +5,10 @@ body {
   width: 100%;
   font-family: 'Mulish', serif;
   margin-bottom: 20px;
-
-  -ms-overflow-style: none;  /* IE and Edge */
+  font-size: 14px !important;
+  -ms-overflow-style: none;  
   scrollbar-width: none;
+  
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;  

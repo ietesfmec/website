@@ -143,7 +143,7 @@ export default function Past({showFooter, events}) {
                             <div ref={r} onClick={handleActive(r)} className={styles.past} key={i}>
                         <section className={styles.cover} key={event[1]}>
                             {/* <img key={event[1]} src={event[1]} placeholder={logo.src}></img> */}
-                            <Image unoptimized loader={imageLoader} src={event[1]} layout="fill" placeholder="blur" blurDataURL={logo.src}></Image>
+                            <Image unoptimized priority loader={imageLoader} src={event[1]} layout="fill" placeholder="blur" blurDataURL={logo.src}></Image>
                             <span>
                                 <h3>Special Mentions:</h3>
                                 <h5 hidden={event[3] === '<none>'}>{event[3]}</h5>
