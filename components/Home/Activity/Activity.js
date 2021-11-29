@@ -164,10 +164,13 @@ export default function Activity() {
         touchendX = e.changedTouches[0].screenX;
         handleGesture()
     }
+<<<<<<< HEAD
 
     const imageLoader=({src, width})=>{
         return `${src}?w=${width}`;
     }
+=======
+>>>>>>> 65eaba4fd1c0831345766f854abac043859716c9
     
     return (
         <div className={styles.outer}>
@@ -181,7 +184,11 @@ export default function Activity() {
                 <main>
                     <div ref={el} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                         <section key={featured.index} className={styles.cover}>
+<<<<<<< HEAD
                             <Image loader={imageLoader} priority layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
+=======
+                            <Image priority layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
+>>>>>>> 65eaba4fd1c0831345766f854abac043859716c9
                         </section>
                         <section>
                             <h1>{featured.data.title}</h1>
