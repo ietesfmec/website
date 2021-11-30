@@ -8,6 +8,7 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 59px;
+    margin-left: 20px;
 }
 
 .main {
@@ -161,12 +162,18 @@
     .main > div {
         width: clamp(353px, 75vw, 550px);
     }
+    .encloser > h1 {
+        margin-left: 0px;
+    }
 }
 
 @media screen and (max-width:500px) {
 
     .encloser {
         padding: 30px 17px;
+    }
+    .encloser > h1 {
+        margin-left: 20px;
     }
  
     .main > div {

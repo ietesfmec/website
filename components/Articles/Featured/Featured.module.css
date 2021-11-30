@@ -3,10 +3,15 @@
     background-color: #191826;
     height: calc(100vh - 144px);
     min-height: 460px;
-    max-height: 60vw;
+    max-height: 40vw;
     padding: 30px clamp(20px, 7vw, 120px);
     overflow: hidden;
 }
+@media screen and (max-height: 1300px) and (max-width: 1100px) {
+    .encloser {
+      max-height: 60vw;
+    }
+  }
 .main {
     width: 100%;
     height: 100%;   
@@ -44,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -59,6 +64,7 @@
     line-height: 57px;
     color: #f1f1f1;
     margin-top: 5px;
+    margin-bottom: 34px;
     /* color: black; */
 }
 
@@ -83,7 +89,7 @@
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 20px;
     
     color: #F1F1F1;
@@ -98,7 +104,7 @@
     line-height: 42px;
     color: #f1f1f1;
     /* color: black; */
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .image {
     position: relative;

@@ -13,10 +13,8 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 55px;
-    margin-left: 30px;
-    /* or 114% */
-    
     letter-spacing: 0.05cm;
+    margin-left: 60px;
   }
   .container {
     background-color: black;
@@ -138,6 +136,9 @@
       height: fit-content;
       max-height: fit-content;
     }
+    .outer > h1 { 
+      margin-left: 60px;
+    }
     .container {
       padding: 30px;
     }
@@ -191,6 +192,12 @@
       height: calc(100% + 1px);
     }
 
+  }
+
+  @media screen and (max-width:600px) {
+    .outer > h1 {
+      margin-left: 30px;
+    }
   }
 
   @media screen and (max-width:560px) {
