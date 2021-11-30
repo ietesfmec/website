@@ -7,7 +7,7 @@ export default function Tile({info, id}) {
 
     const handleScroll = () => {
         el.current.scrollBy({
-            top: 234,
+            top: 243,
             left: 0,
             behavior: 'smooth'
           })
