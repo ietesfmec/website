@@ -18,7 +18,7 @@ import Riya from '../../public/team/riya.JPG';
 import Abhirami from '../../public/team/abhirami.jpg';
 import Unnikrishnamenon from '../../public/team/unnikrishnamenon.png';
 import Namitha from '../../public/team/namitha.jpeg';
-import Ananya from '../../public/team/ananya.jpg';
+import Ananya from '../../public/team/ananya.jpeg';
 import Fac_1 from '../../public/team/fac1.jpg';
 import Fac_2 from '../../public/team/fac2.jpg';
 
