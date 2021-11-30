@@ -37,7 +37,7 @@ export default function Info() {
         content: `
         <p>
         One of the important charter of IETE is to impart continuing engineering education to
-        working professionals, in the field of electronics, telecommunication, computer & IT,
+        working professionals, in the field of electronics, telecommunication, computer & IT
         at an affordable cost. Aim being to earn while you learn and targeting students who
         cannot afford engineering education at a regular engineering college.
         </p>
