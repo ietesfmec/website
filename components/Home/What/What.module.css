@@ -50,6 +50,12 @@
     object-fit: cover;
   }
 
+  @media screen and (max-height: 1300px) {
+    .half {
+      max-height: 35vw;
+    }
+  }
+
   @media screen and (max-height: 1200px) and (max-width: 1000px) {
     .half {
       max-height: 60vw;
