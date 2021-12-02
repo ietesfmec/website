@@ -1,6 +1,6 @@
 # This is the official website of IETE-SF-MEC
 
-### Usage without prior permission from IETE-SF-MEC team is strictly prohibited.
+Usage without prior permission from IETE-SF-MEC team is strictly prohibited.
 
 ## Steps to run locally
 
