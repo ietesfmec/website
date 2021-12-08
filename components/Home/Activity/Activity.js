@@ -153,8 +153,8 @@ export default function Activity() {
 
 
     function handleGesture() {
-    if (touchendX < (touchstartX - 50)) forwards()
-    if (touchendX > (touchstartX + 50)) backwards()
+    if (touchendX < (touchstartX - 70)) forwards()
+    if (touchendX > (touchstartX + 70)) backwards()
     }
 
     const handleTouchStart = (e) => {
