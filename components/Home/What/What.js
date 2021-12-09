@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './What.module.css';
 import logo from '../../../public/new_logo.png';
-import mecImg from '../../../public/mec.png';
+import mecImg from '../../../public/mec.jpg';
 import Topbar from '../../Topbar/Topbar';
 
 export default function What() {
@@ -15,7 +15,7 @@ export default function What() {
         <div>
             <main className = {styles.container}>
                 <section className = {styles.half + ' ' + styles.cover}>
-                <Image loader={imageLoader} layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
+                <Image priority loader={imageLoader} layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
                 </section>
                 <section className = {styles.half}>
                     <Topbar/>

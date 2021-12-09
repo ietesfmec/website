@@ -8,10 +8,9 @@ body {
   font-size: 14px !important;
   -ms-overflow-style: none;  
   scrollbar-width: none;
-  
+  user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;  
   position: relative;
 }
 
@@ -38,6 +37,9 @@ img {
   user-select: none;  
 }
 
+p {
+  user-select: text;
+}
 
 @media screen and (max-width:700px){
   p {

@@ -2,6 +2,7 @@
   "name": "iete-sf-mec",
   "version": "1.0.0",
   "private": false,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

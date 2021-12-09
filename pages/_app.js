@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
     <title>IETE SF MEC</title>
-    <meta name="description" content="Official website of IETE-SF-MEC" />
+    <meta name="description" content="Official website of IETE student's forum at Government Model Engineering College, Thrikkakara" />
     <meta name="author" content="IETE SF MEC"/>
     <meta name="keywords" content="IETE, IETE SF MEC, IETE-SF-MEC, MEC, Model Engineering College, Government Model Engineering College, Thrikkakara, articles, events, team, kochi, kerala, ernakulam, club"/>
     <link rel="icon" href="/favicon.png" />
