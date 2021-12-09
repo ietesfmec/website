@@ -117,7 +117,7 @@ export default function MembersList({id, members}) {
                         return (
                             <main onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} key={i} ref={e2}>
                                 <div className={styles.cover} key={member.pic.src}>
-                                    <Image loader={imageLoader} priority src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
+                                    <Image alt="member photo" loader={imageLoader} priority src={member.pic} blurDataURL={logo.src} placeholder="blur" layout="fill"></Image>
                                 </div>
                                 <p>{member.content ? member.content : `${member.position.toUpperCase()}`}</p>
                                 <h4>{member.name.toUpperCase()}</h4>

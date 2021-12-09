@@ -83,32 +83,34 @@ export default function Activity() {
 
     const forwards = () => {
         clearTimeout(timeout)
-        let t = featured.index;
-        if(t >=  init.length - 1)   t = -1;
         
         animate(el.current, 'fadeOutLeft', 'fast').then(()=>{
             animate(el.current, 'fadeInRight', 'fast')
         })
 
         timeout = setTimeout(()=>{
-            setFeatured(init[t+1])
+            setFeatured(prev => {
+                let t = prev.index;
+                if(t >=  init.length - 1)   t = -1;
+                return init[t+1];
+            })
             clearTimeout(timeout)
         }, 700)
         
     }
     const backwards = () => {
         clearTimeout(timeout)
-
-        let t = featured.index;
-        if(featured.index === 0)   t = init.length;
-        
         
         animate(el.current, 'fadeOutRight', 'fast').then(()=>{
             animate(el.current, 'fadeInLeft', 'fast')
         })
         
         timeout = setTimeout(()=>{
-            setFeatured(init[t-1])
+            setFeatured(prev => {
+                let t = prev.index;
+                if(prev.index === 0)   t = init.length;
+                return init[t-1];
+            })
             clearTimeout(timeout)
         }, 500)
     }
@@ -181,7 +183,7 @@ export default function Activity() {
                 <main>
                     <div ref={el} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                         <section key={featured.index} className={styles.cover}>
-                            <Image loader={imageLoader} priority layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
+                            <Image alt="activity pic" loader={imageLoader} priority layout="fill" src={featured.data.image} placeholder="blur" blurDataURL={logo.src}></Image>
                         </section>
                         <section>
                             <h1>{featured.data.title}</h1>

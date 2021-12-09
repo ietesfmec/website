@@ -15,7 +15,7 @@ export default function What() {
         <div>
             <main className = {styles.container}>
                 <section className = {styles.half + ' ' + styles.cover}>
-                <Image priority loader={imageLoader} layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
+                <Image alt="mec photo" priority loader={imageLoader} layout="fill" src={mecImg} placeholder="blur" blurDataURL={logo.src}></Image>
                 </section>
                 <section className = {styles.half}>
                     <Topbar/>
