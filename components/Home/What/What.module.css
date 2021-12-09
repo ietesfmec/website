@@ -1,97 +1,97 @@
 .container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
+.half {
+  background-color: white;
+  width: 50%;
+  height: calc(100vh - 70px);
+  min-height: 550px;
+  max-height: 35vw;
+}
+
+.sectionWhat {
+  width: 100%;
+  height: 438px;
+  padding: 0px 25px;
+  margin: 35px 0;
+  overflow: hidden;
+}
+
+.sectionWhat > h1 {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 79px;
+  /* or 124% */
+  letter-spacing: 0.05cm;
+  color: #1A1A1A;
+}
+
+.sectionWhat > p {
+  margin-top: 50px;
+  border-left: 8px solid #14E4E4;
+  width: 85%;
+  padding-left: 20px;
+  line-height: 26px;
+  /* height: fit-content; */
+}
+/* .cover {
+  background: url('../../../public/mec.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.cover > div {
+  position: relative !important;
+  height: 100%;
+}
+.cover > div > img {
+  object-fit: cover;
+}
+
+/* @media screen and (max-height: 1300px) {
   .half {
-    background-color: white;
-    width: 50%;
-    height: calc(100vh - 70px);
-    min-height: 550px;
-    max-height: 35vw;
+    max-height: 50vw;
   }
-  
-  .sectionWhat {
+} */
+
+@media screen and (max-height: 1300px) and (max-width: 1100px) {
+  .half {
+    max-height: 50vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: block;
+    width: 100vw;
+  }
+  .half {
     width: 100%;
-    height: 438px;
-    padding: 0px 25px;
-    margin: 35px 0;
-    overflow: hidden;
+    height: 264px;
+    max-height: fit-content;
+    min-height: 350px;
   }
-  
-  .sectionWhat > h1 {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 79px;
-    /* or 124% */
-    letter-spacing: 0.05cm;
-    color: #1A1A1A;
-  }
-  
-  .sectionWhat > p {
-    margin-top: 50px;
-    border-left: 8px solid #14E4E4;
-    width: 85%;
-    padding-left: 20px;
-    line-height: 26px;
-    /* height: fit-content; */
-  }
-  /* .cover {
-    background: url('../../../public/mec.png') center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
-  .cover > div {
-    position: relative !important;
-    height: 100%;
-  }
-  .cover > div > img {
+  .half > img {
     object-fit: cover;
   }
-
-  /* @media screen and (max-height: 1300px) {
-    .half {
-      max-height: 50vw;
-    }
-  } */
-
-  @media screen and (max-height: 1300px) and (max-width: 1100px) {
-    .half {
-      max-height: 50vw;
-    }
+  .container > section:nth-of-type(2) {
+    height: fit-content;
   }
-
-  @media screen and (max-width: 800px) {
-    .container {
-      display: block;
-      width: 100vw;
-    }
-    .half {
-      width: 100%;
-      height: 264px;
-      max-height: fit-content;
-      min-height: 350px;
-    }
-    .half > img {
-      object-fit: cover;
-    }
-    .container > section:nth-of-type(2) {
-      height: fit-content;
-    }
-    .sectionWhat {
-      margin-top: 15px;
-      height: fit-content;
-      padding: 0 60px;
-    }
-    .sectionWhat > p {
-      margin-top: 50px;
-    }
+  .sectionWhat {
+    margin-top: 15px;
+    height: fit-content;
+    padding: 0 60px;
   }
-
-  @media screen and (max-width:600px) {
-  
-    .sectionWhat {
-      padding: 0 30px;
-    }
+  .sectionWhat > p {
+    margin-top: 50px;
   }
+}
+
+@media screen and (max-width:600px) {
+
+  .sectionWhat {
+    padding: 0 30px;
+  }
+}
