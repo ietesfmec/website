@@ -90,15 +90,8 @@
   }
 
   @media screen and (max-width:600px) {
-    .half:nth-of-type(2) {
-      min-height: 450px;
-    }
+  
     .sectionWhat {
       padding: 0 30px;
-    }
-  }
-  @media screen and (max-width: 460px) {
-    .half {
-      min-height: 500px;
     }
   }

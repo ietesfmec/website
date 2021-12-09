@@ -141,6 +141,8 @@ export default function MembersSection() {
     ]
     const [allMembers, setAllMembers] = useState([])
     const [type, setType] = useState(2)
+
+    /* function to change layout depending on screen size */
     const format = (type) => {
         const x = [];
         let k = 0;
