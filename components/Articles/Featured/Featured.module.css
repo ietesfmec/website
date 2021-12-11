@@ -7,7 +7,7 @@
     padding: 30px clamp(20px, 7vw, 120px);
     overflow: hidden;
 }
-@media screen and (max-height: 1300px) and (max-width: 1100px) {
+@media screen and (max-height: 1300px) and (max-width: 1500px) {
     .encloser {
       max-height: 60vw;
     }
