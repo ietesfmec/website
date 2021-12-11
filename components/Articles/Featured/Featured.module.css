@@ -3,7 +3,7 @@
     background-color: #191826;
     height: calc(100vh - 144px);
     min-height: 460px;
-    max-height: 40vw;
+    max-height: 45vw;
     padding: 30px clamp(20px, 7vw, 120px);
     overflow: hidden;
 }
