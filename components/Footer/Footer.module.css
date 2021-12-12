@@ -102,6 +102,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding-top: 1.3px;
 }
 
 .social > div:first-of-type > h4 > span > svg {
@@ -140,11 +141,12 @@
     }
     .social > div:first-of-type > h4 > span {
         margin-right: 0.3px;
+        padding-top: 0;
     } 
     .social > div:first-of-type > h4 > span > svg {
         width: 10px;
         height: 10px;
-        margin-bottom:-1.2px;
+        margin-bottom:-1.5px;
     }
     .details {
         height: fit-content !important;
