@@ -90,6 +90,9 @@
     font-family: Mulish;
     font-style: normal;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .social > div:first-of-type > h4 > span {
@@ -99,8 +102,8 @@
 }
 
 .social > div:first-of-type > h4 > span > svg {
-    vertical-align: top;
-    margin-top: 1.2px;
+    vertical-align: baseline;
+    margin-bottom: -0.8px;
 }
 
 .details > div > div > h4 {
@@ -137,9 +140,8 @@
         margin-right: 1px;
     } */
     .social > div:first-of-type > h4 > span > svg {
-        width: 11px;
-        height: 11px;
-        margin-top: 0.4px;
+        width: 9px;
+        height: 9px;
     }
     .details {
         height: fit-content !important;
