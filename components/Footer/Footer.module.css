@@ -140,8 +140,8 @@
         margin-right: 1px;
     } */
     .social > div:first-of-type > h4 > span > svg {
-        width: 9px;
-        height: 9px;
+        width: 10px;
+        height: 10px;
     }
     .details {
         height: fit-content !important;
