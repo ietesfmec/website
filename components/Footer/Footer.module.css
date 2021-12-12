@@ -142,8 +142,10 @@
         margin-right: 0.3px;
     } 
     .social > div:first-of-type > h4 > span > svg {
-        width: 10px;
+        width: 11px;
         height: 10px;
+        margin-bottom: -1px;
+
     }
     .details {
         height: fit-content !important;
