@@ -144,7 +144,7 @@
     .social > div:first-of-type > h4 > span > svg {
         width: 11px;
         height: 10px;
-        margin-bottom:-0.5px;
+        margin-bottom:-0.8px;
     }
     .details {
         height: fit-content !important;
