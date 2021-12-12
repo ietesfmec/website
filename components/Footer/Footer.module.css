@@ -98,14 +98,14 @@
 .social > div:first-of-type > h4 > span {
     vertical-align: baseline;
     margin-right: 0.5px;
-    margin-bottom: 0px;
     height: 100%;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social > div:first-of-type > h4 > span > svg {
     vertical-align: baseline;
-    margin-bottom: -0.9px;
 }
 
 .details > div > div > h4 {
@@ -144,8 +144,7 @@
     .social > div:first-of-type > h4 > span > svg {
         width: 11px;
         height: 10px;
-        margin-bottom: -1px;
-
+        margin-bottom:-0.5px;
     }
     .details {
         height: fit-content !important;
