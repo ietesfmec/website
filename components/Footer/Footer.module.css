@@ -89,6 +89,11 @@
     font-weight: bold;
 }
 
+.social > div:first-of-type > h4 > span {
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
 .details > div > div > h4 {
     font-weight: 500;
 }
@@ -118,6 +123,11 @@
     .social > div > svg {
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .social > div:first-of-type > h4 > span > svg {
+        width: 11px;
+        height: 11px;
+        vertical-align: top;
     }
     .details {
         height: fit-content !important;
