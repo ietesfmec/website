@@ -2,7 +2,7 @@
 
 Usage without consent from IETE-SF-MEC team is strictly prohibited.
 
-## Steps to run locally
+## Steps to run locally:
 
 First, `cd` into the root directory after cloning repo.
 
