@@ -94,7 +94,7 @@
 
 .social > div:first-of-type > h4 > span {
     vertical-align: middle;
-    margin-right: 2px;
+    margin-right: 1px;
     display: inline-block;
 }
 
@@ -133,6 +133,9 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+    /* .social > div:first-of-type > h4 > span {
+        margin-right: 1px;
+    } */
     .social > div:first-of-type > h4 > span > svg {
         width: 11px;
         height: 11px;
