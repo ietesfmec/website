@@ -96,8 +96,10 @@
 }
 
 .social > div:first-of-type > h4 > span {
-    vertical-align: middle;
-    margin-right: 1px;
+    vertical-align: baseline;
+    margin-right: 0.5px;
+    margin-bottom: 0px;
+    height: 100%;
     display: inline-block;
 }
 
@@ -136,9 +138,9 @@
         margin-left: 10px;
         margin-right: 10px;
     }
-    /* .social > div:first-of-type > h4 > span {
-        margin-right: 1px;
-    } */
+    .social > div:first-of-type > h4 > span {
+        margin-right: 0.3px;
+    } 
     .social > div:first-of-type > h4 > span > svg {
         width: 10px;
         height: 10px;
