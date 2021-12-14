@@ -143,13 +143,14 @@
       padding: 30px;
     }
     .container > div {
-      width: 200px;
+      width: 130px;
     } 
     .container > main {
       height: 100%;
       justify-content: initial;
       display: block;
       margin:  70px;
+      width: 100%;
     }
     .container > main > div {
       display: block;
@@ -186,6 +187,9 @@
 
     .container > div {
       display: none;
+    }
+    .container > main {
+      width: auto;
     }
     
     .cover > div {

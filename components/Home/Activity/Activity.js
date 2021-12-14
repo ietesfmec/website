@@ -3,11 +3,11 @@ import Image from 'next/image';
 import styles from './Activity.module.css';
 import animate from '../../../hooks/animate';
 import logo from '../../../public/new_logo.png';
-import collaboration from '../../../public/activities/collaboration.jpg';
+import collaboration from '../../../public/activities/collaborations.png';
 import articles from '../../../public/activities/articles.jpg';
-import webinar from '../../../public/activities/webinar.jpg';
-import competition from '../../../public/activities/competition.jpg';
-import workshop from '../../../public/activities/workshop.jpg';
+import webinar from '../../../public/activities/webinars.png';
+import competition from '../../../public/activities/competition.png';
+import workshop from '../../../public/activities/workshops.jpg';
 
 export default function Activity() {
     const init = [
