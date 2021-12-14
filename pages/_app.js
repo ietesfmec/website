@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     <title>IETE SF MEC</title>
     <meta name="description" content="Official website of IETE student's forum at Government Model Engineering College, Thrikkakara" />
     <meta name="author" content="IETE SF MEC"/>
-    <meta name="keywords" content="IETE, IETE SF MEC, IETE-SF-MEC, MEC, Model Engineering College, Government Model Engineering College, Thrikkakara, articles, events, team, kochi, kerala, ernakulam, club"/>
+    <meta name="keywords" content="IETE, iete, iete mec, forum, IETE SF MEC, IETE-SF-MEC, MEC, Model Engineering College, Government Model Engineering College, Thrikkakara, articles, events, team, kochi, kerala, ernakulam, club"/>
     <link rel="icon" href="/favicon.png" />
   </Head>
   <Component {...pageProps} />
