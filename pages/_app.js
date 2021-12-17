@@ -17,6 +17,13 @@ function MyApp({ Component, pageProps }) {
     <meta name="description" content="Official website of IETE student's forum at Government Model Engineering College, Thrikkakara" />
     <meta name="author" content="IETE SF MEC"/>
     <meta name="keywords" content="IETE, iete, iete mec, forum, IETE SF MEC, IETE-SF-MEC, MEC, Model Engineering College, Government Model Engineering College, Thrikkakara, articles, events, team, kochi, kerala, ernakulam, club"/>
+    
+    <meta property="og:title" content="IETE SF MEC" />
+    <meta property="og:description" content="Official website of IETE student's forum at Government Model Engineering College, Thrikkakara" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/favicon.png" />
+    <meta property="og:url" content="https://iete.mec.ac.in" />
+
     <link rel="icon" href="/favicon.png" />
   </Head>
   <Component {...pageProps} />
